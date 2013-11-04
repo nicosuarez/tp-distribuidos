@@ -1,70 +1,219 @@
 autostart = False
-version = 0.8.5
+version = 0.8.6
+[127.0.0.1:7202]
+    workingdir = C:\Users\nsuarez\AppData\Local\Temp
+    udp = 10201
+    [[3640]]
+        image = C:\Users\nsuarez\GNS3\Images\c3640-js-mz.124-10.bin
+        sparsemem = True
+        chassis = 3640
+    [[ROUTER R12]]
+        model = 3640
+        console = 2120
+        aux = 2520
+        cnfg = configs\R12.cfg
+        slot0 = NM-4E
+        e0/0 = Internet e0/2
+        x = 367.222438151
+        y = 345.695526217
+        z = 1.0
+    [[ROUTER R8]]
+        model = 3640
+        console = 2115
+        aux = 2515
+        cnfg = configs\R8.cfg
+        slot0 = NM-4E
+        e0/1 = Internet e0/0
+        x = 210.244732728
+        y = 58.6101730552
+        z = 1.0
+    [[ROUTER Internet]]
+        model = 3640
+        console = 2118
+        aux = 2518
+        cnfg = configs\Internet.cfg
+        slot0 = NM-4E
+        e0/0 = R8 e0/1
+        e0/2 = R12 e0/0
+        x = 560.969696196
+        y = -43.2132034356
+        z = 1.0
 [127.0.0.1:7200]
-    workingdir = /tmp
+    workingdir = C:\Users\nsuarez\AppData\Local\Temp
     udp = 10001
     [[3640]]
-        image = /root/ios/IOS/c3640-js-mz.124-10.bin
+        image = C:\Users\nsuarez\GNS3\Images\c3640-js-mz.124-10.bin
         sparsemem = True
-        ghostios = True
         chassis = 3640
-    [[ROUTER R4]]
+    [[ROUTER R6]]
         model = 3640
-        console = 2104
-        aux = 2504
-        cnfg = configs/R4.cfg
+        console = 2102
+        aux = 2502
         slot0 = NM-4E
-        e0/0 = SW1 3
-        x = -129.0
-        y = -101.0
-        z = 1.0
-    [[ETHSW SW1]]
-        1 = access 1 R1 e0/0
-        2 = access 1 R3 e0/0
-        3 = access 1 R4 e0/0
-        4 = access 1 R2 e0/0
-        x = -132.5
-        y = 11.0
+        e0/0 = SW1 4
+        x = -178.38268427
+        y = -226.269119346
         z = 1.0
     [[ROUTER R1]]
         model = 3640
         console = 2101
         aux = 2501
-        cnfg = configs/R1.cfg
+        cnfg = configs\R1.cfg
         slot0 = NM-4E
         e0/0 = SW1 1
-        x = -300.0
-        y = -2.0
+        x = -560.201010127
+        y = -262.31580054
         z = 1.0
     [[ROUTER R2]]
         model = 3640
-        console = 2102
-        aux = 2502
-        cnfg = configs/R2.cfg
+        console = 2104
+        aux = 2504
         slot0 = NM-4E
-        e0/0 = SW1 4
-        x = -127.0
-        y = 115.0
+        e0/0 = SW1 3
+        e0/1 = SW2 2
+        x = -200.181674143
+        y = -435.198051534
         z = 1.0
-    [[ROUTER R3]]
+    [[ETHSW SW1]]
+        1 = access 1 R1 e0/0
+        3 = access 1 R2 e0/0
+        4 = access 1 R6 e0/0
+        x = -357.830952442
+        y = -344.411254969
+        z = 1.0
+    [[ETHSW SW2]]
+        2 = access 1 R2 e0/1
+        3 = access 1 R4 e0/0
+        x = 77.6370849898
+        y = -351.168614282
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = .
+    udp = 10000
+    [[3640]]
+        image = C:\Users\nsuarez\GNS3\Images\c3640-js-mz.124-10.bin
+        sparsemem = True
+        chassis = 3640
+    [[ROUTER R4]]
         model = 3640
-        console = 2103
-        aux = 2503
-        cnfg = configs/R3.cfg
+        console = 2009
+        aux = 2109
+        cnfg = configs\R4.cfg
         slot0 = NM-4E
-        e0/0 = SW1 2
-        x = 31.0
-        y = 2.0
+        e0/0 = SW2 3
+        e0/1 = R7 e0/1
+        x = 77.308657865
+        y = -229.889393669
+        z = 1.0
+    [[ROUTER R5]]
+        model = 3640
+        console = 2008
+        aux = 2108
+        cnfg = configs\R5.cfg
+        slot0 = NM-4E
+        x = 247.01428535
+        y = -252.516810667
+        z = 1.0
+    [[ROUTER R7]]
+        model = 3640
+        console = 2013
+        aux = 2113
+        cnfg = configs\R7.cfg
+        slot0 = NM-4E
+        e0/0 = SW3 1
+        e0/1 = R4 e0/1
+        x = -107.953318806
+        y = -67.2548339959
+        z = 1.0
+    [[ROUTER R9]]
+        model = 3640
+        console = 2012
+        aux = 2112
+        cnfg = configs\R9.cfg
+        slot0 = NM-4E
+        e0/0 = SW3 2
+        x = -95.2253967444
+        y = 102.450793489
+        z = 1.0
+    [[ETHSW SW3]]
+        x = 40.8675323681
+        y = 32.0832611207
         z = 1.0
 [GNS3-DATA]
     configs = configs
+    m11 = 0.707106781187
+    m22 = 0.707106781187
+    [[NOTE 1]]
+        text = "Aprila"
+        x = 564.271211387
+        y = -105.338095117
+        color = "#ff0000"
+    [[NOTE 2]]
+        text = "Sede Rio Colorado"
+        x = 342.239682094
+        y = 205.788888605
+    [[NOTE 3]]
+        text = ""
+        x = -618.011326757
+        y = 204.374675043
+    [[NOTE 4]]
+        text = "Azel"
+        x = 56.5685424949
+        y = -24.7279220613
+        color = "#ff0000"
+    [[NOTE 5]]
+        text = "Sede Bariloche"
+        x = 363.45288553
+        y = -95.43860018
+    [[NOTE 6]]
+        text = "Honda"
+        x = -343.653895656
+        y = -409.394011027
+        color = "#ff0000"
+    [[NOTE 7]]
+        text = "Zanella"
+        x = 90.5096679918
+        y = -412.222438151
+        color = "#ff0000"
+    [[NOTE 8]]
+        text = "Sede Trelew"
+        x = 386.755267272
+        y = -482.558441227
+    [[Cloud FTPServer]]
+        symbol = Host
+        x = 80.6370849895
+        y = -91.7253967443
+        z = 1.0
     [[Cloud HostA]]
         symbol = Host
-        x = -14.5
-        y = 105.5
+        x = -377.779220613
+        y = -258.881817718
+        z = 1.0
+    [[Cloud HostC]]
+        symbol = Host
+        x = 207.916305603
+        y = -408.509234716
         z = 1.0
     [[Cloud DNS2]]
         symbol = Host
-        x = -267.5
-        y = -163.5
+        x = -450.404545571
+        y = -419.916305603
         z = 1.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -607.602163828
+        y = -490.732106143
+        width = 1082.77792079
+        height = 362.038671967
+    [[SHAPE 2]]
+        type = rectangle
+        x = -608.11183182
+        y = -115.965512115
+        width = 1083.28758878
+        height = 291.327993849
+    [[SHAPE 3]]
+        type = rectangle
+        x = -606.697618258
+        y = 196.57568517
+        width = 1083.28758878
+        height = 227.688383542
