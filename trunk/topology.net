@@ -1,0 +1,70 @@
+autostart = False
+version = 0.8.5
+[127.0.0.1:7200]
+    workingdir = /tmp
+    udp = 10001
+    [[3640]]
+        image = /root/ios/IOS/c3640-js-mz.124-10.bin
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R4]]
+        model = 3640
+        console = 2104
+        aux = 2504
+        cnfg = configs/R4.cfg
+        slot0 = NM-4E
+        e0/0 = SW1 3
+        x = -129.0
+        y = -101.0
+        z = 1.0
+    [[ETHSW SW1]]
+        1 = access 1 R1 e0/0
+        2 = access 1 R3 e0/0
+        3 = access 1 R4 e0/0
+        4 = access 1 R2 e0/0
+        x = -132.5
+        y = 11.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3640
+        console = 2101
+        aux = 2501
+        cnfg = configs/R1.cfg
+        slot0 = NM-4E
+        e0/0 = SW1 1
+        x = -300.0
+        y = -2.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3640
+        console = 2102
+        aux = 2502
+        cnfg = configs/R2.cfg
+        slot0 = NM-4E
+        e0/0 = SW1 4
+        x = -127.0
+        y = 115.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3640
+        console = 2103
+        aux = 2503
+        cnfg = configs/R3.cfg
+        slot0 = NM-4E
+        e0/0 = SW1 2
+        x = 31.0
+        y = 2.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[Cloud HostA]]
+        symbol = Host
+        x = -14.5
+        y = 105.5
+        z = 1.0
+    [[Cloud DNS2]]
+        symbol = Host
+        x = -267.5
+        y = -163.5
+        z = 1.0
