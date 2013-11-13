@@ -1,0 +1,14 @@
+========== Comando Inicio4 Inicio de Ejecución ==========
+-distribuidos (2013-05-28 21:18:00)-  ERROR  --- No se ha encontrado el archivo ../mae/PPI.mae
+-distribuidos (2013-05-28 21:18:00)-  ERROR  --- No se ha encontrado el archivo ../mae/p-s.mae
+-distribuidos (2013-05-28 21:18:00)-  ERROR  --- La instalacion esta incompleta. Para solucionar el problema debe correr el comando Instal4
+~distribuidos (2013-05-28 21:18:00)~ MENSAJE ~~~ Los comandos necesarios para la ejecucion del programa cuentan con permisos suficientes.
+-distribuidos (2013-05-28 21:18:00)-  ERROR  --- No se ha encontrado el archivo ../mae/PPI.mae
+-distribuidos (2013-05-28 21:18:00)-  ERROR  --- No se ha encontrado el archivo ../mae/p-s.mae
+-distribuidos (2013-05-28 21:18:00)-  ERROR  --- La instalacion esta incompleta. Para solucionar el problema debe correr el comando Instal4
+~distribuidos (2013-05-28 21:18:00)~ MENSAJE ~~~ Los comandos necesarios para la ejecucion del programa cuentan con permisos suficientes.
+~distribuidos (2013-05-28 21:18:04)~ MENSAJE ~~~ Usuario ingresa CANLOOP=20
+~distribuidos (2013-05-28 21:18:04)~ MENSAJE ~~~ Usuario ingresa TESPERA=1
+~distribuidos (2013-05-28 21:18:04)~ MENSAJE ~~~ Exportando TESPERA=1 y CANLOOP=20
+~distribuidos (2013-05-28 21:18:11)~ MENSAJE ~~~ El usuario desea iniciar el comando Detecta4. Invocando comando...
+========== Comando Inicio4 Fin de Ejecución ==========
