@@ -1,0 +1,352 @@
+\documentclass{article}
+\usepackage{latexsym}
+\usepackage[utf8]{inputenx}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{anysize}
+\usepackage{amsmath}
+\usepackage{float}
+\setlength{\skip\footins}{5cm}
+\usepackage{lscape}
+\usepackage{footnote}
+\usepackage{pdfpages}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{listings}
+\let\verbatiminput=\verbatimtabinput
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%     PORTADA     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%    MARGENES     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\marginsize{2cm}{2cm}{.5cm}{3cm} 
+
+
+% En la instrucción \title{..}, se escribe el título del documento.
+\title{ 75.08:Sistemas Operativos - Trabajo Práctico }
+
+% Aqui se pueden escribir los nombres de varios autores, separados por la instrucción \and.
+\author{ Gonzalo Beviglia \and Tomás Boccardo \and Damian Manoff \and Diego Montoya \and Federico Quevedo \and Lucas Simonelli} 
+
+
+% Aquí podemos escribir la fecha de realización del trabajo práctico. La fecha actual se escribe con \today. Si no se quiere incluir la fecha, dejar la instrucción en blanco.
+\date{ \today }
+
+	\begin{document}
+		
+		\maketitle
+		\tableofcontents
+		
+		\newpage
+		
+
+\section{Hipótesis y aclaraciones globales}
+\begin{itemize}
+	\item Todos los comandos que seteen variables de entorno deberán correrse de la siguiente forma:
+			
+	\begin{lstlisting}[language=bash] 
+		$ . Comando
+	\end{lstlisting}
+	
+	Esto es necesario debido a que se generarán variables que deben estar disponibles en el entorno actual.
+	
+	\item Los comandos se corren desde el directorio ``grupo4/'', ya que todo el manejo de rutas se hace respecto
+	de la ubicación de los scripts.
+	
+	\item Cada comando cuenta con su archivo de log propio.
+	
+	\item Cada comando debe verificar que las variables de entorno estén correctamente seteadas.	
+	
+	\item El orden de los parámetros que recibe el comando Glog4.sh son ``Mensaje'' [``Tipo''] ``Comando Invocante''
+	
+	\item Al filtrar préstamos en Reporte4.pl se utiliza del archivo maestro aquel registro que tenga el mismo
+	código.
+	
+	\item El archivo de log, en vez de estar separado por -, se separa de una manera que sea amigable para la visualización,
+	cosa de que, complementado con el comando Vlog4, su visualización pueda ser más bella.
+	
+\end{itemize}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%Desarrollo%%%%%%%%%%%%%%%%%
+\section {Problemas relevantes}
+
+	\begin{itemize}
+		\item Un problema que surgió a la hora de realizar el comando Glog4 fue con respecto al tamaño máximo que podía alcanzar este archivo.
+		Hubo un desentendimiento respecto de si la variable LOGSIZE debía ser interpretada como un tamaño en KB o si esta representaba una
+		cantidad máxima de lineas de archivo de log. Se decidió, debido a que en el Instal4 se especificaba que la unidad era en KB, que esta debía
+		ser la unidad a utilizar. Luego, se tuvo que adaptar lo que antes en el Glog4 se hacia con cantidad de lineas, para que sepa trabajar bien con
+		un tamaño en KB.
+		\item Con respecto al comando Mov4, surgió un problema de determinación de lo que representa el directorio destino (o archivo destino) a
+		donde uno quiere mover un archivo. Dado que el comando de Linux `mv' opera tanto `mv directorio/origen.extension otroDir/destino.extension'
+		como `mv directorio/origen.extension otroDir/' se pensó que el Mov4 debía tener el mismo comportamiento. Para facilitar las cosas, se optó por
+		permitir que el comando reciba únicamente archivos origen y destino, y no directorios, debido a que hacia las cosas más sencillas cuando uno
+		queria utilizar el comando para renombrar el archivo.
+		\item Surgió un problema respecto a la interpretación del enunciado del comando Reporte4, ya que al no tener entendimiento acerca de préstamos
+		entre paises, no se entendía bien que registros debían compararse contra cuales. Se tomó una decisión que se documenta en las hipótesis tanto
+		generales como individuales de ese comando.
+		\item Con respecto a la integración, un problema que ocurrió fue la falta de un número significativo de datos de prueba, que se pudieran ir
+		procesando por los distintos comandos. Al ser publicados estos, la integración se desenvolvió de mejor manera.
+		\item Una decisión que se tuvo que tomar fue desde donde se debían correr los scripts. Como hay una diferencia entre comandos que setean
+		variables y otros que no, muchos archivos que no modifican variables se corren utilizando ``./Comando4.sh''. Esto trajo problemas a la hora
+		de integración, ya que todos los comandos se ubicarían en BINDIR. Se optó utilizar esta carpeta contenedor y, a la vez, contar con una copia
+		de los mismos en el directorio de grupo. Esto fue una decisión operativa que facilitó la integración entre módulos. El comportamiento de la
+		ejecución de algunos comandos fuera del directorio en donde estos estaban ubicados era errática y, en algunos momentos, difícil de comprender
+		con las herramientas de `debugging' con las que contábamos.
+		\item Nuevamente con respecto a la integración, un problema que surgió fue el comportamiento de algunos scripts que utilizaban funciones que
+		estaban declaradas en otros módulos. Las funciones eran triviales, como limpiar la pantalla para emprolijar los mensajes mostrados. Al
+		estar esta función declarada en el Instal4, y como en primera instancia la prueba de los scripts se realizaba corriéndolos uno después del
+		otro, no había problema. En cuanto empezamos a experimentar con cerrar la terminal (restaurando de esta manera el entorno), comenzaba a
+		haber mensajes de que la función en cuestión no estaba declarada. La decisión que se tomó fue la de duplicar esta función en el código
+		fuente de los comandos que la invocaban.
+		\item Dado que los scripts eran corridos por terminal para testear los mismos, `debuggearlos' era una tarea engorrosa, casi completamente
+		basada en llamadas al comando `echo'. Esto no es un problema al que le encontramos solución, pero de tener que trabajar en algún otro momento
+		con scripts, un entorno que provea `breakpoints' e investigador de variables sería muy útil. Por las dimensiones de este trabajo práctico se
+		optó por no investigar acerca de tal entorno de desarrollo.
+	\end{itemize}
+
+\newpage
+\section {Archivo readme}
+
+\verbatiminput{../README.txt}
+\newpage
+\section{Listado de comandos y funciones}
+	\subsection{Instal4.sh}
+		\subsubsection{Archivos de input, intermedios y output}
+		\begin{itemize}
+			\item Input: no recibe.
+			\item Output: Instal4.log.
+			\item Intermedios: el log se copia en un dir auxiliar antes de instalar.
+		\end{itemize}
+		\subsubsection{Parametros y opciones}
+		Tiene un parámetro opcional, el directorio donde se realizará la instalación, por defecto, grupo4/
+		\subsubsection{Invocacion manual y/o automatica con ejemplos}
+		\begin{itemize}
+			\item Invocación sin parámetros (instala en ./grupo4/): . Instal4.sh
+			\item Invocación con parámetros (instala en \$DIR): . Instal4.sh \$DIR
+		\end{itemize}
+		\subsubsection{Hipotesis y aclaraciones especificas del comando}
+		\begin{itemize}
+			\item Se eligio permitir elegir el directorio de instalación
+		\end{itemize}
+		
+	\subsection{Inicio4.sh}
+	
+		\subsubsection{Justificacion}
+		Se necesita de este comando para la inicialización del ambiente. Se verifica que la instalación del sistema este completa y se agrega a la variable PATH el archivo en donde se encuentran este comando y los demás que componen al sistema.
+		\subsubsection{Archivos de input, intermedios y output}
+		No recibe archivos de input ni genera archivos intermedios. Escribe en un archivo de log por medio de otro comando. Si este no existe, se lo crea.
+		\subsubsection{Parametros y opciones}
+		No recibe parametros ni opciones.
+		\subsubsection{Invocacion manual y/o automatica con ejemplos}
+		Invocación: ``. Inicio4.sh''
+		\subsubsection{Hipotesis y aclaraciones especificas del comando}
+		Como el ejemplo anterior ilustra, el comando debe ser ejecutado en el entorno actual de la terminal, debido a que setea variables que serán utilizadas por otros comandos. De ser ejecutado en un subentorno (``./Inicio4.sh'') estas variables no podrían ser utilizadas por los otros comandos.
+	
+	\subsection{Reporte4.pl}
+	
+		\subsubsection{Archivos de input, intermedios y output}
+		\begin{itemize}
+			\item Input: PPI.mae, prestamos.$<$pais$>$
+			\item Output: salida de texto del programa, outputReporte.fecha (opcional) 
+		\end{itemize}
+		\subsubsection{Parametros y opciones}
+			\begin{itemize} 
+				\item -c (codigo de pais) - OBLIGATORIO
+				\item -s (codigo del sistema)
+				\item -a (anio)
+				\item -p [periodo (AAAA/MM)]
+				\item -r [Rango de periodos (AAAA/MM-AAAA/MM)]
+				\item -w (graba un reporte de salida)
+				\item -h (imprime menu de ayuda)
+			\end{itemize}
+		\subsubsection{Invocacion manual y/o automatica con ejemplos}
+		\begin{itemize}
+			\item Invocación con parámetros (ejecuta consulta filtrada del pais de código A, año 2012, código de sistema 12):
+\begin{lstlisting}[language=bash] 
+$ ./Reporte4.pl -c A -a 2012 -s 12
+\end{lstlisting} 
+			\item Invocación con el parámetro mínimo [código país] para funcionar (ejecuta consulta filtrada del pais de código A):
+\begin{lstlisting}[language=bash] 
+$ ./Reporte4.pl -c A
+\end{lstlisting} 
+		\end{itemize}
+		\subsubsection{Hipotesis y aclaraciones especificas del comando}
+		\begin{itemize}
+			\item En la consulta filtrada, se compara cada registro del maestro con el de préstamos correspondiente, encontrado según
+			el enunciado indica.
+			\item El recálculo se calcula para cada registro del archivo de préstamos aunque la recomendación sea solo para uno del de préstamos.
+		\end{itemize}
+	
+	\subsection{Glog4.sh}
+	
+		\subsubsection{Justificacion}
+		Se necesita de este comando para escribir y generar los archivos de log que utilizan los demás comandos (menos Instal4, que genera su propio log).
+		\subsubsection{Archivos de input, intermedios y output}
+		No recibe archivos de input ni genera archivos intermedios. Genera un archivo output, el archivo de log, si este no existe aún.
+		\subsubsection{Parametros y opciones}
+		Recibe dos parámetros obligatorios y uno opcional. Los parámetros obligatorios son el mensaje que se va a loggear y el comando que invoca la escritura en archivo de log. El parámetro opcional es la severidad del mensaje a loggear.
+		\subsubsection{Invocacion manual y/o automatica con ejemplos}
+		``./Glog4.sh `Esto es un mensaje' `SEVERE' `Comando'\,''
+		\subsubsection{Hipotesis y aclaraciones especificas del comando}
+		Los parámetros deben ser provistos en el orden ilustrado anteriormente. De no proporcionar tipo de mensaje, la invocación sería la siguiente: ``./Glog4.sh `Esto es un mensaje' `Comando'\,''. Los tipos de mensaje son: MENSAJE, HEADER, ERROR, WARNING y SEVERE. La escritura en los archivos no esta separada por -, sino que se escribe de una manera que sea más amigable a la vista. Por ejemplo: ``~user (2013-05-08 17:27:13)~ MENSAJE ~~~ Usuario ingresa TESPERA=2''
+	
+	\subsection{Interprete.sh}
+	
+		\subsubsection{Justificacion}
+		El propósito del intérprete es traducir los distintos archivos provenientes de los diferentes países, que están en ACEPDIR,llevándolos a un formato estándar para el sistema.
+El hecho de traducir se refiere a interpretar cada campo y transformarlo a un formato que entienda el sistema.
+		\subsubsection{Archivos de input, intermedios y output}
+		El intérprete no recibe archivos de input.
+
+		Los archivos de output del intérprete son:
+			\begin{itemize}
+				\item Archivos de Préstamos Personales por país PROCDIR/PRESTAMOS.pais
+				\item Archivos (duplicados) Rechazados RECHDIR/nombre del archivo
+				\item Archivos Procesados PROCDIR/pais-sistema-año-mes
+				\item Log LOGDIR/Interprete.LOGEXT
+			\end{itemize}			
+		\subsubsection{Parametros y opciones}
+		El intérprete no recibe parémetro alguno, pero obligatoriamente de debe ejecutar luego del instalador ya que necesita las variables de entorno seteadas por el mismo.
+		\subsubsection{Invocacion manual y/o automatica con ejemplos}
+		``./Intérprete.sh 
+		\subsubsection{Hipotesis y aclaraciones especificas del comando}
+	
+	\subsection{Detecta4.sh}
+	
+		\subsubsection{Justificacion}
+		Se necesita este comando para validar los archivos que llegan y llamar al siguiente comando para los archivos validos.
+		\subsubsection{Archivos de input, intermedios y output}
+		\begin{itemize}
+			\item Input: Maestro de Países y Sistemas. Archivos a verificar.
+			\item Output: Archivos aceptados y rechazados. Detecta4.log
+		\end{itemize}
+		\subsubsection{Parametros y opciones}
+		No recibe parametros ni opciones.
+		\subsubsection{Invocacion manual y/o automatica con ejemplos}
+		Invocación: `./Detecta4.sh \& '
+		Se utiliza el `\& ' para que se ejecute en el background, ya que el proceso es de tipo demonio.
+		\subsubsection{Hipotesis y aclaraciones especificas del comando}
+	
+	\subsection{Mov4.sh}
+	
+		\subsubsection{Justificacion}
+		Se necesita de este comando para mover archivos de una ubicación a otra dejando que este se ocupe de las colisiones entre archivos. El comando maneja y soluciona el caso en el que exista un archivo con el nombre del que se está moviendo en el directorio al que se lo quiere mover.
+		\subsubsection{Archivos de input, intermedios y output}
+		No recibe archivos de inputs ni genera intermedios. Se podría decir que al mover el archivo de un directorio al otro se está generando un archivo output.
+		\subsubsection{Parametros y opciones}
+		Recibe dos parámetros obligatorios y uno opcional. Los dos parámetros obligatorios que recibe son ``ruta/origen/origen.extension'' y ``ruta/destino/destino.extension''. El parámetro opcional que recibe es el comando que invoca al Mov4. El comando invocante debe ser pasado sin la extensión ``.sh/.pl''.
+		\subsubsection{Invocacion manual y/o automatica con ejemplos}
+		``./Mov4.sh `ruta/origen/origen.txt' `ruta/destino/destino.txt' `Comando'\,''
+		\subsubsection{Hipotesis y aclaraciones especificas del comando}
+	
+	\subsection{Start4.sh}
+	
+		\subsubsection{Justificacion}
+		Se necesita de este comando para poder iniciar los procesos dentro de un entorno controlado, verificando no iniciarlo si ya se encuentra corriendo.
+		\subsubsection{Archivos de input, intermedios y output}
+		No recibe archivos de inputs ni genera intermedios.
+		\subsubsection{Parametros y opciones}
+		Recibe como parámetro el nombre del proceso que se debe iniciar.
+		\subsubsection{Invocacion manual y/o automatica con ejemplos}
+		``./Start4.sh `nombre del proceso a iniciar' ''
+		\subsubsection{Hipotesis y aclaraciones especificas del comando}
+	
+	\subsection{Stop4.sh}
+	
+		\subsubsection{Justificacion}
+		Se necesita de este comando para poder detener los procesos, verificando su existencia.
+		\subsubsection{Archivos de input, intermedios y output}
+		No recibe archivos de inputs ni genera intermedios.
+		\subsubsection{Parametros y opciones}
+		Recibe como parámetro el nombre del proceso que se debe detener, o su PID, según la opción elegida.
+		-n: Opción para detener el proceso con el nombre del mismo
+		-p: Opción para detener el proceso con el PID  
+		\subsubsection{Invocacion manual y/o automatica con ejemplos}
+		``./Stop4.sh -n `nombre del proceso a detener' ''
+		``./Stop4.sh -p `PID del proceso a detener' ''
+		\subsubsection{Hipotesis y aclaraciones especificas del comando}
+		Si se invoca el comando utilizando ambas opciones, solamente se tendrá en cuenta la primera de ellas
+	
+	\subsection{Vlog4.sh}
+	
+		\subsubsection{Justificacion}
+		Se necesita de este comando para generar una visualización del contenido de los archivos de log. Como estos pueden ser muy extensos, este comando proporciona de una manera cómoda de consultarlos.
+		\subsubsection{Archivos de input, intermedios y output}
+		No recibe archivos de input y no genera archivos intermedios ni archivos output.
+		\subsubsection{Parametros y opciones}
+		Recibe parámetros de tipo ``short options'', cuya descripción se encuentra en la sección ``Codigo fuente de los scripts''.
+		\subsubsection{Invocacion manual y/o automatica con ejemplos}
+		``./Vlog4.sh -s `mensaje buscado' -f `comando' -n `15'\,''
+		\subsubsection{Hipotesis y aclaraciones especificas del comando}
+		El comando provisto no debe contar con la extensión del mismo (``.sh/.pl'').
+	\newpage
+\begin{comment}
+\section{Código fuente de los scripts}
+	\subsection{Instal4.sh}
+		\verbatiminput{../Instal4.sh}
+		\newpage
+	\subsection{Inicio4.sh}
+		\verbatiminput{../Inicio4.sh}
+		\newpage
+	\subsection{Reporte4.pl}
+		\verbatiminput{../Reporte4.pl}
+		\newpage
+	\subsection{Glog4.sh}
+		\verbatiminput{../Glog4.sh}
+		\newpage
+	\subsection{Interprete.sh}
+		\verbatiminput{../Interprete.sh}
+		\newpage
+	\subsection{Detecta4.sh}
+		\verbatiminput{../Detecta4.sh}
+		\newpage
+	\subsection{Mov4.sh}
+		\verbatiminput{../Mov4.sh}
+		\newpage
+	\subsection{Start4.sh}
+		\verbatiminput{../Start4.sh}
+		\newpage
+	\subsection{Stop4.sh}
+		\verbatiminput{../Stop4.sh}
+		\newpage
+	\subsection{Vlog4.sh}
+		\verbatiminput{../Vlog4.sh}
+\end{comment}
+\end {document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
