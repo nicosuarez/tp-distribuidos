@@ -1,0 +1,49 @@
+Ruteo estático
+--------------
+
+Inicio:
+
+  Router>enable
+
+Lista la configuración IP:
+
+  Router#show ip interface brief 
+  Interface                  IP-Address      OK? Method Status
+  Ethernet0/0                unassigned      YES unset  administratively down
+  Ethernet0/1                unassigned      YES unset  administratively down
+  Ethernet0/2                unassigned      YES unset  administratively down
+  Ethernet0/3                unassigned      YES unset  administratively down
+
+Modo configuracion:
+
+  Router#configure terminal
+  Enter configuration commands, one per line.  End with CNTL/Z.
+
+Seleccionar interfaz:
+
+  Router(config)#interface e0/0
+
+Agregar IP en la interfaz y habilitarla:
+
+  Router(config-if)#ip address 10.11.2.5 255.255.255.0
+  Router(config-if)#no shut
+  Router(config-if)#full-duplex
+
+Salir y generar la configuración inicial:
+
+  Router(config-if)#exit
+  Router(config)#exit
+  Router#copy running-config startup-config
+  Destination filename [startup-config]?
+  Building configuration...
+  [OK]
+  Router#
+
+Agregado de Ruta Estática:
+--------------------------
+
+  Router> enable
+  Router# config t
+  Router(config)# ip route network-ip mask next-hop-ip
+  Router(config)# ip route 0.0.0.0 0.0.0.0 default-gateway-ip
+

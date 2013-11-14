@@ -1,0 +1,67 @@
+$TTL	604800
+@	IN	SOA	ns2.charrua root. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	        IN	NS	ns2.charrua
+ns2.charrua	IN	A	10.11.3.68
+
+ftpserver.toba     IN    A    10.34.13.1
+
+; Atacama
+r1.atacama	       IN    A    10.11.3.2
+r2.atacama	       IN    A    10.11.3.3
+
+; Toba
+r6.toba		       IN    A    10.34.13.2
+ftpserver.toba	   IN    A    10.34.13.1
+
+; Charrua
+r6.charrua         IN    A    10.11.3.65
+r7.charrua         IN    A    10.11.3.66
+hostb.charrua      IN    A    10.11.3.67
+ns2.charrua        IN    A    10.11.3.68
+
+; Diaguita
+r1.diaguita        IN    A    10.11.2.2
+r2.diaguita        IN    A    10.11.2.3
+r4.diaguita        IN    A    10.11.2.4
+r5.diaguita        IN    A    10.11.2.5
+r6.diaguita        IN    A    10.11.2.6
+
+; Tehuelche
+r3.tehuelche       IN    A    10.11.3.33
+r4.tehuelche       IN    A    10.11.3.34
+r5.tehuelche       IN    A    10.11.3.35
+r7.tehuelche       IN    A    10.11.3.36
+r8.tehuelche       IN    A    10.11.3.37
+hostc.tehuelche    IN    A    10.11.3.38
+nsroot.tehuelche   IN    A    10.11.3.39
+
+; Wichi
+r8.wichi	   IN    A    10.34.6.177
+
+; Puelche
+r3.puelche	      IN    A    172.3.1.193
+
+; Guarani
+r3.guarani            IN    A    172.3.1.197
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
