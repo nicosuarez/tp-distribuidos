@@ -1,0 +1,5 @@
+Para configurar la maquina que ejecutará GNS3 se debe ejecutar el script "scriptMaquinaGSN3.sh" 
+con permisos de root y de ejcucion. Pasar por parametro el nombre de la interfaz de red a usar (ej eth0), ip para el bridge y mascara en cantidad de bits.
+
+Para borrar la configuracion del script anterior se debe ejecutar el script "scriptMaquinaGSN3Desinstalacion.sh" 
+con permisos de root y de ejcucion. Pasar por parametro el nombre de la interfaz de red a usar (ej eth0), ip y mascara en octetos.

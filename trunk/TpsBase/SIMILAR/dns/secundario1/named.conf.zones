@@ -1,0 +1,48 @@
+// ----------------------- Zones -----------------------
+
+//#######################################################
+//	Zona 	-->   trelew.chubut.dc.fi.uba.ar
+//#######################################################
+
+zone "trelew.chubut.dc.fi.uba.ar" in{
+ type master;
+ file "dns1/trelew.chubut.dc.fi.uba.ar";
+};
+
+//#######################################################
+//	
+//#######################################################
+
+// local host domain (required)
+zone "localhost" in{
+ type master;
+ file "/slave/slave.localhost";
+ allow-update{none;};
+};
+// localhost reverse map
+ zone "0.0.127.IN-ADDR.ARPA" in{
+ type master;
+ file "slave/localhost.rev";
+ allow-update{none;};
+};
+
+//;##########################################################################
+//;Trelew
+//;##########################################################################
+
+//Ariel
+//-----
+
+zone "0/25.27.92.10.in-addr.arpa" in{
+ type master;
+ file "dns1/0.27.92.10.IN-ADDR.ARPA.rev";
+};
+
+//Bernardo
+//-----
+
+zone "0/24.3.24.10.in-addr.arpa" in{
+ type master;
+ file "dns1/0.3.24.10.IN-ADDR.ARPA.rev";
+};
+

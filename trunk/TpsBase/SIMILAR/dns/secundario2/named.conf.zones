@@ -1,0 +1,115 @@
+// ----------------------- Zones -----------------------
+
+//#######################################################
+//	Zona 	-->   puntaindio.chubut.dc.fi.uba.ar
+//#######################################################
+
+zone "puntaindio.chubut.dc.fi.uba.ar" in{
+ type master;
+ file "dns2/puntaindio.chubut.dc.fi.uba.ar";
+};
+
+//#######################################################
+//	Zona 	-->   rionegro.chubut.dc.fi.uba.ar
+//#######################################################
+
+zone "rionegro.chubut.dc.fi.uba.ar" in{
+  type master;
+  file "dns2/rionegro.chubut.dc.fi.uba.ar";
+};
+
+//#######################################################
+//	
+//#######################################################
+
+// local host domain (required)
+zone "localhost" in{
+ type master;
+ file "/slave/slave.localhost";
+ allow-update{none;};
+};
+// localhost reverse map
+ zone "0.0.127.IN-ADDR.ARPA" in{
+ type master;
+ file "slave/localhost.rev";
+ allow-update{none;};
+};
+
+//;##########################################################################
+//;PuntaIndio
+//;##########################################################################
+
+//Diego
+//-----
+
+zone "0/27.1.24.10.in-addr.arpa" in{
+ type master;
+ file "dns2/0.1.24.10.IN-ADDR.ARPA.rev";
+};
+
+//Nestor
+//-----
+
+zone "64/27.1.24.10.in-addr.arpa" in{
+ type master;
+ file "dns2/64.1.24.10.IN-ADDR.ARPA.rev";
+};
+
+//Elio
+//-----
+
+zone "96/28.1.24.10.in-addr.arpa" in{
+ type master;
+ file "dns2/96.1.24.10.IN-ADDR.ARPA.rev";
+};
+
+//Guido
+//-----
+
+zone "128/25.1.24.10.in-addr.arpa" in{
+ type master;
+ file "dns2/128.1.24.10.IN-ADDR.ARPA.rev";
+};
+
+//;##########################################################################
+//;RioNegro
+//;##########################################################################
+
+//Luis
+//-----
+zone "32/27.1.24.10.in-addr.arpa" in{
+ type master;
+ file "dns2/32.1.24.10.IN-ADDR.ARPA.rev";
+};
+
+//Juan
+//-----
+
+zone "112/28.1.24.10.in-addr.arpa" in{
+ type master;
+ file "dns2/112.1.24.10.IN-ADDR.ARPA.rev";
+};
+
+//Ignacio
+//-----
+
+zone "0/24.5.10.10.in-addr.arpa" in{
+ type master;
+ file "dns2/0.5.10.10.IN-ADDR.ARPA.rev";
+};
+
+//Ken
+//-----
+
+zone "136/29.27.92.10.in-addr.arpa" in{
+ type master;
+ file "dns2/136.27.92.10.IN-ADDR.ARPA.rev";
+};
+
+//Hernan
+//-----
+
+zone "64/26.8.168.192.in-addr.arpa" in{
+ type master;
+ file "dns2/64.8.168.192.IN-ADDR.ARPA.rev";
+};

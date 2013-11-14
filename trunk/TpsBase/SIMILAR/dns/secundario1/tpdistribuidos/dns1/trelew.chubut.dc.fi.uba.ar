@@ -1,0 +1,61 @@
+$ORIGIN trelew.chubut.dc.fi.uba.ar.
+$TTL 2d
+; The SOA Resource Record (in the following format:)
+;name [ttl] [class] rr      name-server           e-mail             ( [...] )
+@           IN      SOA     dns1.trelew.chubut.dc.fi.uba.ar.   hostmaster.trelew.chubut.dc.fi.uba.ar.      (
+                        2012041101      ; Serial (usually YYYYMMDDSS): increment after any change
+                                8h      ; Refresh (8 hours)
+                                2h      ; Retry (2 hours)
+                                4w      ; Expire (4 weeks)
+                                3h )    ; NX (3 hours) TTL Negativ Cache
+
+; name server RR for the domain
+                               IN      NS      dns1.trelew.chubut.dc.fi.uba.ar.
+
+dns1		               IN      A       10.10.5.5
+
+localhost                      IN      A       127.0.0.1
+
+
+;##########################################################################
+;Ariel
+;##########################################################################
+
+ariel1                         IN      A       10.92.27.1
+ariel2                         IN      A       10.92.27.2
+ariel3                         IN      A       10.92.27.3
+ariel4                         IN      A       10.92.27.4
+ariel5                         IN      A       10.92.27.5
+ariel6                         IN      A       10.92.27.6
+ariel7                         IN      A       10.92.27.7
+ariel8                         IN      A       10.92.27.8
+ariel9                         IN      A       10.92.27.9
+ariel10                        IN      A       10.92.27.10
+
+ftpserver.ariel1      	       IN    CNAME     ariel1
+r1.ariel2         	       IN    CNAME     ariel2
+r2.ariel3         	       IN    CNAME     ariel3
+r3.ariel4         	       IN    CNAME     ariel4
+r6.ariel5         	       IN    CNAME     ariel5
+hostc.ariel6         	       IN    CNAME     ariel6
+vrrp.ariel7         	       IN    CNAME     ariel7
+
+;##########################################################################
+;Bernardo
+;##########################################################################
+
+bernardo1                         IN      A       10.24.3.1
+bernardo2                         IN      A       10.24.3.2
+bernardo3                         IN      A       10.24.3.3
+bernardo4                         IN      A       10.24.3.4
+bernardo5                         IN      A       10.24.3.5
+bernardo6                         IN      A       10.24.3.6
+bernardo7                         IN      A       10.24.3.7
+bernardo8                         IN      A       10.24.3.8
+
+r2.bernardo1      	          IN    CNAME     bernardo1
+r3.bernardo2      	          IN    CNAME     bernardo2
+r4.bernardo3      	          IN    CNAME     bernardo3
+r5.bernardo4      	          IN    CNAME     bernardo4
+dns2.bernardo5      	          IN    CNAME     bernardo5
+vrrp.bernardo6      	          IN    CNAME     bernardo6
