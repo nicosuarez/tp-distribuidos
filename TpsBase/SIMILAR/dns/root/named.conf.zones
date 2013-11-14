@@ -1,0 +1,57 @@
+// ----------------------- Zones ----------------------- 
+
+zone "." in{
+  type hint;
+  file "root.servers";
+};
+
+
+//#######################################################
+//	Zona 	-->   chubut.dc.fi.uba.ar
+//#######################################################
+
+zone "chubut.dc.fi.uba.ar" in{
+  type master;
+  file "master/chubut.dc.fi.uba.ar";
+};
+
+//Diego - Elio - Guido - Juan - Luis - Nestor
+//-----
+
+zone "1.24.10.in-addr.arpa" in{
+ type master;
+ file "master/1.24.10.IN-ADDR.ARPA.rev";
+};
+
+//Ignacio
+//-----
+
+zone "5.10.10.in-addr.arpa" in{
+ type master;
+ file "master/5.10.10.IN-ADDR.ARPA.rev";
+};
+
+//Ariel - Carlos - Fernando - Ken
+//-----
+
+zone "27.92.10.in-addr.arpa" in{
+ type master;
+ file "master/27.92.10.IN-ADDR.ARPA.rev";
+};
+
+//Hernan
+//-----
+
+zone "8.168.192.in-addr.arpa" in{
+ type master;
+ file "master/8.168.192.IN-ADDR.ARPA.rev";
+};
+
+//Bernardo
+//-----
+
+zone "3.24.10.in-addr.arpa" in{
+ type master;
+ file "master/3.24.10.IN-ADDR.ARPA.rev";
+};
+
