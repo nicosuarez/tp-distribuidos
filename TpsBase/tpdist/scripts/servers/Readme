@@ -1,0 +1,14 @@
+Para configurar los servers, ejecutar primero el archivo correspondiente a cada 
+server (ftp, telnet o web) como root lo cual configura las tablas de ruteo. Pasar
+como parametro el nombre de la interfaz de red a configurar (ej eth0)
+
+Para iniciar o detener los servers usar el archivo servers.sh
+Configurar dentro del archivo servers.sh el password de root 
+
+Se le pasa por parametro: 
+apache (para iniciar / detener el webserver)
+ftp (para iniciar / detener el ftpserver)
+telnet (para iniciar / detener el telnetserver)
+ 
+En caso de no poseer los servers instalados, el script los instala. En el caso de
+producirse una instalacion debera correr el script una segunda vez para levantar el servicio. 

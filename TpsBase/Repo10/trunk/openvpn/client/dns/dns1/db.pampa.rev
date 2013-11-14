@@ -1,0 +1,13 @@
+$TTL	604800
+@	IN	SOA	ns1.quechua.cafayate.salta.dc.fi.uba.ar. root. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+
+@    IN   NS    ns1.quechua.cafayate.salta.dc.fi.uba.ar.
+
+161  IN   PTR   r16.pampa.cafayate.salta.dc.fi.uba.ar.
+

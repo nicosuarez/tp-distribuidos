@@ -1,0 +1,24 @@
+Ruteo RIP
+--------------
+
+Inicio:
+
+  Router>enable
+
+Activar RIP:
+  
+  Router# config t
+  Router(config)# router rip
+  
+Establecer las redes por las cuales se harán los RIP routing updates [1]:
+  
+  Router(config)# network network-ip
+  
+RIP va a enviar updates a las interfaces que estén en *network-ip*.
+
+Indicar que se deben redistribuir las rutas establecidas de forma estática [2]:
+
+  Router(config)# redistribute static
+  
+  [1]: http://www.cisco.com/en/US/docs/ios/iproute_rip/command/reference/irr_cr_book.pdf
+  [2]: http://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a008009487e.shtml

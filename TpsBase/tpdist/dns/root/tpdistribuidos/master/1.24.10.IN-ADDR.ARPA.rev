@@ -1,0 +1,34 @@
+$TTL 2d
+$ORIGIN  1.24.10.in-addr.arpa.  
+@           IN      SOA     dnsroot.chubut.dc.fi.uba.ar.   hostmaster.chubut.dc.fi.uba.ar.      (
+                        2012041101      ; Serial (usually YYYYMMDDSS): increment after any change
+                                8h      ; Refresh (8 hours)
+                                2h      ; Retry (2 hours)
+                                4w      ; Expire (4 weeks)
+                                3h )    ; NX (3 hours) TTL Negativ Cache
+
+				  IN    NS  	  dnsroot.chubut.dc.fi.uba.ar.
+
+;##########################################################################
+;PuntaIndio
+;##########################################################################
+
+0/27			       IN    NS  	  dns2.puntaindio.chubut.dc.fi.uba.ar.
+64/27			       IN    NS  	  dns2.puntaindio.chubut.dc.fi.uba.ar.
+96/28			       IN    NS  	  dns2.puntaindio.chubut.dc.fi.uba.ar.
+128/25			       IN    NS  	  dns2.puntaindio.chubut.dc.fi.uba.ar.
+
+$GENERATE    0-31      $      CNAME	$.0/27
+$GENERATE    64-95     $      CNAME	$.64/27
+$GENERATE    96-111    $      CNAME	$.96/28
+$GENERATE    128-255   $      CNAME	$.128/25
+
+;##########################################################################
+;RioNegro
+;##########################################################################
+
+32/27			       IN    NS  	  dns2.rionegro.chubut.dc.fi.uba.ar.
+112/28			       IN    NS  	  dns2.rionegro.chubut.dc.fi.uba.ar.
+
+$GENERATE    32-63     $      CNAME	$.32/27
+$GENERATE    112-127   $      CNAME	$.112/28

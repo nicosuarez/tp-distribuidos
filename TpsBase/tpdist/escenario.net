@@ -1,0 +1,532 @@
+autostart = False
+version = 0.8.3
+[127.0.0.1:7202]
+    workingdir = /tmp
+    udp = 10200
+    [[3640]]
+        image = /root/ios/IOS/c3640-js-mz.124-10.bin
+        idlepc = 0x604eb190
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R10]]
+        model = 3640
+        console = 2013
+        aux = 2513
+        cnfg = configs/R10.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedG 1
+        slot1 = NM-1FE-TX
+        f1/0 = RedE 3
+        x = 105.595887705
+        y = 167.663996924
+        z = 1.0
+[127.0.0.1:7203]
+    workingdir = /tmp
+    udp = 10300
+    [[3640]]
+        image = /root/ios/IOS/c3640-js-mz.124-10.bin
+        idlepc = 0x604eb190
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R16]]
+        model = 3640
+        console = 2021
+        aux = 2518
+        cnfg = configs/R16.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedL 3
+        slot1 = NM-1FE-TX
+        f1/0 = RedK 1
+        x = -386.833477759
+        y = 521.053823869
+        z = 1.0
+    [[ROUTER R17]]
+        model = 3640
+        console = 2022
+        aux = 2519
+        cnfg = configs/R17.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedN 2
+        slot1 = NM-4T
+        s1/0 = FR2 1
+        x = -463.994949366
+        y = 98.6619048831
+        z = 1.0
+    [[ROUTER R14]]
+        model = 3640
+        console = 2018
+        aux = 2516
+        cnfg = configs/R14.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedI 3
+        slot1 = NM-1FE-TX
+        f1/0 = RedJ 1
+        slot2 = NM-1FE-TX
+        f2/0 = RedL 1
+        slot3 = NM-1FE-TX
+        f3/0 = RedH 2
+        x = 13.1076477382
+        y = 474.769552622
+        z = 1.0
+        hx = 36.7842712474
+        hy = -26.1715728753
+    [[ROUTER R15]]
+        model = 3640
+        console = 2020
+        aux = 2517
+        cnfg = configs/R15.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedL 2
+        slot1 = NM-4T
+        s1/0 = FR5 1
+        x = -596.539105243
+        y = 372.769552622
+        z = 1.0
+    [[ROUTER R12]]
+        model = 3640
+        console = 2014
+        aux = 2514
+        cnfg = configs/R12.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = R11 f1/0
+        slot1 = NM-1FE-TX
+        f1/0 = RedI 1
+        slot2 = NM-1FE-TX
+        f2/0 = Internet f2/0
+        x = 614.414213563
+        y = 415.414213562
+        z = 1.0
+    [[ROUTER R13]]
+        model = 3640
+        console = 2016
+        aux = 2515
+        cnfg = configs/R13.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedI 2
+        slot1 = NM-1FE-TX
+        f1/0 = RedH 1
+        x = 27.3919189856
+        y = 393.455844122
+        z = 1.0
+    [[FRSW FR2]]
+        1:117 = 3:117
+        1:517 = 3:517
+        1:617 = 2:617
+        2:617 = 1:617
+        3:117 = 1:117
+        3:517 = 1:517
+        1 = R17 s1/0
+        2 = FR1 2
+        3 = FR6 1
+        x = -669.264501988
+        y = 100.465512115
+        z = 1.0
+    [[FRSW FR5]]
+        1:115 = 3:115
+        1:517 = 2:517
+        1:615 = 2:615
+        2:517 = 1:517
+        2:615 = 1:615
+        3:115 = 1:115
+        1 = R15 s1/0
+        2 = FR6 2
+        3 = FR4 3
+        x = -898.703102168
+        y = 217.997474683
+        z = 1.0
+    [[ETHSW RedK]]
+        1 = access 1 R16 f1/0
+        x = -269.5
+        y = 565.999999999
+        z = 1.0
+    [[ETHSW RedJ]]
+        1 = access 1 R14 f1/0
+        x = -89.7598846301
+        y = 569.137084989
+        z = 1.0
+    [[ETHSW RedI]]
+        1 = access 1 R12 f1/0
+        2 = access 1 R13 f0/0
+        3 = access 1 R14 f0/0
+        x = 389.744732728
+        y = 437.597979746
+        z = 1.0
+    [[ETHSW RedH]]
+        1 = access 1 R13 f1/0
+        2 = access 1 R14 f3/0
+        x = -109.63499295
+        y = 412.04163056
+        z = 1.0
+    [[ETHSW RedL]]
+        1 = access 1 R14 f2/0
+        2 = access 1 R15 f0/0
+        3 = access 1 R16 f0/0
+        x = -428.505050634
+        y = 448.887301628
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = /tmp
+    udp = 10000
+    [[3640]]
+        image = /root/ios/IOS/c3640-js-mz.124-10.bin
+        idlepc = 0x604eb190
+        ghostios = True
+        chassis = 3640
+    [[FRSW FR3]]
+        1:16 = 2:16
+        1:115 = 2:115
+        1:117 = 2:117
+        2:16 = 1:16
+        2:115 = 1:115
+        2:117 = 1:117
+        1 = R1 s0/0
+        2 = FR4 2
+        x = -912.169047558
+        y = -61.0735931284
+        z = 1.0
+    [[FRSW FR6]]
+        1:117 = 4:117
+        1:517 = 2:517
+        2:517 = 1:517
+        2:615 = 3:615
+        3:16 = 4:16
+        3:615 = 2:615
+        4:16 = 3:16
+        4:117 = 1:117
+        1 = FR2 3
+        2 = FR5 2
+        3 = FR1 3
+        4 = FR4 1
+        x = -788.980230741
+        y = 69.0857864376
+        z = 1.0
+    [[FRSW FR4]]
+        1:16 = 2:16
+        1:117 = 2:117
+        2:16 = 1:16
+        2:115 = 3:115
+        2:117 = 1:117
+        3:115 = 2:115
+        1 = FR6 4
+        2 = FR3 2
+        3 = FR5 3
+        x = -968.318325857
+        y = 70.3406204335
+        z = 1.0
+        hx = 23.6658752485
+        hy = -30.6568542495
+    [[ROUTER R4]]
+        model = 3640
+        console = 2017
+        aux = 2106
+        cnfg = configs/R4.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedB 4
+        slot1 = NM-1FE-TX
+        f1/0 = R7 f0/0
+        x = 13.7329726954
+        y = -182.306565824
+        z = 1.0
+        hx = 60.0121933087
+        hy = -12.2720779387
+    [[ROUTER R5]]
+        model = 3640
+        console = 2019
+        aux = 2107
+        cnfg = configs/R5.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedB 5
+        slot1 = NM-1FE-TX
+        f1/0 = Internet f0/0
+        slot2 = NM-1FE-TX
+        x = 398.119841047
+        y = -263.470129472
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3640
+        console = 15000
+        aux = 2108
+        cnfg = configs/R1.cfg
+        slot0 = NM-4T
+        s0/0 = FR3 1
+        slot1 = NM-1FE-TX
+        f1/0 = RedA 1
+        x = -687.962553522
+        y = -331.060966544
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3640
+        console = 2012
+        aux = 2109
+        cnfg = configs/R2.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedB 1
+        slot1 = NM-1FE-TX
+        f1/0 = RedA 2
+        x = -149.659379566
+        y = -228.060966544
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3640
+        console = 2015
+        aux = 2110
+        cnfg = configs/R3.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedA 4
+        slot1 = NM-1FE-TX
+        f1/0 = RedB 2
+        x = -160.0
+        y = -354.0
+        z = 1.0
+    [[ETHSW RedB]]
+        1 = access 1 R2 f0/0
+        2 = access 1 R3 f1/0
+        4 = access 1 R4 f0/0
+        5 = access 1 R5 f0/0
+        x = 79.4999999997
+        y = -278.0
+        z = 1.0
+    [[ETHSW RedA]]
+        1 = access 1 R1 f1/0
+        2 = access 1 R2 f1/0
+        4 = access 1 R3 f0/0
+        5 = access 1 R6 f0/0
+        x = -329.673664916
+        y = -286.872149726
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = /tmp
+    udp = 10100
+    [[3640]]
+        image = /root/ios/IOS/c3640-js-mz.124-10.bin
+        idlepc = 0x604eb190
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R11]]
+        model = 3640
+        console = 2011
+        aux = 2112
+        cnfg = configs/R11.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedG 2
+        slot1 = NM-1FE-TX
+        f1/0 = R12 f0/0
+        slot2 = NM-1FE-TX
+        f2/0 = RedN 1
+        x = -8.54624791937
+        y = 240.558441227
+        z = 1.0
+        hx = 63.997474683
+        hy = -9.44365081393
+    [[FRSW FR1]]
+        1:16 = 3:16
+        1:615 = 3:615
+        1:617 = 2:617
+        2:617 = 1:617
+        3:16 = 1:16
+        3:615 = 1:615
+        1 = R6 s1/0
+        2 = FR2 2
+        3 = FR6 3
+        x = -793.867532368
+        y = -50.4461761309
+        z = 1.0
+    [[ROUTER R6]]
+        model = 3640
+        console = 2006
+        aux = 2105
+        cnfg = configs/R6.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedA 5
+        slot1 = NM-4T
+        s1/0 = FR1 1
+        x = -549.281312654
+        y = -239.13708499
+        z = 1.0
+    [[ROUTER R7]]
+        model = 3640
+        console = 2007
+        aux = 2111
+        cnfg = configs/R7.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = R4 f1/0
+        slot1 = NM-1FE-TX
+        f1/0 = RedD 1
+        slot2 = NM-1FE-TX
+        f2/0 = RedG 3
+        x = -25.8599564172
+        y = -33.7228714273
+        z = 1.0
+    [[ROUTER R8]]
+        model = 3640
+        console = 2008
+        aux = 2113
+        cnfg = configs/R8.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedD 3
+        slot1 = NM-1FE-TX
+        f1/0 = Internet f1/0
+        x = 410.859956417
+        y = 123.497474683
+        z = 1.0
+    [[ROUTER R9]]
+        model = 3640
+        console = 2009
+        aux = 2114
+        cnfg = configs/R9.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = RedD 2
+        slot1 = NM-1FE-TX
+        f1/0 = RedE 1
+        x = 171.201010127
+        y = 122.568542495
+        z = 1.0
+        hx = 44.4558441227
+        hy = -19.3431457505
+    [[ETHSW RedG]]
+        1 = access 1 R10 f0/0
+        2 = access 1 R11 f0/0
+        3 = access 1 R7 f2/0
+        x = -17.6980515335
+        y = 133.556349186
+        z = 1.0
+    [[ETHSW RedE]]
+        1 = access 1 R9 f1/0
+        3 = access 1 R10 f1/0
+        x = 211.428932188
+        y = 202.735064736
+        z = 1.0
+        hx = 10.0
+        hy = -23.0
+    [[ETHSW RedD]]
+        1 = access 1 R7 f1/0
+        2 = access 1 R9 f0/0
+        3 = access 1 R8 f0/0
+        x = 302.298989873
+        y = 131.330952442
+        z = 1.0
+    [[ETHSW RedN]]
+        1 = access 1 R11 f2/0
+        2 = access 1 R17 f0/0
+        x = -365.5
+        y = 192.0
+        z = 1.0
+[127.0.0.1:7204]
+    workingdir = /tmp
+    udp = 10400
+    [[3640]]
+        image = /root/ios/IOS/c3640-js-mz.124-10.bin
+        idlepc = 0x604eb190
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER Internet]]
+        model = 3640
+        console = 2023
+        aux = 2520
+        cnfg = configs/Internet.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = R5 f1/0
+        slot1 = NM-1FE-TX
+        f1/0 = R8 f1/0
+        slot2 = NM-1FE-TX
+        f2/0 = R12 f2/0
+        x = 691.101730551
+        y = 81.9066376111
+        z = 1.0
+        hx = 7.89949493659
+        hy = -25.0
+[GNS3-DATA]
+    configs = configs
+    m11 = 0.500000000001
+    m22 = 0.500000000001
+    [[NOTE 1]]
+        text = "Punta Indio"
+        x = 109.019335984
+        y = -34.6421356238
+    [[NOTE 2]]
+        text = "Frame Relay"
+        x = -763.675323681
+        y = 182.661471607
+    [[NOTE 3]]
+        text = "Trelew"
+        x = 90.0142853505
+        y = -444.5
+    [[NOTE 4]]
+        text = "Río Negro"
+        x = 93.0580079521
+        y = 318.425973595
+    [[Cloud FTPServer]]
+        x = -383.499999999
+        y = -201.0
+        z = 1.0
+    [[Cloud DNSroot]]
+        x = -223.5
+        y = -11.0
+        z = 1.0
+    [[Cloud DNS_2]]
+        x = 144.5
+        y = -384.999999999
+        z = 1.0
+    [[Cloud Host_A]]
+        x = 206.499999999
+        y = 4.99999999992
+        z = 1.0
+    [[Cloud Host_C]]
+        x = -473.499999999
+        y = -390.999999999
+        z = 1.0
+    [[Cloud Host_B]]
+        x = 469.2148622
+        y = 513.7148622
+        z = 1.0
+    [[Cloud WebServer]]
+        x = -335.499999999
+        y = 356.999999999
+        z = 1.0
+    [[Cloud TelServer]]
+        x = -231.5
+        y = 133.0
+        z = 1.0
+    [[Cloud DNS_1]]
+        x = 226.499999999
+        y = 548.999999999
+        z = 1.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -757.999999998
+        y = 311.999999999
+        width = 1564.0
+        height = 327.999999999
+        fill_color = "#ffaaff"
+        border_style = 3
+        z = -1.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -755.999999998
+        y = -453.999999999
+        width = 1302.0
+        height = 331.999999999
+        fill_color = "#ffff7f"
+        border_style = 3
+        z = -1.0
+    [[SHAPE 3]]
+        type = ellipse
+        x = -517.999999999
+        y = -53.9999999999
+        width = 1026.0
+        height = 351.999999999
+        fill_color = "#aaaaff"
+        border_style = 3
+        z = -1.0
+    [[SHAPE 4]]
+        type = ellipse
+        x = -1026.71904628
+        y = -107.48023074
+        width = 435.577777211
+        height = 398.808224589
+        fill_color = "#f0c3bb"
+        border_style = 3
+        z = -2.0

@@ -1,0 +1,14 @@
+$TTL	604800
+@	IN	SOA	ns2.charrua.oran.salta.dc.fi.uba.ar. root. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+
+@    IN    NS      ns2.charrua.oran.salta.dc.fi.uba.ar.
+
+177  IN    PTR     r8.wichi.oran.salta.dc.fi.uba.ar.
+178  IN    PTR     r9.wichi.sancarlos.salta.dc.fi.uba.ar.
+
