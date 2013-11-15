@@ -11,8 +11,8 @@ autostart = False
     [[ETHSW SWDerbi]]
         1 = access 1 R13 e0/1
         2 = access 1 R14 e0/2
-        x = -303.500000001
-        y = 124.0
+        x = 19.7994231488
+        y = 155.313708499
     [[ROUTER Internet]]
         model = 3640
         console = 2023
@@ -23,8 +23,8 @@ autostart = False
         e0/1 = R5 e0/1
         e0/2 = R12 e0/0
         symbol = cloud
-        x = 336.109739779
-        y = -262.416305603
+        x = 749.918830921
+        y = -86.8528137416
     [[ROUTER R17]]
         model = 3640
         console = 2036
@@ -32,9 +32,10 @@ autostart = False
         cnfg = configs/R17.cfg
         slot0 = NM-4E
         e0/0 = SWGilera 3
-        e0/1 = SW2 e0/2
-        x = -703.337228565
-        y = -24.8284271247
+        slot1 = NM-4T
+        s1/0 = SW2 s1/0
+        x = -111.337228564
+        y = -4.82842712466
     [[ROUTER R12]]
         model = 3640
         console = 2032
@@ -44,8 +45,8 @@ autostart = False
         e0/0 = Internet e0/2
         e0/1 = R11 e0/1
         e0/2 = SWHarley 2
-        x = 182.798989873
-        y = 103.036579926
+        x = 506.098413023
+        y = 134.350288425
     [[ROUTER R13]]
         model = 3640
         console = 2034
@@ -54,8 +55,8 @@ autostart = False
         slot0 = NM-4E
         e0/0 = SWHarley 1
         e0/1 = SWDerbi 1
-        x = -166.923881554
-        y = 149.521861301
+        x = 156.375541596
+        y = 180.8355698
     [[ROUTER R10]]
         model = 3640
         console = 2028
@@ -63,8 +64,8 @@ autostart = False
         cnfg = configs/R10.cfg
         slot0 = NM-4E
         e0/0 = SWGilera 1
-        x = -430.394011027
-        y = -201.605122421
+        x = 161.605988974
+        y = -181.605122421
     [[ROUTER R11]]
         model = 3640
         console = 2030
@@ -73,21 +74,21 @@ autostart = False
         slot0 = NM-4E
         e0/0 = SWGilera 2
         e0/1 = R12 e0/1
-        x = -444.536146651
-        y = -47.4558441227
+        x = 147.46385335
+        y = -27.4558441227
     [[ETHSW SWHarley]]
         1 = access 1 R13 e0/0
         2 = access 1 R12 e0/2
         3 = access 1 R14 e0/0
-        x = 46.5243866176
-        y = 163.605122421
+        x = 369.823809767
+        y = 194.91883092
     [[ETHSW SWGilera]]
         1 = access 1 R10 e0/0
         2 = access 1 R11 e0/0
         3 = access 1 R17 e0/0
         4 = access 1 R7 e0/2
-        x = -630.883909759
-        y = -133.379725677
+        x = -38.8839097577
+        y = -113.379725677
 [127.0.0.1:7203]
     workingdir = /tmp
     udp = 10301
@@ -97,78 +98,90 @@ autostart = False
         sparsemem = True
         ghostios = True
         chassis = 3640
-    [[ROUTER SW5]]
-        model = 3640
-        console = 2026
-        aux = 2526
-        cnfg = configs/SW5.cfg
-        slot0 = NM-4E
-        e0/0 = SW4 e0/2
-        e0/1 = SW6 e0/3
-        e0/2 = R15 e0/1
-        symbol = frame_relay_switch
-        x = -773.703535445
-        y = 294.660425588
     [[ROUTER SW1]]
         model = 3640
         console = 2021
         aux = 2521
         cnfg = configs/SW1.cfg
-        slot0 = NM-4E
-        e0/0 = SW6 e0/0
-        e0/1 = SW2 e0/0
-        e0/2 = R6 e0/1
+        slot1 = NM-4T
+        s1/0 = R6 s1/0
+        s1/1 = SW6 s1/2
+        s1/2 = SW2 s1/1
         symbol = frame_relay_switch
-        x = -702.038059224
-        y = 108.928932188
+        x = -499.230447379
+        y = -178.363961031
     [[ROUTER SW3]]
         model = 3640
         console = 2024
         aux = 2524
         cnfg = configs/SW3.cfg
-        slot0 = NM-4E
-        e0/0 = SW4 e0/0
-        e0/1 = R1 e0/1
+        slot1 = NM-4T
+        s1/0 = R1 s1/0
+        s1/1 = SW4 s1/0
+        s1/2 = SW4 s1/1
+        s1/3 = SW4 s1/2
         symbol = frame_relay_switch
-        x = -777.145706963
-        y = 88.1227996402
+        x = -657.802561212
+        y = -249.220346111
     [[ROUTER SW2]]
         model = 3640
         console = 2020
         aux = 2520
         cnfg = configs/SW2.cfg
-        slot0 = NM-4E
-        e0/0 = SW1 e0/1
-        e0/1 = SW6 e0/1
-        e0/2 = R17 e0/1
+        slot1 = NM-4T
+        s1/0 = R17 s1/0
+        s1/1 = SW1 s1/2
+        s1/2 = SW6 s1/3
+        s1/3 = SW6 s2/0
         symbol = frame_relay_switch
-        x = -656.101984361
-        y = 206.710678119
+        x = -463.75883861
+        y = 5.36753236805
+    [[ROUTER SW5]]
+        model = 3640
+        console = 2026
+        aux = 2526
+        cnfg = configs/SW5.cfg
+        slot1 = NM-4T
+        s1/0 = R15 s1/0
+        s1/1 = SW4 s2/1
+        s1/2 = SW6 s2/1
+        s1/3 = SW6 s2/2
+        symbol = frame_relay_switch
+        x = -589.360389694
+        y = 139.317279837
     [[ROUTER SW4]]
         model = 3640
         console = 2027
         aux = 2527
         cnfg = configs/SW4.cfg
-        slot0 = NM-4E
-        e0/0 = SW3 e0/0
-        e0/1 = SW6 e0/2
-        e0/2 = SW5 e0/0
+        slot1 = NM-4T
+        s1/0 = SW3 s1/1
+        s1/1 = SW3 s1/2
+        s1/2 = SW3 s1/3
+        s1/3 = SW6 s1/0
+        slot2 = NM-4T
+        s2/0 = SW6 s1/1
+        s2/1 = SW5 s1/1
         symbol = frame_relay_switch
-        x = -849.82694783
-        y = 217.062445841
+        x = -749.483802079
+        y = -31.2806999101
     [[ROUTER SW6]]
         model = 3640
         console = 2028
         aux = 2528
         cnfg = configs/SW6.cfg
-        slot0 = NM-4E
-        e0/0 = SW1 e0/0
-        e0/1 = SW2 e0/1
-        e0/2 = SW4 e0/1
-        e0/3 = SW5 e0/1
+        slot1 = NM-4T
+        s1/0 = SW4 s1/3
+        s1/1 = SW4 s2/0
+        s1/2 = SW1 s1/1
+        s1/3 = SW2 s1/2
+        slot2 = NM-4T
+        s2/0 = SW2 s1/3
+        s2/1 = SW5 s1/2
+        s2/2 = SW5 s1/3
         symbol = frame_relay_switch
-        x = -753.544155879
-        y = 196.369011665
+        x = -591.201010128
+        y = -28.974134086
 [127.0.0.1:7200]
     workingdir = /tmp
     udp = 10001
@@ -183,9 +196,10 @@ autostart = False
         aux = 2504
         slot0 = NM-4E
         e0/0 = SWHonda 3
-        e0/1 = SW1 e0/2
-        x = -528.421356237
-        y = -330.597979746
+        slot1 = NM-4T
+        s1/0 = SW1 s1/0
+        x = 9.838528394
+        y = -273.828427124
         z = 1.0
     [[ROUTER R1]]
         model = 3640
@@ -194,9 +208,10 @@ autostart = False
         cnfg = configs/R1.cfg
         slot0 = NM-4E
         e0/0 = SWHonda 1
-        e0/1 = SW3 e0/1
-        x = -829.529003976
-        y = -405.546247918
+        slot1 = NM-4T
+        s1/0 = SW3 s1/0
+        x = -236.529003975
+        y = -385.546247918
         z = 1.0
     [[ROUTER R2]]
         model = 3640
@@ -206,8 +221,8 @@ autostart = False
         slot0 = NM-4E
         e0/0 = SWHonda 4
         e0/1 = SWZanella 4
-        x = -450.053823869
-        y = -575.63160108
+        x = 136.289321883
+        y = -357.641702347
         z = 1.0
     [[ROUTER R3]]
         model = 3640
@@ -217,16 +232,16 @@ autostart = False
         slot0 = NM-4E
         e0/0 = SWHonda 2
         e0/1 = SWZanella 2
-        x = -441.960461481
-        y = -667.418397644
+        x = 138.725830021
+        y = -457.913780286
         z = 1.0
     [[ETHSW SWHonda]]
         1 = access 1 R1 e0/0
         2 = access 1 R3 e0/0
         3 = access 1 R6 e0/0
         4 = access 1 R2 e0/0
-        x = -676.171139599
-        y = -515.582827845
+        x = -72.8574310987
+        y = -424.872149726
         z = 1.0
 [127.0.0.1:7201]
     workingdir = /tmp
@@ -237,16 +252,12 @@ autostart = False
         sparsemem = True
         ghostios = True
         chassis = 3640
-    [[ROUTER R4]]
-        model = 3640
-        console = 2013
-        aux = 2513
-        cnfg = configs/R4.cfg
-        slot0 = NM-4E
-        e0/0 = SWZanella 1
-        e0/1 = R7 e0/0
-        x = -261.30151519
-        y = -366.149278299
+    [[ETHSW SWKawasaki]]
+        1 = access 1 R16 e0/0
+        2 = access 1 R15 e0/0
+        3 = access 1 R14 e0/1
+        x = 47.3141417758
+        y = 256.897402896
     [[ROUTER R16]]
         model = 3640
         console = 2027
@@ -254,8 +265,8 @@ autostart = False
         cnfg = configs/R16.cfg
         slot0 = NM-4E
         e0/0 = SWKawasaki 1
-        x = -403.060099992
-        y = 173.587878479
+        x = -79.7606768422
+        y = 204.901586978
     [[ROUTER R14]]
         model = 3640
         console = 2025
@@ -265,8 +276,8 @@ autostart = False
         e0/0 = SWHarley 3
         e0/1 = SWKawasaki 3
         e0/2 = SWDerbi 2
-        x = -127.305699272
-        y = 224.984848098
+        x = 195.993723878
+        y = 256.298556597
     [[ROUTER R15]]
         model = 3640
         console = 2026
@@ -274,21 +285,26 @@ autostart = False
         cnfg = configs/R15.cfg
         slot0 = NM-4E
         e0/0 = SWKawasaki 2
-        e0/1 = SW5 e0/2
-        x = -477.528750168
-        y = 317.272690684
+        slot1 = NM-4T
+        s1/0 = SW5 s1/0
+        x = -154.229327018
+        y = 348.586399183
     [[ETHSW SWAzel]]
         1 = access 1 R7 e0/1
         2 = access 1 R9 e0/0
         3 = access 1 R8 e0/0
-        x = -151.465512115
-        y = -106.509667992
-    [[ETHSW SWKawasaki]]
-        1 = access 1 R16 e0/0
-        2 = access 1 R15 e0/0
-        3 = access 1 R14 e0/1
-        x = -275.985281374
-        y = 225.583694397
+        x = 378.309091142
+        y = -72.3675323682
+    [[ROUTER R4]]
+        model = 3640
+        console = 2013
+        aux = 2513
+        cnfg = configs/R4.cfg
+        slot0 = NM-4E
+        e0/0 = SWZanella 1
+        e0/1 = R7 e0/0
+        x = 330.698484811
+        y = -346.149278299
     [[ROUTER R5]]
         model = 3640
         console = 2011
@@ -297,8 +313,8 @@ autostart = False
         slot0 = NM-4E
         e0/0 = SWZanella 3
         e0/1 = Internet e0/1
-        x = 59.7249634685
-        y = -405.747258045
+        x = 575.357431101
+        y = -312.208152801
     [[ROUTER R7]]
         model = 3640
         console = 2015
@@ -308,8 +324,8 @@ autostart = False
         e0/0 = R4 e0/1
         e0/1 = SWAzel 1
         e0/2 = SWGilera 4
-        x = -345.541197284
-        y = -181.806132548
+        x = 246.458802717
+        y = -161.806132548
     [[ROUTER R8]]
         model = 3640
         console = 2018
@@ -318,8 +334,8 @@ autostart = False
         slot0 = NM-4E
         e0/0 = SWAzel 3
         e0/1 = Internet e0/0
-        x = 10.8406204336
-        y = -173.320851174
+        x = 602.840620435
+        y = -153.320851174
     [[ROUTER R9]]
         model = 3640
         console = 2020
@@ -327,72 +343,504 @@ autostart = False
         cnfg = configs/R9.cfg
         slot0 = NM-4E
         e0/0 = SWAzel 2
-        x = -399.281312655
-        y = -111.09545443
+        x = 192.718687346
+        y = -91.09545443
     [[ETHSW SWZanella]]
         1 = access 1 R4 e0/0
         2 = access 1 R3 e0/1
         3 = access 1 R5 e0/0
         4 = access 1 R2 e0/1
-        x = -102.58116908
-        y = -556.724963469
+        x = 466.791413923
+        y = -400.960461481
 [GNS3-DATA]
     configs = configs
-    m11 = 0.707106781185
-    m22 = 0.707106781185
-    [[Cloud HostB]]
-        x = -299.5
-        y = 44.0000000002
-    [[Cloud AP]]
-        x = -333.428932188
-        y = 276.939033456
+    m11 = 0.499999999999
+    m22 = 0.499999999999
+    [[NOTE 1]]
+        text = 2
+        x = 69.353024362
+        y = -5.30663609181
+        interface = SWHonda 2
+    [[NOTE 2]]
+        text = 4
+        x = 74.3804240235
+        y = 6.60252013818
+        interface = SWHonda 4
+    [[NOTE 3]]
+        text = 3
+        x = 59.714033654
+        y = 47.8383506828
+        interface = SWHonda 3
+    [[NOTE 4]]
+        text = 1
+        x = 3.48940454196
+        y = 39.985866222
+        interface = SWHonda 1
+    [[NOTE 5]]
+        text = e0/1
+        x = 71.2468548892
+        y = 33.712305114
+        interface = R3 e0/1
+    [[NOTE 6]]
+        text = e0/0
+        x = -0.853024361959
+        y = 43.3066360918
+        interface = R3 e0/0
+    [[NOTE 7]]
+        text = e0/1
+        x = 72.9728265188
+        y = 23.4741574209
+        interface = R2 e0/1
+    [[NOTE 8]]
+        text = e0/0
+        x = -5.88042402349
+        y = 31.3974798618
+        interface = R2 e0/0
+    [[NOTE 9]]
+        text = e0/0
+        x = 65.010595458
+        y = -1.98586622204
+        interface = R1 e0/0
+    [[NOTE 10]]
+        text = s1/0
+        x = -2.37640005552
+        y = 40.6684310833
+        interface = R1 s1/0
+    [[NOTE 11]]
+        text = e0/0
+        x = 8.78596634596
+        y = -9.8383506828
+        interface = R6 e0/0
+    [[NOTE 12]]
+        text = s1/0
+        x = -5.49656853806
+        y = 32.8634345763
+        interface = R6 s1/0
+    [[NOTE 13]]
+        text = s2/2
+        x = 25.3843616238
+        y = 63.2553866753
+        interface = SW6 s2/2
+    [[NOTE 14]]
+        text = s2/0
+        x = 66.4857192291
+        y = 23.6840098083
+        interface = SW6 s2/0
+    [[NOTE 15]]
+        text = s2/1
+        x = 30.3840626001
+        y = 63.2007044335
+        interface = SW6 s2/1
+    [[NOTE 16]]
+        text = s1/3
+        x = 65.1847811961
+        y = 28.5118002174
+        interface = SW6 s1/3
+    [[NOTE 17]]
+        text = s1/2
+        x = 43.8117945729
+        y = -12.0623140349
+        interface = SW6 s1/2
+    [[NOTE 18]]
+        text = s1/1
+        x = -14.2149306146
+        y = 22.6154014158
+        interface = SW6 s1/1
+    [[NOTE 19]]
+        text = s1/0
+        x = -14.2877850585
+        y = 27.6148706107
+        interface = SW6 s1/0
+    [[NOTE 20]]
+        text = s2/1
+        x = 55.196778106
+        y = 50.2974134969
+        interface = SW4 s2/1
+    [[NOTE 21]]
+        text = s2/0
+        x = 65.3606395023
+        y = 14.3856601945
+        interface = SW4 s2/0
+    [[NOTE 22]]
+        text = s1/2
+        x = 48.9484719436
+        y = -12.2312008581
+        interface = SW4 s1/2
+    [[NOTE 23]]
+        text = s1/3
+        x = 65.2877850585
+        y = 19.3851293893
+        interface = SW4 s1/3
+    [[NOTE 24]]
+        text = s1/1
+        x = 40.7000313365
+        y = -14.3492700113
+        interface = SW4 s1/1
+    [[NOTE 25]]
+        text = s1/0
+        x = 44.82425164
+        y = -11.5224684817
+        interface = SW4 s1/0
+    [[NOTE 26]]
+        text = s1/3
+        x = 15.6162364236
+        y = -16.1460221918
+        interface = SW5 s1/3
+    [[NOTE 27]]
+        text = s1/2
+        x = 20.6159373999
+        y = -16.2007044335
+        interface = SW5 s1/2
+    [[NOTE 28]]
+        text = s1/1
+        x = -4.19677810603
+        y = -3.29741349685
+        interface = SW5 s1/1
+    [[NOTE 29]]
+        text = s1/0
+        x = 64.3389497763
+        y = 33.0674437691
+        interface = SW5 s1/0
+    [[NOTE 30]]
+        text = s1/3
+        x = -12.883843163
+        y = 13.6604093735
+        interface = SW2 s1/3
+    [[NOTE 31]]
+        text = s1/1
+        x = 14.4082193159
+        y = -14.9313986378
+        interface = SW2 s1/1
+    [[NOTE 32]]
+        text = s1/2
+        x = -14.1847811961
+        y = 18.4881997826
+        interface = SW2 s1/2
+    [[NOTE 33]]
+        text = s1/0
+        x = 65.3450180148
+        y = 19.9822536478
+        interface = SW2 s1/0
+    [[NOTE 34]]
+        text = s1/3
+        x = 10.2999686635
+        y = 61.3492700113
+        interface = SW3 s1/3
+    [[NOTE 35]]
+        text = s1/2
+        x = -17.7474618168
+        y = 47.9174923591
+        interface = SW3 s1/2
+    [[NOTE 36]]
+        text = s1/0
+        x = 60.8764000555
+        y = 4.8315689167
+        interface = SW3 s1/0
+    [[NOTE 37]]
+        text = s1/1
+        x = 6.17574835998
+        y = 58.5224684817
+        interface = SW3 s1/1
+    [[NOTE 38]]
+        text = s1/2
+        x = 36.5917806841
+        y = 61.9313986378
+        interface = SW1 s1/2
+    [[NOTE 39]]
+        text = s1/1
+        x = 7.18820542708
+        y = 59.0623140349
+        interface = SW1 s1/1
+    [[NOTE 40]]
+        text = s1/0
+        x = 63.9965685381
+        y = 12.6365654237
+        interface = SW1 s1/0
+    [[NOTE 41]]
+        text = 3
+        x = 64.0356719831
+        y = 44.0306158418
+        interface = SWZanella 3
+    [[NOTE 42]]
+        text = 2
+        x = -2.74685488923
+        y = 4.28769488604
+        interface = SWZanella 2
+    [[NOTE 43]]
+        text = 4
+        x = -4.47282651875
+        y = 14.5258425791
+        interface = SWZanella 4
+    [[NOTE 44]]
+        text = 1
+        x = 10.1341556304
+        y = 46.9285295385
+        interface = SWZanella 1
+    [[NOTE 45]]
+        text = 4
+        x = 75.0574541147
+        y = 10.0663818828
+        interface = SWGilera 4
+    [[NOTE 46]]
+        text = 2
+        x = 71.27708764
+        y = 33.88854382
+        interface = SWGilera 2
+    [[NOTE 47]]
+        text = 1
+        x = 73.6597486761
+        y = 4.00693613044
+        interface = SWGilera 1
+    [[NOTE 48]]
+        text = 3
+        x = 13.5988930753
+        y = 49.4715030358
+        interface = SWGilera 3
+    [[NOTE 49]]
+        text = 2
+        x = 72.5371341044
+        y = 0.892031991968
+        interface = SWHarley 2
+    [[NOTE 50]]
+        text = 3
+        x = -1.8649426541
+        y = 30.2779921717
+        interface = SWHarley 3
+    [[NOTE 51]]
+        text = 1
+        x = -4.47200711359
+        y = 14.5037890152
+        interface = SWHarley 1
+    [[NOTE 52]]
+        text = e0/0
+        x = 72.9993616291
+        y = 21.7740149061
+        interface = R9 e0/0
+    [[NOTE 53]]
+        text = e0/1
+        x = 72.1875255459
+        y = 13.9789126929
+        interface = R8 e0/1
+    [[NOTE 54]]
+        text = e0/0
+        x = -77.9238531145
+        y = 101.279878369
+        interface = R8 e0/0
+    [[NOTE 55]]
+        text = e0/1
+        x = 70.7246211362
+        y = 35.2986074509
+        interface = R7 e0/1
+    [[NOTE 56]]
+        text = e0/0
+        x = 49.6252529706
+        y = -14.381327129
+        interface = R7 e0/0
+    [[NOTE 57]]
+        text = e0/2
+        x = -6.55745411474
+        y = 27.9336181172
+        interface = R7 e0/2
+    [[NOTE 58]]
+        text = e0/0
+        x = 4.4643280169
+        y = -6.03061584185
+        interface = R5 e0/0
+    [[NOTE 59]]
+        text = e0/1
+        x = 69.0021554279
+        y = 39.4311446712
+        interface = R5 e0/1
+    [[NOTE 60]]
+        text = e0/1
+        x = 16.3747470294
+        y = 58.381327129
+        interface = R4 e0/1
+    [[NOTE 61]]
+        text = e0/0
+        x = 58.3658443696
+        y = -8.92852953853
+        interface = R4 e0/0
+    [[NOTE 62]]
+        text = 2
+        x = -4.49936162912
+        y = 16.2259850939
+        interface = SWAzel 2
+    [[NOTE 63]]
+        text = 3
+        x = 72.884747871
+        y = 1.77394550047
+        interface = SWAzel 3
+    [[NOTE 64]]
+        text = 1
+        x = -2.22462113617
+        y = 2.70139254912
+        interface = SWAzel 1
+    [[NOTE 65]]
+        text = e0/1
+        x = 77.5533030203
+        y = 51.1299208567
+        interface = R11 e0/1
+    [[NOTE 66]]
+        text = e0/0
+        x = -2.77708763997
+        y = 4.11145617995
+        interface = R11 e0/0
+    [[NOTE 67]]
+        text = e0/0
+        x = -5.15974867607
+        y = 33.9930638696
+        interface = R10 e0/0
+    [[NOTE 68]]
+        text = e0/1
+        x = -5.93833466437
+        y = 12.8454331853
+        interface = R13 e0/1
+    [[NOTE 69]]
+        text = e0/0
+        x = 72.9720071136
+        y = 23.4962109848
+        interface = R13 e0/0
+    [[NOTE 70]]
+        text = e0/2
+        x = -4.03713410441
+        y = 37.107968008
+        interface = R12 e0/2
+    [[NOTE 71]]
+        text = e0/0
+        x = 52.7270376594
+        y = -12.7971835812
+        interface = R12 e0/0
+    [[NOTE 72]]
+        text = e0/1
+        x = -5.89644877083
+        y = 12.6690690165
+        interface = R12 e0/1
+    [[NOTE 73]]
+        text = e0/0
+        x = 69.078277832
+        y = 4.72696122055
+        interface = R15 e0/0
+    [[NOTE 74]]
+        text = s1/0
+        x = -5.83894977628
+        y = 12.4325562309
+        interface = R15 s1/0
+    [[NOTE 75]]
+        text = e0/0
+        x = 70.3649426541
+        y = 7.72200782828
+        interface = R14 e0/0
+    [[NOTE 76]]
+        text = e0/2
+        x = -1.05792378675
+        y = 1.02244467685
+        interface = R14 e0/2
+    [[NOTE 77]]
+        text = e0/1
+        x = -6.97272371394
+        y = 20.5230575876
+        interface = R14 e0/1
+    [[NOTE 78]]
+        text = s1/0
+        x = -6.84501801483
+        y = 25.5177463522
+        interface = R17 s1/0
+    [[NOTE 79]]
+        text = e0/0
+        x = 54.9011069247
+        y = -11.4715030358
+        interface = R17 e0/0
+    [[NOTE 80]]
+        text = e0/0
+        x = 70.6954909018
+        y = 35.3809553349
+        interface = R16 e0/0
+    [[NOTE 81]]
+        text = e0/2
+        x = 54.8412029258
+        y = 78.4964794765
+        interface = Internet e0/2
+    [[NOTE 82]]
+        text = e0/1
+        x = -1.50484971267
+        y = -4.22007551023
+        interface = Internet e0/1
+    [[NOTE 83]]
+        text = e0/0
+        x = -8.6719324783
+        y = 53.047446441
+        interface = Internet e0/0
+    [[NOTE 84]]
+        text = 1
+        x = 74.4383346644
+        y = 25.1545668147
+        interface = SWDerbi 1
+    [[NOTE 85]]
+        text = 2
+        x = 69.5579237868
+        y = 36.9775553232
+        interface = SWDerbi 2
+    [[NOTE 86]]
+        text = 2
+        x = -0.578277832008
+        y = 33.2730387795
+        interface = SWKawasaki 2
+    [[NOTE 87]]
+        text = 3
+        x = 75.4727237139
+        y = 17.4769424124
+        interface = SWKawasaki 3
+    [[NOTE 88]]
+        text = 1
+        x = -2.19549090177
+        y = 2.61904466509
+        interface = SWKawasaki 1
     [[Cloud FTPServer]]
-        x = -208.193434176
-        y = -204.705627485
+        x = 383.806565825
+        y = -184.705627485
     [[Cloud HostA]]
-        x = -734.280879379
-        y = -384.310749906
-    [[Cloud DNSRoot]]
-        x = -619.729580827
-        y = -201.87720036
+        x = -179.050431999
+        y = -336.026478658
+    [[Cloud HostB]]
+        x = 23.7994231498
+        y = 75.3137084993
+    [[Cloud AP]]
+        x = -10.1295090382
+        y = 308.252741955
     [[Cloud DNS2]]
-        x = -810.648411747
-        y = -678.46717088
+        x = -354.412913734
+        y = -477.447834896
     [[Cloud DNS1]]
-        x = 67.5782104868
-        y = 195.516810667
+        x = 390.877633637
+        y = 226.830519166
+    [[Cloud DNSRoot]]
+        x = -27.7295808257
+        y = -181.87720036
     [[Cloud WebServer]]
-        x = -62.5294372515
-        y = 80.9655121146
+        x = 260.769985898
+        y = 112.279220614
     [[Cloud TelServer]]
-        x = -639.5285707
-        y = -68.941125497
+        x = -47.5285706987
+        y = -48.941125497
     [[SHAPE 1]]
-        type = ellipse
-        x = -868.979184722
-        y = 82.0502525319
-        width = 270.000000001
-        height = 278.000000001
-        border_style = 2
+        type = rectangle
+        x = -390.663130371
+        y = -186.384776311
+        width = 1111.91204718
+        height = 245.968470707
         z = -2.0
     [[SHAPE 2]]
         type = rectangle
-        x = -986.000000002
-        y = 39.7344519917
-        width = 1298.0
-        height = 328.11183182
+        x = -391.491557496
+        y = -528.915872329
+        width = 1115.56890143
+        height = 341.94530958
         z = -2.0
     [[SHAPE 3]]
         type = rectangle
-        x = -983.491557497
-        y = -781.141269072
-        width = 1290.35865659
-        height = 574.170706323
-        z = -2.0
-    [[SHAPE 4]]
-        type = rectangle
-        x = -985.491557497
-        y = -206.384776311
-        width = 1295.00627612
-        height = 245.968470707
+        x = -391.171572876
+        y = 62.5628791165
+        width = 1115.24891681
+        height = 328.11183182
         z = -2.0
