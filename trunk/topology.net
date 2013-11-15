@@ -270,16 +270,12 @@ version = 0.8.5
         sparsemem = True
         ghostios = True
         chassis = 3640
-    [[ROUTER R4]]
-        model = 3640
-        console = 2013
-        aux = 2513
-        cnfg = configs/R4.cfg
-        slot0 = NM-4E
-        e0/0 = SWZanella 1
-        e0/1 = R7 e0/0
-        x = 330.698484811
-        y = -346.149278299
+    [[ETHSW SWKawasaki]]
+        1 = access 1 R16 e0/0
+        2 = access 1 R15 e0/0
+        3 = access 1 R14 e0/1
+        x = 47.3141417758
+        y = 256.897402896
         z = 1.0
     [[ROUTER R16]]
         model = 3640
@@ -322,12 +318,16 @@ version = 0.8.5
         x = 534.309091142
         y = -14.3675323681
         z = 1.0
-    [[ETHSW SWKawasaki]]
-        1 = access 1 R16 e0/0
-        2 = access 1 R15 e0/0
-        3 = access 1 R14 e0/1
-        x = 47.3141417758
-        y = 256.897402896
+    [[ROUTER R4]]
+        model = 3640
+        console = 2013
+        aux = 2513
+        cnfg = configs/R4.cfg
+        slot0 = NM-4E
+        e0/0 = SWZanella 1
+        e0/1 = R7 e0/0
+        x = 330.698484811
+        y = -346.149278299
         z = 1.0
     [[ROUTER R5]]
         model = 3640
@@ -390,8 +390,8 @@ version = 0.8.5
         z = 1.0
 [GNS3-DATA]
     configs = configs
-    m11 = 1.41421356237
-    m22 = 1.41421356237
+    m11 = 0.707106781185
+    m22 = 0.707106781185
     [[NOTE 1]]
         text = "s1/0"
         x = 65.3450180148
@@ -489,16 +489,16 @@ version = 0.8.5
         interface = R9 e0/0
         color = "#212121"
     [[NOTE 17]]
-        text = "e0/0"
-        x = -77.9238531145
-        y = 101.279878369
-        interface = R8 e0/0
-        color = "#212121"
-    [[NOTE 18]]
         text = "e0/1"
         x = 72.1875255459
         y = 13.9789126929
         interface = R8 e0/1
+        color = "#212121"
+    [[NOTE 18]]
+        text = "e0/0"
+        x = -77.9238531145
+        y = 101.279878369
+        interface = R8 e0/0
         color = "#212121"
     [[NOTE 19]]
         text = "e0/1"
@@ -579,76 +579,76 @@ version = 0.8.5
         interface = R5 e0/1
         color = "#212121"
     [[NOTE 32]]
+        text = "e0/1"
+        x = 16.3747470294
+        y = 58.381327129
+        interface = R4 e0/1
+        color = "#212121"
+    [[NOTE 33]]
+        text = "e0/0"
+        x = 58.3658443696
+        y = -8.92852953853
+        interface = R4 e0/0
+        color = "#212121"
+    [[NOTE 34]]
         text = "2"
         x = -4.49936162912
         y = 16.2259850939
         interface = SWAzel 2
         color = "#212121"
-    [[NOTE 33]]
+    [[NOTE 35]]
         text = "3"
         x = 72.884747871
         y = 1.77394550047
         interface = SWAzel 3
         color = "#212121"
-    [[NOTE 34]]
+    [[NOTE 36]]
         text = "1"
         x = -2.22462113617
         y = 2.70139254912
         interface = SWAzel 1
         color = "#212121"
-    [[NOTE 35]]
-        text = "e0/1"
-        x = 77.5533030203
-        y = 51.1299208567
-        interface = R11 e0/1
-        color = "#212121"
-    [[NOTE 36]]
+    [[NOTE 37]]
         text = "e0/0"
         x = -58.7770876401
         y = -1.88854382006
         interface = R11 e0/0
         color = "#212121"
-    [[NOTE 37]]
+    [[NOTE 38]]
+        text = "e0/1"
+        x = 77.5533030203
+        y = 51.1299208567
+        interface = R11 e0/1
+        color = "#212121"
+    [[NOTE 39]]
         text = "e0/0"
         x = -5.15974867607
         y = 33.9930638696
         interface = R10 e0/0
         color = "#212121"
-    [[NOTE 38]]
+    [[NOTE 40]]
         text = "e0/1"
         x = -5.89644877083
         y = 12.6690690165
         interface = R12 e0/1
         color = "#212121"
-    [[NOTE 39]]
+    [[NOTE 41]]
         text = "e0/0"
         x = 52.7270376594
         y = -12.7971835812
         interface = R12 e0/0
         color = "#212121"
-    [[NOTE 40]]
+    [[NOTE 42]]
         text = "s1/0"
         x = -6.84501801483
         y = 25.5177463522
         interface = R17 s1/0
         color = "#212121"
-    [[NOTE 41]]
+    [[NOTE 43]]
         text = "e0/0"
         x = 54.9011069247
         y = -11.4715030358
         interface = R17 e0/0
-        color = "#212121"
-    [[NOTE 42]]
-        text = "e0/2"
-        x = 54.8412029258
-        y = 78.4964794765
-        interface = Internet e0/2
-        color = "#212121"
-    [[NOTE 43]]
-        text = "e0/1"
-        x = -1.50484971267
-        y = -4.22007551023
-        interface = Internet e0/1
         color = "#212121"
     [[NOTE 44]]
         text = "e0/0"
@@ -657,24 +657,20 @@ version = 0.8.5
         interface = Internet e0/0
         color = "#212121"
     [[NOTE 45]]
-        text = "e0/1"
-        x = 16.3747470294
-        y = 58.381327129
-        interface = R4 e0/1
+        text = "e0/2"
+        x = 54.8412029258
+        y = 78.4964794765
+        interface = Internet e0/2
         color = "#212121"
     [[NOTE 46]]
-        text = "e0/0"
-        x = 58.3658443696
-        y = -8.92852953853
-        interface = R4 e0/0
+        text = "e0/1"
+        x = -1.50484971267
+        y = -4.22007551023
+        interface = Internet e0/1
         color = "#212121"
     [[Cloud AP]]
         x = -10.1295090382
         y = 308.252741955
-        z = 1.0
-    [[Cloud DNSRoot]]
-        x = -27.7295808257
-        y = -181.87720036
         z = 1.0
     [[Cloud FTPServer]]
         x = 427.806565825
@@ -687,6 +683,10 @@ version = 0.8.5
     [[Cloud HostB]]
         x = 23.7994231498
         y = 75.3137084993
+        z = 1.0
+    [[Cloud DNSRoot]]
+        x = -27.7295808257
+        y = -181.87720036
         z = 1.0
     [[Cloud DNS2]]
         x = -354.412913734
@@ -713,15 +713,15 @@ version = 0.8.5
         z = -2.0
     [[SHAPE 2]]
         type = rectangle
-        x = -391.171572876
-        y = 62.5628791165
-        width = 1115.24891681
-        height = 328.11183182
-        z = -2.0
-    [[SHAPE 3]]
-        type = rectangle
         x = -385.491557496
         y = -524.915872329
         width = 1115.56890143
         height = 341.94530958
+        z = -2.0
+    [[SHAPE 3]]
+        type = rectangle
+        x = -391.171572876
+        y = 62.5628791165
+        width = 1115.24891681
+        height = 328.11183182
         z = -2.0
