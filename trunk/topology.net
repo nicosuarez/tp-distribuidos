@@ -128,6 +128,8 @@ autostart = False
         s1/1 = R1 s1/0
         s1/2 = R17 s1/0
         s1/3 = R15 s1/0
+        slot2 = NM-4T
+        slot3 = NM-4T
         symbol = frame_relay_switch
         x = -538.828427126
         y = -123.209632098
@@ -150,7 +152,7 @@ autostart = False
         slot1 = NM-4T
         s1/0 = SWFR s1/0
         x = 9.838528394
-        y = -273.828427124
+        y = -275.242640686
         z = 1.0
     [[ROUTER R1]]
         model = 3640
@@ -161,8 +163,8 @@ autostart = False
         e0/0 = SWHonda 1
         slot1 = NM-4T
         s1/0 = SWFR s1/1
-        x = -236.529003975
-        y = -385.546247918
+        x = -235.114790413
+        y = -388.374675043
         z = 1.0
     [[ROUTER R2]]
         model = 3640
@@ -323,69 +325,69 @@ autostart = False
         z = 1.0
 [GNS3-DATA]
     configs = configs
-    m11 = 0.499999999999
-    m22 = 0.499999999999
+    m11 = 0.707106781185
+    m22 = 0.707106781185
     [[NOTE 1]]
-        text = s1/3
-        x = 11.1161637424
-        y = 47.6916063598
-        interface = SWFR s1/3
-    [[NOTE 2]]
-        text = s1/1
-        x = 39.0758550176
-        y = -44.9223133056
-        interface = SWFR s1/1
-    [[NOTE 3]]
-        text = s1/2
-        x = 62.7816408954
-        y = 12.4174849806
-        interface = SWFR s1/2
-    [[NOTE 4]]
-        text = s1/0
-        x = 67.92698705
-        y = -19.527214428
-        interface = SWFR s1/0
-    [[NOTE 5]]
         text = "2"
         x = 69.353024362
         y = -5.30663609181
         interface = SWHonda 2
         color = "#212121"
-    [[NOTE 6]]
+    [[NOTE 2]]
         text = "4"
         x = 74.3804240235
         y = 6.60252013818
         interface = SWHonda 4
         color = "#212121"
-    [[NOTE 7]]
+    [[NOTE 3]]
         text = "1"
         x = 3.48940454196
         y = 39.985866222
         interface = SWHonda 1
         color = "#212121"
-    [[NOTE 8]]
+    [[NOTE 4]]
         text = "3"
         x = 59.714033654
         y = 47.8383506828
         interface = SWHonda 3
         color = "#212121"
+    [[NOTE 5]]
+        text = s1/1
+        x = 39.0758550176
+        y = -44.9223133056
+        interface = SWFR s1/1
+    [[NOTE 6]]
+        text = s1/0
+        x = 67.92698705
+        y = -19.527214428
+        interface = SWFR s1/0
+    [[NOTE 7]]
+        text = s1/3
+        x = 11.1161637424
+        y = 47.6916063598
+        interface = SWFR s1/3
+    [[NOTE 8]]
+        text = s1/2
+        x = 62.7816408954
+        y = 12.4174849806
+        interface = SWFR s1/2
     [[NOTE 9]]
-        text = "3"
-        x = 64.0356719831
-        y = 44.0306158418
-        interface = SWZanella 3
-        color = "#212121"
-    [[NOTE 10]]
         text = "2"
         x = -2.74685488923
         y = 4.28769488604
         interface = SWZanella 2
         color = "#212121"
-    [[NOTE 11]]
+    [[NOTE 10]]
         text = "4"
         x = -4.47282651875
         y = 14.5258425791
         interface = SWZanella 4
+        color = "#212121"
+    [[NOTE 11]]
+        text = "3"
+        x = 64.0356719831
+        y = 44.0306158418
+        interface = SWZanella 3
         color = "#212121"
     [[NOTE 12]]
         text = "1"
@@ -430,16 +432,16 @@ autostart = False
         interface = SWGilera 3
         color = "#212121"
     [[NOTE 19]]
-        text = "2"
-        x = 72.5371341044
-        y = 0.892031992027
-        interface = SWHarley 2
-        color = "#212121"
-    [[NOTE 20]]
         text = "1"
         x = -4.47200711359
         y = 14.5037890152
         interface = SWHarley 1
+        color = "#212121"
+    [[NOTE 20]]
+        text = "2"
+        x = 72.5371341044
+        y = 0.892031992027
+        interface = SWHarley 2
         color = "#212121"
     [[NOTE 21]]
         text = "3"
@@ -448,28 +450,28 @@ autostart = False
         interface = SWHarley 3
         color = "#212121"
     [[NOTE 22]]
-        text = "e0/0"
-        x = 72.9993616291
-        y = 21.7740149061
-        interface = R9 e0/0
-        color = "#212121"
-    [[NOTE 23]]
         text = "e0/1"
         x = -5.7393417521
         y = 12.0368980426
         interface = R9 e0/1
         color = "#212121"
-    [[NOTE 24]]
-        text = "e0/1"
-        x = 72.1875255459
-        y = 13.9789126929
-        interface = R8 e0/1
+    [[NOTE 23]]
+        text = "e0/0"
+        x = 72.9993616291
+        y = 21.7740149061
+        interface = R9 e0/0
         color = "#212121"
-    [[NOTE 25]]
+    [[NOTE 24]]
         text = "e0/0"
         x = -77.9238531145
         y = 101.279878369
         interface = R8 e0/0
+        color = "#212121"
+    [[NOTE 25]]
+        text = "e0/1"
+        x = 72.1875255459
+        y = 13.9789126929
+        interface = R8 e0/1
         color = "#212121"
     [[NOTE 26]]
         text = "e0/1"
@@ -625,27 +627,27 @@ autostart = False
         interface = R13 e0/0
         color = "#212121"
     [[NOTE 52]]
-        text = "e0/0"
-        x = 52.7270376594
-        y = -12.7971835812
-        interface = R12 e0/0
-        color = "#212121"
-    [[NOTE 53]]
         text = "e0/2"
         x = -4.03713410444
         y = 37.107968008
         interface = R12 e0/2
         color = "#212121"
-    [[NOTE 54]]
+    [[NOTE 53]]
         text = "e0/1"
         x = -55.8964487709
         y = -2.33093098353
         interface = R12 e0/1
         color = "#212121"
+    [[NOTE 54]]
+        text = "e0/0"
+        x = 52.7270376594
+        y = -12.7971835812
+        interface = R12 e0/0
+        color = "#212121"
     [[NOTE 55]]
         text = s1/0
-        x = 6.37164294869
-        y = -7.84846060935
+        x = 4.95742938631
+        y = -10.6768877341
         interface = R15 s1/0
     [[NOTE 56]]
         text = "e0/0"
@@ -654,16 +656,16 @@ autostart = False
         interface = R15 e0/0
         color = "#212121"
     [[NOTE 57]]
-        text = "e0/1"
-        x = -6.97272371394
-        y = 20.5230575876
-        interface = R14 e0/1
-        color = "#212121"
-    [[NOTE 58]]
         text = "e0/2"
         x = -1.05792378676
         y = 1.02244467687
         interface = R14 e0/2
+        color = "#212121"
+    [[NOTE 58]]
+        text = "e0/1"
+        x = -6.97272371394
+        y = 20.5230575876
+        interface = R14 e0/1
         color = "#212121"
     [[NOTE 59]]
         text = "e0/0"
@@ -672,15 +674,15 @@ autostart = False
         interface = R14 e0/0
         color = "#212121"
     [[NOTE 60]]
-        text = e0/1
-        x = 65.394945809
-        y = 45.4641745228
-        interface = R17 e0/1
-    [[NOTE 61]]
         text = s1/0
         x = -5.69585445773
         y = 11.8693115838
         interface = R17 s1/0
+    [[NOTE 61]]
+        text = e0/1
+        x = 65.394945809
+        y = 45.4641745228
+        interface = R17 e0/1
     [[NOTE 62]]
         text = "e0/0"
         x = 54.9011069247
@@ -694,16 +696,16 @@ autostart = False
         interface = R16 e0/0
         color = "#212121"
     [[NOTE 64]]
-        text = "e0/0"
-        x = -8.6719324783
-        y = 53.047446441
-        interface = Internet e0/0
-        color = "#212121"
-    [[NOTE 65]]
         text = "e0/1"
         x = -1.50484971267
         y = -4.22007551023
         interface = Internet e0/1
+        color = "#212121"
+    [[NOTE 65]]
+        text = "e0/0"
+        x = -8.6719324783
+        y = 53.047446441
+        interface = Internet e0/0
         color = "#212121"
     [[NOTE 66]]
         text = "e0/2"
@@ -782,19 +784,19 @@ autostart = False
         y = -7.46417452276
         interface = SWMotomel 1
     [[SHAPE 1]]
+        type = rectangle
+        x = -389.248916809
+        y = -187.798989873
+        width = 1111.91204718
+        height = 245.968470707
+        z = -2.0
+    [[SHAPE 2]]
         type = ellipse
         x = -615.182899634
         y = -200.818325857
         width = 200.0
         height = 200.0
         border_style = 2
-        z = -2.0
-    [[SHAPE 2]]
-        type = rectangle
-        x = -391.171572876
-        y = 58.3202384294
-        width = 1115.24891681
-        height = 328.11183182
         z = -2.0
     [[SHAPE 3]]
         type = rectangle
@@ -805,8 +807,8 @@ autostart = False
         z = -2.0
     [[SHAPE 4]]
         type = rectangle
-        x = -389.248916809
-        y = -187.798989873
-        width = 1111.91204718
-        height = 245.968470707
+        x = -391.171572876
+        y = 58.3202384294
+        width = 1115.24891681
+        height = 328.11183182
         z = -2.0
