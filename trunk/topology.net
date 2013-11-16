@@ -389,8 +389,8 @@ autostart = False
         z = 1.0
 [GNS3-DATA]
     configs = configs
-    m11 = 1.41421356237
-    m22 = 1.41421356237
+    m11 = 0.707106781185
+    m22 = 0.707106781185
     [[Cloud FTPServer]]
         x = 427.806565825
         y = -148.705627485
