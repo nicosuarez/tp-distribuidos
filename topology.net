@@ -269,16 +269,12 @@ autostart = False
         sparsemem = True
         ghostios = True
         chassis = 3640
-    [[ROUTER R4]]
-        model = 3640
-        console = 2013
-        aux = 2513
-        cnfg = configs/R4.cfg
-        slot0 = NM-4E
-        e0/0 = SWZanella 1
-        e0/1 = R7 e0/0
-        x = 330.698484811
-        y = -346.149278299
+    [[ETHSW SWKawasaki]]
+        1 = access 1 R16 e0/0
+        2 = access 1 R15 e0/0
+        3 = access 1 R14 e0/1
+        x = 47.3141417758
+        y = 256.897402896
         z = 1.0
     [[ROUTER R16]]
         model = 3640
@@ -321,12 +317,16 @@ autostart = False
         x = 534.309091142
         y = -14.3675323681
         z = 1.0
-    [[ETHSW SWKawasaki]]
-        1 = access 1 R16 e0/0
-        2 = access 1 R15 e0/0
-        3 = access 1 R14 e0/1
-        x = 47.3141417758
-        y = 256.897402896
+    [[ROUTER R4]]
+        model = 3640
+        console = 2013
+        aux = 2513
+        cnfg = configs/R4.cfg
+        slot0 = NM-4E
+        e0/0 = SWZanella 1
+        e0/1 = R7 e0/0
+        x = 330.698484811
+        y = -346.149278299
         z = 1.0
     [[ROUTER R5]]
         model = 3640
@@ -389,12 +389,8 @@ autostart = False
         z = 1.0
 [GNS3-DATA]
     configs = configs
-    m11 = 0.499999999999
-    m22 = 0.499999999999
-    [[Cloud AP]]
-        x = -10.1295090382
-        y = 308.252741955
-        z = 1.0
+    m11 = 1.41421356237
+    m22 = 1.41421356237
     [[Cloud FTPServer]]
         x = 427.806565825
         y = -148.705627485
@@ -407,9 +403,9 @@ autostart = False
         x = 23.7994231498
         y = 75.3137084993
         z = 1.0
-    [[Cloud DNSRoot]]
-        x = -27.7295808257
-        y = -181.87720036
+    [[Cloud AP]]
+        x = -10.1295090382
+        y = 308.252741955
         z = 1.0
     [[Cloud DNS2]]
         x = -354.412913734
@@ -418,6 +414,10 @@ autostart = False
     [[Cloud DNS1]]
         x = 390.877633637
         y = 226.830519166
+        z = 1.0
+    [[Cloud DNSRoot]]
+        x = -27.7295808257
+        y = -181.87720036
         z = 1.0
     [[Cloud WebServer]]
         x = 260.769985898
@@ -429,10 +429,10 @@ autostart = False
         z = 1.0
     [[SHAPE 1]]
         type = rectangle
-        x = -391.171572876
-        y = 62.5628791165
-        width = 1115.24891681
-        height = 328.11183182
+        x = -390.663130371
+        y = -186.384776311
+        width = 1111.91204718
+        height = 245.968470707
         z = -2.0
     [[SHAPE 2]]
         type = rectangle
@@ -443,8 +443,8 @@ autostart = False
         z = -2.0
     [[SHAPE 3]]
         type = rectangle
-        x = -390.663130371
-        y = -186.384776311
-        width = 1111.91204718
-        height = 245.968470707
+        x = -391.171572876
+        y = 62.5628791165
+        width = 1115.24891681
+        height = 328.11183182
         z = -2.0
