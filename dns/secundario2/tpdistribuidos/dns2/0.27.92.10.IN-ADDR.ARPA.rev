@@ -15,6 +15,6 @@ $ORIGIN  0/27.27.92.10.IN-ADDR.ARPA.
 ;##########################################################################
 
 1				IN      PTR     ftpserver.azel4.bariloche.chubut.dc.com.ar.
-2				IN      PTR     r8.azel2.bariloche.chubut.dc.com.ar.
-3				IN      PTR     r9.azel3.bariloche.chubut.dc.com.ar.
+2				IN      PTR     r9.azel3.bariloche.chubut.dc.com.ar.
+3				IN      PTR     r8.azel2.bariloche.chubut.dc.com.ar.
 4				IN      PTR     r7.azel1.bariloche.chubut.dc.com.ar.
