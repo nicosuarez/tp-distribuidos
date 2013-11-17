@@ -1,21 +1,17 @@
 $TTL 2d
-$ORIGIN  27.92.10.in-addr.arpa.  
-@           IN      SOA     dnsroot.chubut.dc.fi.uba.ar.   hostmaster.chubut.dc.fi.uba.ar.      (
+$ORIGIN  16/28.3.24.10.IN-ADDR.ARPA.
+@  IN      SOA     dns1.riocolorado.chubut.dc.fi.uba.ar.   hostmaster.riocolorado.chubut.dc.fi.uba.ar.      (
                         2012041101      ; Serial (usually YYYYMMDDSS): increment after any change
                                 8h      ; Refresh (8 hours)
                                 2h      ; Retry (2 hours)
                                 4w      ; Expire (4 weeks)
                                 3h )    ; NX (3 hours) TTL Negativ Cache
 
-				  IN    NS  	  dnsroot.chubut.dc.fi.uba.ar.
+; name server RR for the domain
+@                               IN      NS      dns1.riocolorado.chubut.dc.fi.uba.ar.
 
 ;##########################################################################
-;RioNegro
+;Vespa
 ;##########################################################################
 
-0/27			       IN    NS  	  dns2.bariloche.chubut.dc.fi.uba.ar.
-32/27			       IN    NS  	  dns2.bariloche.chubut.dc.fi.uba.ar.
-
-$GENERATE    0-31      $      CNAME	$.0/27
-$GENERATE    32-47     $      CNAME	$.0/28
-
+17				IN      PTR     r14.vespa1.riocolorado.chubut.dc.com.ar.

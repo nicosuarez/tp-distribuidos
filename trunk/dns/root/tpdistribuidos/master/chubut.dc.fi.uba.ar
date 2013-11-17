@@ -20,8 +20,8 @@ localhost                      IN      A       127.0.0.1
 ;RioNegro
 ;##########################################################################
 
-;subdomain definitions for RioNegro
-$ORIGIN rionegro.chubut.dc.fi.uba.ar.
+;subdomain definitions for RioColorado
+$ORIGIN riocolorado.chubut.dc.fi.uba.ar.
 
 @           IN      NS     dns1.riocolorado.chubut.dc.fi.uba.ar.
 
@@ -31,8 +31,8 @@ dns1			       IN      A       192.168.8.4
 ;Bariloche
 ;##########################################################################
 
-;subdomain definitions for PuntaIndio
-$ORIGIN puntaindio.chubut.dc.fi.uba.ar.
+;subdomain definitions for Bariloche
+$ORIGIN bariloche.chubut.dc.fi.uba.ar.
 
 @           IN      NS     dns2.bariloche.chubut.dc.fi.uba.ar.
 
