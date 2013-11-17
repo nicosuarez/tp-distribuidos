@@ -13,17 +13,14 @@ $ORIGIN  3.24.10.in-addr.arpa.
 ;Rio Colorado
 ;##########################################################################
 
-0/30			       IN    NS  	  dns1.riocolorado.chubut.dc.fi.uba.ar.
-4/30			       IN    NS           dns1.riocolorado.chubut.dc.fi.uba.ar.
-8/29			       IN    NS           dns1.riocolorado.chubut.dc.fi.uba.ar.
-16/28			       IN    NS           dns1.riocolorado.chubut.dc.fi.uba.ar.
-32/27			       IN    NS           dns1.riocolorado.chubut.dc.fi.uba.ar.
-64/26			       IN    NS           dns1.riocolorado.chubut.dc.fi.uba.ar.
-128/25			       IN    NS           dns2.trellew.chubut.dc.fi.uba.ar.
+8/29			         IN    NS           dns1.riocolorado.chubut.dc.fi.uba.ar.
+16/28			         IN    NS           dns1.riocolorado.chubut.dc.fi.uba.ar.
+32/27			         IN    NS           dns1.riocolorado.chubut.dc.fi.uba.ar.
+64/26			         IN    NS           dns1.riocolorado.chubut.dc.fi.uba.ar.
+128/25			         IN    NS           dns2.trelew.chubut.dc.fi.uba.ar.
 
-$GENERATE    0-3         $      CNAME	$.0/30
-$GENERATE    4-7         $      CNAME	$.4/30
 $GENERATE    8-15        $      CNAME	$.8/29
 $GENERATE    16-31       $      CNAME	$.16/28
 $GENERATE    32-63       $      CNAME	$.32/27
+$GENERATE    32-63       $      CNAME	$.64/26
 $GENERATE    128-255     $      CNAME	$.128/25
