@@ -89,7 +89,7 @@ autostart = False
     [[ETHSW SWMotomel]]
         1 = access 1 R17 e0/1
         2 = access 1 R11 e0/2
-        x = -87.8259018079
+        x = -85.8259018079
         y = 82.9949493663
         hx = 12.5857864376
         hy = -26.4142135624
@@ -327,382 +327,72 @@ autostart = False
     configs = configs
     m11 = 0.499999999999
     m22 = 0.499999999999
-    [[NOTE 1]]
-        text = 4
-        x = 73.202616288
-        y = 29.36086543
-        interface = SWHonda 4
-    [[NOTE 2]]
-        text = 1
-        x = -3.23226175801
-        y = 25.9905905286
-        interface = SWHonda 1
-    [[NOTE 3]]
-        text = 3
-        x = 53.8224491074
-        y = 51.5568257682
-        interface = SWHonda 3
-    [[NOTE 4]]
-        text = s1/0
-        x = 63.6563370645
-        y = 11.4960863957
-        interface = SWFR s1/0
-    [[NOTE 5]]
-        text = 2
-        x = -4.03312150736
-        y = 9.90637186199
-        interface = SWZanella 2
-    [[NOTE 6]]
-        text = 4
-        x = -4.06839484121
-        y = 21.8602158399
-        interface = SWZanella 4
-    [[NOTE 7]]
-        text = 3
-        x = 65.3304482975
-        y = 42.6485338127
-        interface = SWZanella 3
-    [[NOTE 8]]
-        text = 1
-        x = -1.12911591977
-        y = 32.0719590261
-        interface = SWZanella 1
-    [[NOTE 9]]
-        text = 1
-        x = 74.2393417521
-        y = 25.9631019574
-        interface = SWBMW 1
-    [[NOTE 10]]
-        text = 2
-        x = -2.95720752921
-        y = 4.99803703628
-        interface = SWBMW 2
-    [[NOTE 11]]
-        text = 4
-        x = 75.3509983398
-        y = 12.5506621911
-        interface = SWGilera 4
-    [[NOTE 12]]
-        text = 2
-        x = 72.3270931512
-        y = 31.6129820992
-        interface = SWGilera 2
-    [[NOTE 13]]
-        text = 1
-        x = 75.321924052
-        y = 19.7701942646
-        interface = SWGilera 1
-    [[NOTE 14]]
-        text = 1
-        x = -4.47200711359
-        y = 14.5037890152
-        interface = SWHarley 1
-    [[NOTE 15]]
-        text = 2
-        x = 72.5371341044
-        y = 0.892031992027
-        interface = SWHarley 2
-    [[NOTE 16]]
-        text = 3
-        x = -1.86494265409
-        y = 30.2779921718
-        interface = SWHarley 3
-    [[NOTE 17]]
-        text = e0/1
-        x = -5.7393417521
-        y = 12.0368980426
-        interface = R9 e0/1
-    [[NOTE 18]]
-        text = e0/0
-        x = 72.9904979644
-        y = 21.1281785989
-        interface = R9 e0/0
-    [[NOTE 19]]
-        text = e0/0
-        x = 8.74540763141
-        y = 53.8074637315
-        interface = R8 e0/0
-    [[NOTE 20]]
-        text = e0/1
-        x = 71.4518964076
-        y = 33.020510998
-        interface = R8 e0/1
-    [[NOTE 21]]
-        text = e0/1
-        x = 72.5331215074
-        y = 28.093628138
-        interface = R3 e0/1
-    [[NOTE 22]]
-        text = e0/1
-        x = 72.5683948412
-        y = 16.1397841601
-        interface = R2 e0/1
-    [[NOTE 23]]
-        text = e0/0
-        x = -4.70261628802
-        y = 8.63913457002
-        interface = R2 e0/0
-    [[NOTE 24]]
-        text = e0/0
-        x = 71.732261758
-        y = 12.0094094714
-        interface = R1 e0/0
-    [[NOTE 25]]
-        text = e0/2
-        x = -6.85099833982
-        y = 25.4493378089
-        interface = R7 e0/2
-    [[NOTE 26]]
-        text = e0/1
-        x = 68.4942766092
-        y = 40.4433274652
-        interface = R7 e0/1
-    [[NOTE 27]]
-        text = e0/0
-        x = 45.6720684551
-        y = -15.9396715994
-        interface = R7 e0/0
-    [[NOTE 28]]
-        text = s1/0
-        x = -5.15633706451
-        y = 34.0039136043
-        interface = R6 s1/0
-    [[NOTE 29]]
-        text = e0/0
-        x = 14.6775508926
-        y = -13.5568257682
-        interface = R6 e0/0
-    [[NOTE 30]]
-        text = e0/0
-        x = 3.16955170247
-        y = -4.64853381274
-        interface = R5 e0/0
-    [[NOTE 31]]
-        text = e0/1
-        x = 60.2002945679
-        y = 51.328211255
-        interface = R5 e0/1
-    [[NOTE 32]]
-        text = 2
-        x = -0.578277832002
-        y = 33.2730387795
-        interface = SWKawasaki 2
-    [[NOTE 33]]
-        text = 3
-        x = 75.4727237139
-        y = 17.4769424124
-        interface = SWKawasaki 3
-    [[NOTE 34]]
-        text = 1
-        x = -2.19549090177
-        y = 2.61904466509
-        interface = SWKawasaki 1
-    [[NOTE 35]]
-        text = 2
-        x = -4.49049796445
-        y = 16.8718214011
-        interface = SWAzel 2
-    [[NOTE 36]]
-        text = 3
-        x = 59.7545923686
-        y = -15.8074637315
-        interface = SWAzel 3
-    [[NOTE 37]]
-        text = 1
-        x = 0.00572339076132
-        y = -2.44332746515
-        interface = SWAzel 1
-    [[NOTE 38]]
-        text = e0/2
-        x = -2.53628941176
-        y = 40.3622475434
-        interface = R11 e0/2
-    [[NOTE 39]]
-        text = e0/0
-        x = -3.82709315122
-        y = 6.38701790076
-        interface = R11 e0/0
-    [[NOTE 40]]
-        text = e0/1
-        x = 70.496184732
-        y = 35.9296852278
-        interface = R11 e0/1
-    [[NOTE 41]]
-        text = e0/1
-        x = 71.4572075292
-        y = 33.0019629637
-        interface = R10 e0/1
-    [[NOTE 42]]
-        text = e0/0
-        x = -6.82192405205
-        y = 18.2298057354
-        interface = R10 e0/0
-    [[NOTE 43]]
-        text = e0/1
-        x = -5.93833466438
-        y = 12.8454331853
-        interface = R13 e0/1
-    [[NOTE 44]]
-        text = e0/0
-        x = 72.9720071136
-        y = 23.4962109848
-        interface = R13 e0/0
-    [[NOTE 45]]
-        text = e0/2
-        x = -4.03713410444
-        y = 37.107968008
-        interface = R12 e0/2
-    [[NOTE 46]]
-        text = e0/1
-        x = -4.49618473197
-        y = 8.07031477218
-        interface = R12 e0/1
-    [[NOTE 47]]
-        text = e0/0
-        x = 65.5052544801
-        y = -1.31112247797
-        interface = R12 e0/0
-    [[NOTE 48]]
-        text = e0/0
-        x = 69.078277832
-        y = 4.72696122054
-        interface = R15 e0/0
-    [[NOTE 49]]
-        text = e0/2
-        x = -1.05792378676
-        y = 1.02244467687
-        interface = R14 e0/2
-    [[NOTE 50]]
-        text = e0/1
-        x = -6.97272371394
-        y = 20.5230575876
-        interface = R14 e0/1
-    [[NOTE 51]]
-        text = e0/0
-        x = 70.3649426541
-        y = 7.72200782824
-        interface = R14 e0/0
-    [[NOTE 52]]
-        text = e0/1
-        x = 65.8162564772
-        y = 44.8712332598
-        interface = R17 e0/1
-    [[NOTE 53]]
-        text = e0/0
-        x = 70.6954909018
-        y = 35.3809553349
-        interface = R16 e0/0
-    [[NOTE 54]]
-        text = e0/2
-        x = 22.6158046598
-        y = 75.7944643364
-        interface = Internet e0/2
-    [[NOTE 55]]
-        text = e0/1
-        x = 45.4996317901
-        y = -1.66026406877
-        interface = Internet e0/1
-    [[NOTE 56]]
-        text = e0/0
-        x = -7.01676691719
-        y = 10.2038502546
-        interface = Internet e0/0
-    [[NOTE 57]]
-        text = 1
-        x = 74.4383346644
-        y = 25.1545668147
-        interface = SWDerbi 1
-    [[NOTE 58]]
-        text = 2
-        x = 69.5579237868
-        y = 36.9775553231
-        interface = SWDerbi 2
-    [[NOTE 59]]
-        text = e0/1
-        x = 20.3279315449
-        y = 59.9396715994
-        interface = R4 e0/1
-    [[NOTE 60]]
-        text = e0/0
-        x = 69.6291159198
-        y = 5.92804097392
-        interface = R4 e0/0
-    [[Cloud DNSRoot]]
-        x = -51.7295808258
-        y = -179.87720036
-        z = 1.0
-        connections = SWGilera:5:nio_tap:tap3
     [[Cloud FTPServer]]
-        x = 427.806565825
+        x = 429.806565825
         y = -148.705627485
         z = 1.0
-        connections = SWAzel:4:nio_tap:tap4
+        connections = SWAzel:4:nio_gen_eth:tap4
     [[Cloud HostA]]
         x = -196.020994748
-        y = -300.671139599
+        y = -302.671139599
         z = 1.0
-        connections = SWHonda:6:nio_tap:tap8
+        connections = SWHonda:6:nio_gen_eth:tap8
     [[Cloud HostB]]
-        x = 27.7994231498
+        x = 29.7994231498
         y = 83.3137084993
         z = 1.0
-        connections = SWDerbi:3:nio_tap:tap9
+        connections = SWDerbi:3:nio_gen_eth:tap9
     [[Cloud DNS2]]
         x = -337.442350985
         y = -483.104689146
         z = 1.0
-        connections = SWHonda:5:nio_tap:tap2
+        connections = SWHonda:5:nio_gen_eth:tap2
     [[Cloud DNS1]]
         x = 412.877633637
         y = 264.830519166
         z = 1.0
-        connections = SWHarley:5:nio_tap:tap1
+        connections = SWHarley:4:nio_gen_eth:tap1
+    [[Cloud DNSRoot]]
+        x = -51.7295808258
+        y = -179.87720036
+        z = 1.0
+        connections = SWGilera:5:nio_gen_eth:tap3
     [[Cloud WebServer]]
         x = 248.769985898
         y = 110.279220614
         z = 1.0
-        connections = SWHarley:4:nio_tap:tap5
+        connections = SWHarley:5:nio_gen_eth:tap5
     [[Cloud TelServer]]
         x = -123.528570699
         y = -24.941125497
         z = 1.0
-        connections = SWMotomel:3:nio_tap:tap7 SWGilera:6:nio_tap:tap6
-    [[NOTE 61]]
-        text = 2
-        x = 71.0362894118
-        y = -2.36224754335
-        interface = SWMotomel 2
-    [[NOTE 62]]
-        text = 1
-        x = 2.68374352284
-        y = -6.87123325982
-        interface = SWMotomel 1
+        connections = SWGilera:6:nio_gen_eth:tap6 SWMotomel:3:nio_gen_eth:tap7
     [[SHAPE 1]]
-        type = ellipse
-        x = -615.182899634
-        y = -200.818325857
-        width = 200.0
-        height = 200.0
-        border_style = 2
-        z = -2.0
-    [[SHAPE 2]]
         type = rectangle
         x = -391.171572876
         y = 58.3202384294
         width = 1115.24891681
         height = 328.11183182
         z = -2.0
-    [[SHAPE 3]]
+    [[SHAPE 2]]
         type = rectangle
         x = -389.248916809
         y = -187.798989873
         width = 1111.91204718
         height = 245.968470707
         z = -2.0
-    [[SHAPE 4]]
+    [[SHAPE 3]]
         type = rectangle
         x = -389.491557496
         y = -528.915872329
         width = 1115.56890143
         height = 341.94530958
+        z = -2.0
+    [[SHAPE 4]]
+        type = ellipse
+        x = -615.182899634
+        y = -200.818325857
+        width = 200.0
+        height = 200.0
+        border_style = 2
         z = -2.0
