@@ -1,0 +1,55 @@
+$ORIGIN trelew.chubut.dc.fi.uba.ar.
+$TTL 2d
+; The SOA Resource Record (in the following format:)
+;name [ttl] [class] rr      name-server           e-mail             ( [...] )
+@           IN      SOA     dns2.trelew.chubut.dc.fi.uba.ar.   hostmaster.trelew.chubut.dc.fi.uba.ar.      (
+                        2013111609      ; Serial (usually YYYYMMDDSS): increment after any change
+                                8h      ; Refresh (8 hours)
+                                2h      ; Retry (2 hours)
+                                4w      ; Expire (4 weeks)
+                                3h )    ; NX (3 hours) TTL Negativ Cache
+
+; name server RR for the domain
+                               IN      NS      dns2.trelew.chubut.dc.fi.uba.ar.
+
+dns2			       IN      A       10.24.3.134
+
+localhost                      IN      A       127.0.0.1
+
+;##########################################################################
+;Honda
+;##########################################################################
+
+honda1                       IN      A       10.24.3.129
+honda2                       IN      A       10.24.3.130
+honda3                       IN      A       10.24.3.131
+honda4                       IN      A       10.24.3.132
+honda5                       IN      A       10.24.3.133
+honda6                       IN      A       10.24.3.134
+honda7                       IN      A       10.24.3.135
+
+r1.honda1      	       	       IN    CNAME     honda1
+r6.honda2        	       IN    CNAME     honda2
+r2.honda3        	       IN    CNAME     honda3
+r3.honda4        	       IN    CNAME     honda4
+vrrp-r2r3.honda5               IN    CNAME     honda5
+dns2.honda6 		       IN    CNAME     honda6
+hosta.honda7       	       IN    CNAME     honda7
+
+
+;##########################################################################
+;Zanella
+;##########################################################################
+
+zanella1                          IN      A       10.10.5.1
+zanella2                          IN      A       10.10.5.2
+zanella3                          IN      A       10.10.5.3
+zanella4                          IN      A       10.10.5.4
+zanella5                          IN      A       10.10.5.5
+
+r2.zanella1        	       IN    CNAME     zanella1
+r3.zanella2        	       IN    CNAME     zanella2
+r4.zanella3        	       IN    CNAME     zanella3
+r5.zanella4        	       IN    CNAME     zanella4
+vrrp-r2r3.zanella5             IN    CNAME     zanella5
+

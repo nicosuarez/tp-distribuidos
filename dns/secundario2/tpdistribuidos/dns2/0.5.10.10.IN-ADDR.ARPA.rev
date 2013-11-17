@@ -1,0 +1,22 @@
+$TTL 2d
+$ORIGIN  0/24.5.10.10.IN-ADDR.ARPA.
+@  IN      SOA     dns2.trelew.chubut.dc.fi.uba.ar.   hostmaster.trelew.chubut.dc.fi.uba.ar.      (
+                        2013111601      ; Serial (usually YYYYMMDDSS): increment after any change
+                                8h      ; Refresh (8 hours)
+                                2h      ; Retry (2 hours)
+                                4w      ; Expire (4 weeks)
+                                3h )    ; NX (3 hours) TTL Negativ Cache
+
+; name server RR for the domain
+@                               IN      NS      dns2.trelew.chubut.dc.fi.uba.ar.
+
+;##########################################################################
+;Zanella
+;##########################################################################
+
+1				IN      PTR     r2.zanella1.trelew.chubut.dc.com.ar.
+2				IN      PTR     r3.zanella2.trelew.chubut.dc.com.ar.
+3				IN      PTR     r4.zanella3.trelew.chubut.dc.com.ar.
+4				IN      PTR     r5.zanella4.trelew.chubut.dc.com.ar
+5				IN      PTR     vrrp-r2r3.zanella5.trelew.chubut.dc.com.ar
+
