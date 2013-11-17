@@ -1,7 +1,7 @@
 $TTL 2d
 $ORIGIN  64/26.3.24.10.IN-ADDR.ARPA.
 @  IN      SOA     dns1.riocolorado.chubut.dc.fi.uba.ar.   hostmaster.riocolorado.chubut.dc.fi.uba.ar.      (
-                        2012041101      ; Serial (usually YYYYMMDDSS): increment after any change
+                        2013111601      ; Serial (usually YYYYMMDDSS): increment after any change
                                 8h      ; Refresh (8 hours)
                                 2h      ; Retry (2 hours)
                                 4w      ; Expire (4 weeks)
