@@ -272,7 +272,7 @@ autostart = False
         slot0 = NM-4E
         e0/0 = SWZanella 3
         e0/1 = Internet e0/1
-        x = 575.357431101
+        x = 578.185858226
         y = -312.208152801
         z = 1.0
     [[ROUTER R7]]
@@ -328,419 +328,305 @@ autostart = False
     m11 = 0.707106781185
     m22 = 0.707106781185
     [[NOTE 1]]
-        text = "2"
-        x = 69.353024362
-        y = -5.30663609181
-        interface = SWHonda 2
-        color = "#212121"
-    [[NOTE 2]]
-        text = "4"
-        x = 74.3804240235
-        y = 6.60252013818
-        interface = SWHonda 4
-        color = "#212121"
-    [[NOTE 3]]
-        text = "1"
-        x = 3.48940454196
-        y = 39.985866222
+        text = 1
+        x = -3.23226175801
+        y = 25.9905905286
         interface = SWHonda 1
-        color = "#212121"
-    [[NOTE 4]]
-        text = "3"
-        x = 59.714033654
-        y = 47.8383506828
+    [[NOTE 2]]
+        text = 4
+        x = 73.202616288
+        y = 29.36086543
+        interface = SWHonda 4
+    [[NOTE 3]]
+        text = 3
+        x = 53.8224491074
+        y = 51.5568257682
         interface = SWHonda 3
-        color = "#212121"
-    [[NOTE 5]]
-        text = s1/1
-        x = 39.0758550176
-        y = -44.9223133056
-        interface = SWFR s1/1
-    [[NOTE 6]]
+    [[NOTE 4]]
         text = s1/0
-        x = 67.92698705
-        y = -19.527214428
+        x = 63.6563370645
+        y = 11.4960863957
         interface = SWFR s1/0
-    [[NOTE 7]]
-        text = s1/3
-        x = 11.1161637424
-        y = 47.6916063598
-        interface = SWFR s1/3
-    [[NOTE 8]]
-        text = s1/2
-        x = 62.7816408954
-        y = 12.4174849806
-        interface = SWFR s1/2
-    [[NOTE 9]]
-        text = "2"
-        x = -2.74685488923
-        y = 4.28769488604
+    [[NOTE 5]]
+        text = 2
+        x = -4.03312150736
+        y = 9.90637186199
         interface = SWZanella 2
-        color = "#212121"
-    [[NOTE 10]]
-        text = "4"
-        x = -4.47282651875
-        y = 14.5258425791
+    [[NOTE 6]]
+        text = 4
+        x = -4.06839484121
+        y = 21.8602158399
         interface = SWZanella 4
-        color = "#212121"
-    [[NOTE 11]]
-        text = "3"
-        x = 64.0356719831
-        y = 44.0306158418
-        interface = SWZanella 3
-        color = "#212121"
-    [[NOTE 12]]
-        text = "1"
-        x = 10.1341556304
-        y = 46.9285295385
+    [[NOTE 7]]
+        text = 1
+        x = -1.12911591977
+        y = 32.0719590261
         interface = SWZanella 1
-        color = "#212121"
-    [[NOTE 13]]
-        text = "1"
+    [[NOTE 8]]
+        text = 3
+        x = 65.3304482975
+        y = 42.6485338127
+        interface = SWZanella 3
+    [[NOTE 9]]
+        text = 1
         x = 74.2393417521
         y = 25.9631019574
         interface = SWBMW 1
-        color = "#212121"
-    [[NOTE 14]]
-        text = "2"
+    [[NOTE 10]]
+        text = 2
         x = -2.95720752921
         y = 4.99803703628
         interface = SWBMW 2
-        color = "#212121"
-    [[NOTE 15]]
-        text = "4"
-        x = 75.0574541147
-        y = 10.0663818828
+    [[NOTE 11]]
+        text = 4
+        x = 75.3509983398
+        y = 12.5506621911
         interface = SWGilera 4
-        color = "#212121"
-    [[NOTE 16]]
-        text = "2"
-        x = 71.27708764
-        y = 33.88854382
+    [[NOTE 12]]
+        text = 2
+        x = 72.3270931512
+        y = 31.6129820992
         interface = SWGilera 2
-        color = "#212121"
-    [[NOTE 17]]
-        text = "1"
-        x = 73.6597486761
-        y = 4.00693613044
+    [[NOTE 13]]
+        text = 1
+        x = 75.321924052
+        y = 19.7701942646
         interface = SWGilera 1
-        color = "#212121"
-    [[NOTE 18]]
-        text = "3"
-        x = 23.4983880119
-        y = 31.0867267249
-        interface = SWGilera 3
-        color = "#212121"
-    [[NOTE 19]]
-        text = "1"
+    [[NOTE 14]]
+        text = 1
         x = -4.47200711359
         y = 14.5037890152
         interface = SWHarley 1
-        color = "#212121"
-    [[NOTE 20]]
-        text = "2"
+    [[NOTE 15]]
+        text = 2
         x = 72.5371341044
         y = 0.892031992027
         interface = SWHarley 2
-        color = "#212121"
-    [[NOTE 21]]
-        text = "3"
+    [[NOTE 16]]
+        text = 3
         x = -1.86494265409
         y = 30.2779921718
         interface = SWHarley 3
-        color = "#212121"
-    [[NOTE 22]]
-        text = "e0/1"
+    [[NOTE 17]]
+        text = e0/1
         x = -5.7393417521
         y = 12.0368980426
         interface = R9 e0/1
-        color = "#212121"
-    [[NOTE 23]]
-        text = "e0/0"
-        x = 72.9993616291
-        y = 21.7740149061
+    [[NOTE 18]]
+        text = e0/0
+        x = 72.9904979644
+        y = 21.1281785989
         interface = R9 e0/0
-        color = "#212121"
-    [[NOTE 24]]
-        text = "e0/0"
-        x = -77.9238531145
-        y = 101.279878369
+    [[NOTE 19]]
+        text = e0/0
+        x = 8.74540763141
+        y = 53.8074637315
         interface = R8 e0/0
-        color = "#212121"
-    [[NOTE 25]]
-        text = "e0/1"
-        x = 72.1875255459
-        y = 13.9789126929
+    [[NOTE 20]]
+        text = e0/1
+        x = 71.4518964076
+        y = 33.020510998
         interface = R8 e0/1
-        color = "#212121"
-    [[NOTE 26]]
-        text = "e0/1"
-        x = 71.2468548892
-        y = 33.712305114
+    [[NOTE 21]]
+        text = e0/1
+        x = 72.5331215074
+        y = 28.093628138
         interface = R3 e0/1
-        color = "#212121"
-    [[NOTE 27]]
-        text = "e0/0"
-        x = -0.853024361959
-        y = 43.3066360918
-        interface = R3 e0/0
-        color = "#212121"
-    [[NOTE 28]]
-        text = "e0/1"
-        x = 72.9728265188
-        y = 23.4741574209
+    [[NOTE 22]]
+        text = e0/1
+        x = 72.5683948412
+        y = 16.1397841601
         interface = R2 e0/1
-        color = "#212121"
-    [[NOTE 29]]
-        text = "e0/0"
-        x = -5.88042402349
-        y = 31.3974798618
+    [[NOTE 23]]
+        text = e0/0
+        x = -4.70261628802
+        y = 8.63913457002
         interface = R2 e0/0
-        color = "#212121"
-    [[NOTE 30]]
-        text = s1/0
-        x = 3.86779579631
-        y = 49.4101199967
-        interface = R1 s1/0
-    [[NOTE 31]]
-        text = "e0/0"
-        x = 65.010595458
-        y = -1.98586622204
+    [[NOTE 24]]
+        text = e0/0
+        x = 71.732261758
+        y = 12.0094094714
         interface = R1 e0/0
-        color = "#212121"
-    [[NOTE 32]]
-        text = "e0/2"
-        x = -6.55745411474
-        y = 27.9336181172
+    [[NOTE 25]]
+        text = e0/2
+        x = -6.85099833982
+        y = 25.4493378089
         interface = R7 e0/2
-        color = "#212121"
-    [[NOTE 33]]
-        text = "e0/1"
-        x = 70.7246211362
-        y = 35.2986074509
+    [[NOTE 26]]
+        text = e0/1
+        x = 68.4942766092
+        y = 40.4433274652
         interface = R7 e0/1
-        color = "#212121"
-    [[NOTE 34]]
-        text = "e0/0"
-        x = 49.6252529706
-        y = -14.381327129
+    [[NOTE 27]]
+        text = e0/0
+        x = 45.6720684551
+        y = -15.9396715994
         interface = R7 e0/0
-        color = "#212121"
-    [[NOTE 35]]
+    [[NOTE 28]]
         text = s1/0
-        x = -5.18434636286
-        y = 33.9145160557
+        x = -5.15633706451
+        y = 34.0039136043
         interface = R6 s1/0
-    [[NOTE 36]]
-        text = "e0/0"
-        x = 8.78596634596
-        y = -9.8383506828
+    [[NOTE 29]]
+        text = e0/0
+        x = 14.6775508926
+        y = -13.5568257682
         interface = R6 e0/0
-        color = "#212121"
-    [[NOTE 37]]
-        text = "e0/1"
-        x = 69.0021554279
-        y = 39.4311446712
-        interface = R5 e0/1
-        color = "#212121"
-    [[NOTE 38]]
-        text = "e0/0"
-        x = 4.4643280169
-        y = -6.03061584185
+    [[NOTE 30]]
+        text = e0/0
+        x = 3.16955170247
+        y = -4.64853381274
         interface = R5 e0/0
-        color = "#212121"
-    [[NOTE 39]]
-        text = "2"
+    [[NOTE 31]]
+        text = e0/1
+        x = 60.2002945679
+        y = 51.328211255
+        interface = R5 e0/1
+    [[NOTE 32]]
+        text = 2
         x = -0.578277832002
         y = 33.2730387795
         interface = SWKawasaki 2
-        color = "#212121"
-    [[NOTE 40]]
-        text = "3"
+    [[NOTE 33]]
+        text = 3
         x = 75.4727237139
         y = 17.4769424124
         interface = SWKawasaki 3
-        color = "#212121"
-    [[NOTE 41]]
-        text = "1"
+    [[NOTE 34]]
+        text = 1
         x = -2.19549090177
         y = 2.61904466509
         interface = SWKawasaki 1
-        color = "#212121"
-    [[NOTE 42]]
-        text = "3"
-        x = 72.884747871
-        y = 1.77394550047
-        interface = SWAzel 3
-        color = "#212121"
-    [[NOTE 43]]
-        text = "2"
-        x = -4.49936162912
-        y = 16.2259850939
+    [[NOTE 35]]
+        text = 2
+        x = -4.49049796445
+        y = 16.8718214011
         interface = SWAzel 2
-        color = "#212121"
-    [[NOTE 44]]
-        text = "1"
-        x = -2.22462113617
-        y = 2.70139254912
+    [[NOTE 36]]
+        text = 3
+        x = 59.7545923686
+        y = -15.8074637315
+        interface = SWAzel 3
+    [[NOTE 37]]
+        text = 1
+        x = 0.00572339076132
+        y = -2.44332746515
         interface = SWAzel 1
-        color = "#212121"
-    [[NOTE 45]]
+    [[NOTE 38]]
         text = e0/2
         x = -2.53628941176
         y = 40.3622475434
         interface = R11 e0/2
-    [[NOTE 46]]
-        text = "e0/0"
-        x = -58.7770876401
-        y = -1.88854382006
+    [[NOTE 39]]
+        text = e0/0
+        x = -3.82709315122
+        y = 6.38701790076
         interface = R11 e0/0
-        color = "#212121"
-    [[NOTE 47]]
-        text = "e0/1"
-        x = 77.5533030203
-        y = 51.1299208567
+    [[NOTE 40]]
+        text = e0/1
+        x = 70.496184732
+        y = 35.9296852278
         interface = R11 e0/1
-        color = "#212121"
-    [[NOTE 48]]
-        text = "e0/1"
+    [[NOTE 41]]
+        text = e0/1
         x = 71.4572075292
         y = 33.0019629637
         interface = R10 e0/1
-        color = "#212121"
-    [[NOTE 49]]
-        text = "e0/0"
-        x = -5.15974867607
-        y = 33.9930638696
+    [[NOTE 42]]
+        text = e0/0
+        x = -6.82192405205
+        y = 18.2298057354
         interface = R10 e0/0
-        color = "#212121"
-    [[NOTE 50]]
-        text = "e0/1"
+    [[NOTE 43]]
+        text = e0/1
         x = -5.93833466438
         y = 12.8454331853
         interface = R13 e0/1
-        color = "#212121"
-    [[NOTE 51]]
-        text = "e0/0"
+    [[NOTE 44]]
+        text = e0/0
         x = 72.9720071136
         y = 23.4962109848
         interface = R13 e0/0
-        color = "#212121"
-    [[NOTE 52]]
-        text = "e0/2"
+    [[NOTE 45]]
+        text = e0/2
         x = -4.03713410444
         y = 37.107968008
         interface = R12 e0/2
-        color = "#212121"
-    [[NOTE 53]]
-        text = "e0/1"
-        x = -55.8964487709
-        y = -2.33093098353
+    [[NOTE 46]]
+        text = e0/1
+        x = -4.49618473197
+        y = 8.07031477218
         interface = R12 e0/1
-        color = "#212121"
-    [[NOTE 54]]
-        text = "e0/0"
-        x = 52.7270376594
-        y = -12.7971835812
+    [[NOTE 47]]
+        text = e0/0
+        x = 65.5052544801
+        y = -1.31112247797
         interface = R12 e0/0
-        color = "#212121"
-    [[NOTE 55]]
-        text = s1/0
-        x = 4.95742938631
-        y = -10.6768877341
-        interface = R15 s1/0
-    [[NOTE 56]]
-        text = "e0/0"
+    [[NOTE 48]]
+        text = e0/0
         x = 69.078277832
         y = 4.72696122054
         interface = R15 e0/0
-        color = "#212121"
-    [[NOTE 57]]
-        text = "e0/2"
+    [[NOTE 49]]
+        text = e0/2
         x = -1.05792378676
         y = 1.02244467687
         interface = R14 e0/2
-        color = "#212121"
-    [[NOTE 58]]
-        text = "e0/1"
+    [[NOTE 50]]
+        text = e0/1
         x = -6.97272371394
         y = 20.5230575876
         interface = R14 e0/1
-        color = "#212121"
-    [[NOTE 59]]
-        text = "e0/0"
+    [[NOTE 51]]
+        text = e0/0
         x = 70.3649426541
         y = 7.72200782824
         interface = R14 e0/0
-        color = "#212121"
-    [[NOTE 60]]
-        text = s1/0
-        x = -5.69585445773
-        y = 11.8693115838
-        interface = R17 s1/0
-    [[NOTE 61]]
+    [[NOTE 52]]
         text = e0/1
-        x = 65.394945809
-        y = 45.4641745228
+        x = 65.8162564772
+        y = 44.8712332598
         interface = R17 e0/1
-    [[NOTE 62]]
-        text = "e0/0"
-        x = 54.9011069247
-        y = -11.4715030358
-        interface = R17 e0/0
-        color = "#212121"
-    [[NOTE 63]]
-        text = "e0/0"
+    [[NOTE 53]]
+        text = e0/0
         x = 70.6954909018
         y = 35.3809553349
         interface = R16 e0/0
-        color = "#212121"
-    [[NOTE 64]]
-        text = "e0/1"
-        x = -1.50484971267
-        y = -4.22007551023
-        interface = Internet e0/1
-        color = "#212121"
-    [[NOTE 65]]
-        text = "e0/0"
-        x = -8.6719324783
-        y = 53.047446441
-        interface = Internet e0/0
-        color = "#212121"
-    [[NOTE 66]]
-        text = "e0/2"
-        x = 54.8412029258
-        y = 78.4964794765
+    [[NOTE 54]]
+        text = e0/2
+        x = 22.6158046598
+        y = 75.7944643364
         interface = Internet e0/2
-        color = "#212121"
-    [[NOTE 67]]
-        text = "1"
+    [[NOTE 55]]
+        text = e0/1
+        x = 45.4996317901
+        y = -1.66026406877
+        interface = Internet e0/1
+    [[NOTE 56]]
+        text = e0/0
+        x = -7.01676691719
+        y = 10.2038502546
+        interface = Internet e0/0
+    [[NOTE 57]]
+        text = 1
         x = 74.4383346644
         y = 25.1545668147
         interface = SWDerbi 1
-        color = "#212121"
-    [[NOTE 68]]
-        text = "2"
+    [[NOTE 58]]
+        text = 2
         x = 69.5579237868
         y = 36.9775553231
         interface = SWDerbi 2
-        color = "#212121"
-    [[NOTE 69]]
-        text = "e0/1"
-        x = 16.3747470294
-        y = 58.381327129
-        interface = R4 e0/1
-        color = "#212121"
-    [[NOTE 70]]
-        text = "e0/0"
-        x = 58.3658443696
-        y = -8.92852953853
+    [[NOTE 59]]
+        text = e0/0
+        x = 69.6291159198
+        y = 5.92804097392
         interface = R4 e0/0
-        color = "#212121"
-    [[Cloud AP]]
-        x = -10.1295090382
-        y = 308.252741955
-        z = 1.0
+    [[NOTE 60]]
+        text = e0/1
+        x = 20.3279315449
+        y = 59.9396715994
+        interface = R4 e0/1
     [[Cloud FTPServer]]
         x = 427.806565825
         y = -148.705627485
@@ -753,9 +639,9 @@ autostart = False
         x = 23.7994231498
         y = 75.3137084993
         z = 1.0
-    [[Cloud DNSRoot]]
-        x = -27.7295808257
-        y = -181.87720036
+    [[Cloud AP]]
+        x = -10.1295090382
+        y = 308.252741955
         z = 1.0
     [[Cloud DNS2]]
         x = -354.412913734
@@ -765,6 +651,10 @@ autostart = False
         x = 390.877633637
         y = 226.830519166
         z = 1.0
+    [[Cloud DNSRoot]]
+        x = -27.7295808257
+        y = -181.87720036
+        z = 1.0
     [[Cloud WebServer]]
         x = 260.769985898
         y = 112.279220614
@@ -773,24 +663,17 @@ autostart = False
         x = -123.528570699
         y = -24.941125497
         z = 1.0
-    [[NOTE 71]]
+    [[NOTE 61]]
         text = 2
         x = 71.0362894118
         y = -2.36224754335
         interface = SWMotomel 2
-    [[NOTE 72]]
+    [[NOTE 62]]
         text = 1
-        x = 3.10505419104
-        y = -7.46417452276
+        x = 2.68374352284
+        y = -6.87123325982
         interface = SWMotomel 1
     [[SHAPE 1]]
-        type = rectangle
-        x = -389.248916809
-        y = -187.798989873
-        width = 1111.91204718
-        height = 245.968470707
-        z = -2.0
-    [[SHAPE 2]]
         type = ellipse
         x = -615.182899634
         y = -200.818325857
@@ -798,12 +681,19 @@ autostart = False
         height = 200.0
         border_style = 2
         z = -2.0
-    [[SHAPE 3]]
+    [[SHAPE 2]]
         type = rectangle
         x = -389.491557496
         y = -528.915872329
         width = 1115.56890143
         height = 341.94530958
+        z = -2.0
+    [[SHAPE 3]]
+        type = rectangle
+        x = -389.248916809
+        y = -187.798989873
+        width = 1111.91204718
+        height = 245.968470707
         z = -2.0
     [[SHAPE 4]]
         type = rectangle
