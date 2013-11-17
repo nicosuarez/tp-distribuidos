@@ -11,8 +11,8 @@ autostart = False
     [[ETHSW SWDerbi]]
         1 = access 1 R13 e0/1
         2 = access 1 R14 e0/2
-        x = 19.7994231488
-        y = 155.313708499
+        x = 23.7994231488
+        y = 163.313708499
         z = 1.0
     [[ROUTER Internet]]
         model = 3640
@@ -105,8 +105,8 @@ autostart = False
         2 = access 1 R11 e0/0
         3 = access 1 R17 e0/0
         4 = access 1 R7 e0/2
-        x = -154.883909758
-        y = -117.379725677
+        x = -178.883909758
+        y = -115.379725677
         z = 1.0
 [127.0.0.1:7203]
     workingdir = /tmp
@@ -193,8 +193,8 @@ autostart = False
         2 = access 1 R3 e0/0
         3 = access 1 R6 e0/0
         4 = access 1 R2 e0/0
-        x = -72.8574310987
-        y = -424.872149726
+        x = -53.0584412254
+        y = -414.972654789
         z = 1.0
 [127.0.0.1:7201]
     workingdir = /tmp
@@ -325,18 +325,18 @@ autostart = False
         z = 1.0
 [GNS3-DATA]
     configs = configs
-    m11 = 0.707106781185
-    m22 = 0.707106781185
+    m11 = 0.499999999999
+    m22 = 0.499999999999
     [[NOTE 1]]
-        text = 1
-        x = -3.23226175801
-        y = 25.9905905286
-        interface = SWHonda 1
-    [[NOTE 2]]
         text = 4
         x = 73.202616288
         y = 29.36086543
         interface = SWHonda 4
+    [[NOTE 2]]
+        text = 1
+        x = -3.23226175801
+        y = 25.9905905286
+        interface = SWHonda 1
     [[NOTE 3]]
         text = 3
         x = 53.8224491074
@@ -358,15 +358,15 @@ autostart = False
         y = 21.8602158399
         interface = SWZanella 4
     [[NOTE 7]]
-        text = 1
-        x = -1.12911591977
-        y = 32.0719590261
-        interface = SWZanella 1
-    [[NOTE 8]]
         text = 3
         x = 65.3304482975
         y = 42.6485338127
         interface = SWZanella 3
+    [[NOTE 8]]
+        text = 1
+        x = -1.12911591977
+        y = 32.0719590261
+        interface = SWZanella 1
     [[NOTE 9]]
         text = 1
         x = 74.2393417521
@@ -618,51 +618,55 @@ autostart = False
         y = 36.9775553231
         interface = SWDerbi 2
     [[NOTE 59]]
-        text = e0/0
-        x = 69.6291159198
-        y = 5.92804097392
-        interface = R4 e0/0
-    [[NOTE 60]]
         text = e0/1
         x = 20.3279315449
         y = 59.9396715994
         interface = R4 e0/1
+    [[NOTE 60]]
+        text = e0/0
+        x = 69.6291159198
+        y = 5.92804097392
+        interface = R4 e0/0
+    [[Cloud DNSRoot]]
+        x = -51.7295808258
+        y = -179.87720036
+        z = 1.0
+        connections = SWGilera:5:nio_tap:tap3
     [[Cloud FTPServer]]
         x = 427.806565825
         y = -148.705627485
         z = 1.0
+        connections = SWAzel:4:nio_tap:tap4
     [[Cloud HostA]]
-        x = -179.050431999
-        y = -336.026478658
+        x = -196.020994748
+        y = -300.671139599
         z = 1.0
+        connections = SWHonda:6:nio_tap:tap8
     [[Cloud HostB]]
-        x = 23.7994231498
-        y = 75.3137084993
+        x = 27.7994231498
+        y = 83.3137084993
         z = 1.0
-    [[Cloud AP]]
-        x = -10.1295090382
-        y = 308.252741955
-        z = 1.0
+        connections = SWDerbi:3:nio_tap:tap9
     [[Cloud DNS2]]
-        x = -354.412913734
-        y = -477.447834896
+        x = -337.442350985
+        y = -483.104689146
         z = 1.0
+        connections = SWHonda:5:nio_tap:tap2
     [[Cloud DNS1]]
-        x = 390.877633637
-        y = 226.830519166
+        x = 412.877633637
+        y = 264.830519166
         z = 1.0
-    [[Cloud DNSRoot]]
-        x = -27.7295808257
-        y = -181.87720036
-        z = 1.0
+        connections = SWHarley:5:nio_tap:tap1
     [[Cloud WebServer]]
-        x = 260.769985898
-        y = 112.279220614
+        x = 248.769985898
+        y = 110.279220614
         z = 1.0
+        connections = SWHarley:4:nio_tap:tap5
     [[Cloud TelServer]]
         x = -123.528570699
         y = -24.941125497
         z = 1.0
+        connections = SWMotomel:3:nio_tap:tap7 SWGilera:6:nio_tap:tap6
     [[NOTE 61]]
         text = 2
         x = 71.0362894118
@@ -683,10 +687,10 @@ autostart = False
         z = -2.0
     [[SHAPE 2]]
         type = rectangle
-        x = -389.491557496
-        y = -528.915872329
-        width = 1115.56890143
-        height = 341.94530958
+        x = -391.171572876
+        y = 58.3202384294
+        width = 1115.24891681
+        height = 328.11183182
         z = -2.0
     [[SHAPE 3]]
         type = rectangle
@@ -697,8 +701,8 @@ autostart = False
         z = -2.0
     [[SHAPE 4]]
         type = rectangle
-        x = -391.171572876
-        y = 58.3202384294
-        width = 1115.24891681
-        height = 328.11183182
+        x = -389.491557496
+        y = -528.915872329
+        width = 1115.56890143
+        height = 341.94530958
         z = -2.0
