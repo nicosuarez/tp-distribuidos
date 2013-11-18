@@ -14,7 +14,7 @@ $ORIGIN  128/27.1.24.10.IN-ADDR.ARPA.
 ;Motomel
 ;##########################################################################
 
-65				IN      PTR     telnet.motomel3.bariloche.chubut.dc.com.ar.
-129				IN      PTR     r17.motomel2.bariloche.chubut.dc.com.ar.
+129				IN      PTR     telnet.motomel3.bariloche.chubut.dc.com.ar.
 130				IN      PTR     r11.motomel1.bariloche.chubut.dc.com.ar.
+131				IN      PTR     r17.motomel2.bariloche.chubut.dc.com.ar.
 

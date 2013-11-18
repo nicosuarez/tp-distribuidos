@@ -19,5 +19,5 @@ $ORIGIN  0/25.1.24.10.IN-ADDR.ARPA.
 2				IN      PTR     r10.gilera2.bariloche.chubut.dc.com.ar.
 3				IN      PTR     r11.gilera2.bariloche.chubut.dc.com.ar.
 4				IN      PTR     dnsroot.gilera5.bariloche.chubut.dc.com.ar.
-129				IN      PTR     telnet.gilera4.bariloche.chubut.dc.com.ar.
+65				IN      PTR     telnet.gilera4.bariloche.chubut.dc.com.ar.
 
