@@ -193,6 +193,7 @@ autostart = False
         2 = access 1 R3 e0/0
         3 = access 1 R6 e0/0
         4 = access 1 R2 e0/0
+        5 = access 1 nio_linux_eth:tap8
         x = -53.0584412254
         y = -414.972654789
         z = 1.0
@@ -331,68 +332,61 @@ autostart = False
         x = 429.806565825
         y = -148.705627485
         z = 1.0
-        connections = SWAzel:4:nio_gen_eth:tap4
     [[Cloud HostA]]
         x = -196.020994748
         y = -302.671139599
         z = 1.0
-        connections = SWHonda:6:nio_gen_eth:tap8
+        connections = SWHonda:5:nio_linux_eth:tap8
     [[Cloud HostB]]
         x = 29.7994231498
         y = 83.3137084993
         z = 1.0
-        connections = SWDerbi:3:nio_gen_eth:tap9
     [[Cloud DNS2]]
         x = -337.442350985
-        y = -483.104689146
+        y = -485.104689146
         z = 1.0
-        connections = SWHonda:5:nio_gen_eth:tap2
     [[Cloud DNS1]]
         x = 412.877633637
         y = 264.830519166
         z = 1.0
-        connections = SWHarley:4:nio_gen_eth:tap1
     [[Cloud DNSRoot]]
         x = -51.7295808258
         y = -179.87720036
         z = 1.0
-        connections = SWGilera:5:nio_gen_eth:tap3
     [[Cloud WebServer]]
         x = 248.769985898
         y = 110.279220614
         z = 1.0
-        connections = SWHarley:5:nio_gen_eth:tap5
     [[Cloud TelServer]]
         x = -123.528570699
         y = -24.941125497
         z = 1.0
-        connections = SWGilera:6:nio_gen_eth:tap6 SWMotomel:3:nio_gen_eth:tap7
     [[SHAPE 1]]
-        type = rectangle
-        x = -391.171572876
-        y = 58.3202384294
-        width = 1115.24891681
-        height = 328.11183182
-        z = -2.0
-    [[SHAPE 2]]
-        type = rectangle
-        x = -389.248916809
-        y = -187.798989873
-        width = 1111.91204718
-        height = 245.968470707
-        z = -2.0
-    [[SHAPE 3]]
-        type = rectangle
-        x = -389.491557496
-        y = -528.915872329
-        width = 1115.56890143
-        height = 341.94530958
-        z = -2.0
-    [[SHAPE 4]]
         type = ellipse
         x = -615.182899634
         y = -200.818325857
         width = 200.0
         height = 200.0
         border_style = 2
+        z = -2.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -389.491557496
+        y = -528.915872329
+        width = 1115.56890143
+        height = 341.94530958
+        z = -2.0
+    [[SHAPE 3]]
+        type = rectangle
+        x = -389.248916809
+        y = -187.798989873
+        width = 1111.91204718
+        height = 245.968470707
+        z = -2.0
+    [[SHAPE 4]]
+        type = rectangle
+        x = -391.171572876
+        y = 58.3202384294
+        width = 1115.24891681
+        height = 328.11183182
         z = -2.0
