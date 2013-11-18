@@ -1,0 +1,36 @@
+$TTL	604800
+@	IN	SOA	ns1.quechua root. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	        IN	NS	ns1.quechua
+ns1.quechua	IN	A	192.168.3.3
+
+webserver.quechua   IN    A    192.168.3.1
+
+; Querandi
+r15.querandi        IN    A    10.34.6.193
+r16.querandi        IN    A    10.34.6.194
+
+; Lule
+r16.lule            IN    A    10.34.6.182
+r13.lule            IN    A    10.34.6.181
+
+; Ona
+r16.ona             IN    A    10.34.6.145
+
+; Pampa
+r16.pampa           IN    A    10.34.6.161
+
+; Sanaviron
+r15.sanaviron       IN    A    10.9.2.194
+r14.sanaviron       IN    A    10.9.2.193
+
+; Quechua
+r16.quechua         IN    A    192.168.3.2
+webserver.quechua   IN    A    192.168.3.1
+ns1.quechua         IN    A    192.168.3.3
+

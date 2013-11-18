@@ -1,0 +1,53 @@
+//
+// Do any local configuration here
+//
+
+zone "salta.dc.fi.uba.ar" in {
+  type master;
+  file "/etc/bind/db.salta";
+};
+
+zone "6.34.10.in-addr.arpa" in {
+  type master;
+  file "/etc/bind/db.10.34.6.rev";
+};
+
+zone "1.34.10.in-addr.arpa" in {
+  type master;
+  file "/etc/bind/db.10.34.1.rev";
+};
+
+zone "3.168.192.in-addr.arpa" in {
+  type master;
+  file "/etc/bind/db.192.168.3.rev";
+};
+
+zone "2.9.10.in-addr.arpa" in {
+  type master;
+  file "/etc/bind/db.10.9.2.rev";
+};
+
+zone "13.34.10.in-addr.arpa" in {
+  type master;
+  file "/etc/bind/db.10.34.13.rev";
+};
+
+zone "2.11.10.in-addr.arpa" in {
+  type master;
+  file "/etc/bind/db.10.11.2.rev";
+};
+
+zone "3.11.10.in-addr.arpa" in {
+  type master;
+  file "/etc/bind/db.10.11.3.rev";
+};
+
+zone "1.3.172.in-addr.arpa" in {
+  type master;
+  file "/etc/bind/db.172.3.1.rev";
+};
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+

@@ -1,0 +1,20 @@
+$TTL	604800
+@	IN	SOA	nsroot.tehuelche.oran.salta.dc.fi.uba.ar. root. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+
+@                     IN    NS       nsroot.tehuelche.oran.salta.dc.fi.uba.ar.
+
+0/27                  IN    NS       ns2.charrua.oran.salta.dc.fi.uba.ar  ; Atacama (Oran)
+$GENERATE 0-31    $   IN    CNAME    $.0/27
+
+32/27                 IN    NS       ns2.charrua.oran.salta.dc.fi.uba.ar  ; Tehuelche (Oran)
+$GENERATE 32-63   $   IN    CNAME    $.32/27
+
+64/26                 IN    NS       ns2.charrua.oran.salta.dc.fi.uba.ar  ; Charrua (Oran)
+$GENERATE 64-127  $   IN    CNAME    $.64/26
+
