@@ -46,10 +46,12 @@ zanella2                          IN      A       10.10.5.2
 zanella3                          IN      A       10.10.5.3
 zanella4                          IN      A       10.10.5.4
 zanella5                          IN      A       10.10.5.5
+zanella6			  IN      A       10.10.5.6
 
 r2.zanella1        	       IN    CNAME     zanella1
 r3.zanella2        	       IN    CNAME     zanella2
 r4.zanella3        	       IN    CNAME     zanella3
 r5.zanella4        	       IN    CNAME     zanella4
 vrrp-r2r3.zanella5             IN    CNAME     zanella5
+hostc.zanella6		       IN    CNAME     zanella6
 
