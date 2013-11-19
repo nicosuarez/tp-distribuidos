@@ -28,7 +28,6 @@ setupHost $DNS1_TAP_IP $DNS1_TAP_MASK $DNS1_TAP_BRCST
 
 addDefaultGateway $DNS1_GTWY
 
-setupDNS "DNS1"
 
 end
 
