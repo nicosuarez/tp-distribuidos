@@ -12,7 +12,7 @@ FTP_SERVICE="/etc/init.d/vsftpd"
 TEL_SERVICE="/etc/init.d/openbsd-inetd"
 WEB_SERVICE="/etc/init.d/apache2"
 WEB_DIR="/var/www/"
-WEB_FILE="grupo4.html"
+WEB_FILE="grupo2.html"
 
 function godMode() {
 	if [ $UID != 0 ]; then
@@ -133,7 +133,7 @@ function startWebSever() {
 
 	cp ./$WEB_FILE ${WEB_DIR}
 	log "Página web $WEB_FILE instalada..."
-	wget "http://localhost/grupo4.html"
+	wget "http://localhost/grupo2.html"
 }
 
 function stopWebServer() {
