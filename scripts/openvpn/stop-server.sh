@@ -1,4 +1,5 @@
 echo Dando de baja todas las intefaces...
+ifconfig tap0 down
 ifconfig tap1 down
 ifconfig tap2 down
 ifconfig tap3 down
@@ -8,7 +9,6 @@ ifconfig tap6 down
 ifconfig tap7 down
 ifconfig tap8 down
 ifconfig tap9 down
-#ifconfig tap10 down
 
 echo Fin...
 # Matar todos los procesos
