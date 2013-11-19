@@ -28,7 +28,6 @@ setupHost $DNS2_TAP_IP $DNS2_TAP_MASK $DNS2_TAP_BRCST
 
 addDefaultGateway $DNS2_GTWY
 
-setupDNS "DNS2"
 
 end
 

@@ -28,7 +28,6 @@ setupHost $DNSROOT_TAP_IP $DNSROOT_TAP_MASK $DNSROOT_TAP_BRCST
 
 addDefaultGateway $DNSROOT_GTWY
 
-setupDNS "DNSROOT"
 
 end
 
