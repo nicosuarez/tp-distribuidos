@@ -16,7 +16,7 @@ WEB_FILE="grupo2.html"
 
 function godMode() {
 	if [ $UID != 0 ]; then
-	    echo "Ud. no es dios, utilice sudo:"
+	    echo "Ud. no es UID 0, utilice sudo:"
 	    echo "sudo $0 $*"
 	    exit 99
 	fi
@@ -37,7 +37,7 @@ function setupHost() {
 }
 
 function end() {
-	log "Configuracón terminada. Que tenga un excelente día!\n"
+	log "Configuracón terminada \n"
 }
 
 function tunnelPromisc() {
