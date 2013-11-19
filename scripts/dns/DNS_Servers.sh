@@ -3,7 +3,7 @@
 function help {
 
   echo ""
-  
+ 
   echo "###################################################"
 
   echo "Script para iniciar los serividores DNS"
@@ -27,27 +27,19 @@ function help {
 }
 
 function instalarBind {
-
-  echo "###################################################"
-
-  echo "Instalando bind9"
-
-  echo "###################################################"
-
-  sudo apt-get install bind9
-  
+	echo "Verificando que bind9 este instalado..."
+	installed=`dpkg -s bind9 | grep 'ok installed'`
+	if [ "$installed" == "" ]; then
+		echo "bind9 no esta instalado!"
+		sudo apt-get install bind9
+	else
+		echo "bind9 esta instalado!"
+	fi  
 }
 
 function iniciarDeamonBind {
-
-  echo "###################################################"
-
   echo "Iniciando el deamon bind9"
-
-  echo "###################################################"
-
-  sudo service bind9 restart
-  
+  sudo service bind9 restart  
 }
 
 function dns1 {
@@ -66,10 +58,16 @@ function dns1 {
 
   echo "###################################################"
 
+  chmod -R 777 /etc/bind
   sudo cp -R $dir/../../dns/secundario1/* /etc/bind/
+  sudo chattr -i /etc/resolv.conf
+  sudo chmod 777 /etc/resolv.conf
+  echo "Agregando la direccion IP de DNS1 al archivo /etc/resolv.conf..."
+  echo "search riocolorado.chubut.dc.fi.uba.ar" >> /etc/resolv.conf 
+  echo "nameserver 192.168.8.4" >> /etc/resolv.conf
+  sudo chmod 644 /etc/resolv.conf
 
   iniciarDeamonBind
-
 }
 
 function dns2 {
@@ -88,10 +86,16 @@ function dns2 {
 
   echo "###################################################"
 
+  chmod -R 777 /etc/bind
   sudo cp -R $dir/../../dns/secundario2/* /etc/bind/
+  sudo chattr -i /etc/resolv.conf
+  sudo chmod 777 /etc/resolv.conf
+  echo "Agregando la direccion IP de DNS1 al archivo /etc/resolv.conf..."
+  echo "search riocolorado.chubut.dc.fi.uba.ar" >> /etc/resolv.conf 
+  echo "nameserver 10.24.3.134" >> /etc/resolv.conf
+  sudo chmod 644 /etc/resolv.conf
 
   iniciarDeamonBind
-
 }
 
 function dnsroot {
@@ -110,7 +114,15 @@ function dnsroot {
 
   echo "###################################################"
 
+  chmod -R 777 /etc/bind
   sudo cp -R $dir/../../dns/root/* /etc/bind/
+  sudo chattr -i /etc/resolv.conf
+  sudo chmod 777 /etc/resolv.conf
+  echo "Agregando la direccion IP de DNS1 al archivo /etc/resolv.conf..."
+  echo "search riocolorado.chubut.dc.fi.uba.ar" >> /etc/resolv.conf 
+  echo "nameserver 10.24.1.5" >> /etc/resolv.conf
+  sudo chmod 644 /etc/resolv.conf
+
 
   iniciarDeamonBind
   
