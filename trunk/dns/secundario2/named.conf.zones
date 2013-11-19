@@ -6,7 +6,7 @@
 
 zone "trelew.chubut.dc.fi.uba.ar" in{
  type master;
- file "dns2/trelew.chubut.dc.fi.uba.ar";
+ file "/etc/bind/dns2/trelew.chubut.dc.fi.uba.ar";
 };
 
 //#######################################################
@@ -15,7 +15,7 @@ zone "trelew.chubut.dc.fi.uba.ar" in{
 
 zone "bariloche.chubut.dc.fi.uba.ar" in{
   type master;
-  file "dns2/bariloche.chubut.dc.fi.uba.ar";
+  file "/etc/bind/dns2/bariloche.chubut.dc.fi.uba.ar";
 };
 
 //#######################################################
@@ -44,7 +44,7 @@ zone "localhost" in{
 
 zone "0/25.1.24.10.in-addr.arpa" in{
  type master;
- file "dns2/0.1.24.10.IN-ADDR.ARPA.rev";
+ file "/etc/bind/dns2/0.1.24.10.IN-ADDR.ARPA.rev";
 };
 
 //Motomel
@@ -52,7 +52,7 @@ zone "0/25.1.24.10.in-addr.arpa" in{
 
 zone "128/27.1.24.10.in-addr.arpa" in{
  type master;
- file "dns2/128.1.24.10.IN-ADDR.ARPA.rev";
+ file "/etc/bind/dns2/128.1.24.10.IN-ADDR.ARPA.rev";
 };
 
 //BMW
@@ -60,7 +60,7 @@ zone "128/27.1.24.10.in-addr.arpa" in{
 
 zone "32/28.27.92.10.in-addr.arpa" in{
  type master;
- file "dns2/32.27.92.10.IN-ADDR.ARPA.rev";
+ file "/etc/bind/dns2/32.27.92.10.IN-ADDR.ARPA.rev";
 };
 
 //Azel
@@ -68,7 +68,7 @@ zone "32/28.27.92.10.in-addr.arpa" in{
 
 zone "0/27.27.92.10.in-addr.arpa" in{
  type master;
- file "dns2/0.27.92.10.IN-ADDR.ARPA.rev";
+ file "/etc/bind/dns2/0.27.92.10.IN-ADDR.ARPA.rev";
 };
 
 //;##########################################################################
@@ -79,7 +79,7 @@ zone "0/27.27.92.10.in-addr.arpa" in{
 //-----
 zone "128/25.3.24.10.in-addr.arpa" in{
  type master;
- file "dns2/128.3.24.10.IN-ADDR.ARPA.rev";
+ file "/etc/bind/dns2/128.3.24.10.IN-ADDR.ARPA.rev";
 };
 
 //Zanella
@@ -87,6 +87,6 @@ zone "128/25.3.24.10.in-addr.arpa" in{
 
 zone "0/24.5.10.10.in-addr.arpa" in{
  type master;
- file "dns2/0.5.10.10.IN-ADDR.ARPA.rev";
+ file "/etc/bind/dns2/0.5.10.10.IN-ADDR.ARPA.rev";
 };
 
