@@ -11,6 +11,7 @@ autostart = False
     [[ETHSW SWDerbi]]
         1 = access 1 R13 e0/1
         2 = access 1 R14 e0/2
+        3 = access 1 nio_linux_eth:tap9
         x = 23.7994231488
         y = 163.313708499
         z = 1.0
@@ -89,6 +90,7 @@ autostart = False
     [[ETHSW SWMotomel]]
         1 = access 1 R17 e0/1
         2 = access 1 R11 e0/2
+        3 = access 1 nio_linux_eth:tap7
         x = -85.8259018079
         y = 82.9949493663
         hx = 12.5857864376
@@ -97,6 +99,8 @@ autostart = False
         1 = access 1 R13 e0/0
         2 = access 1 R12 e0/2
         3 = access 1 R14 e0/0
+        4 = access 1 nio_linux_eth:tap5
+        5 = access 1 nio_linux_eth:tap1
         x = 369.823809767
         y = 194.91883092
         z = 1.0
@@ -105,7 +109,9 @@ autostart = False
         2 = access 1 R11 e0/0
         3 = access 1 R17 e0/0
         4 = access 1 R7 e0/2
-        x = -178.883909758
+        5 = access 1 nio_linux_eth:tap3
+        6 = access 1 nio_linux_eth:tap6
+        x = -208.883909758
         y = -115.379725677
         z = 1.0
 [127.0.0.1:7203]
@@ -194,6 +200,7 @@ autostart = False
         3 = access 1 R6 e0/0
         4 = access 1 R2 e0/0
         5 = access 1 nio_linux_eth:tap8
+        6 = access 1 nio_linux_eth:tap2
         x = -53.0584412254
         y = -414.972654789
         z = 1.0
@@ -255,6 +262,7 @@ autostart = False
         1 = access 1 R7 e0/1
         2 = access 1 R9 e0/0
         3 = access 1 R8 e0/0
+        4 = access 1 nio_linux_eth:tap4
         x = 534.309091142
         y = -14.3675323681
         z = 1.0
@@ -273,8 +281,9 @@ autostart = False
         slot0 = NM-4E
         e0/0 = SWZanella 3
         e0/1 = Internet e0/1
-        x = 578.185858226
-        y = -312.208152801
+        e0/2 = nio_linux_eth:tap0
+        x = 600.185858226
+        y = -330.208152801
         z = 1.0
     [[ROUTER R7]]
         model = 3640
@@ -329,38 +338,58 @@ autostart = False
     m11 = 0.499999999999
     m22 = 0.499999999999
     [[Cloud FTPServer]]
-        x = 429.806565825
-        y = -148.705627485
+        symbol = server
+        x = 499.806565825
+        y = -164.705627485
         z = 1.0
+        connections = SWAzel:4:nio_linux_eth:tap4
     [[Cloud HostA]]
-        x = -196.020994748
-        y = -302.671139599
+        symbol = computer
+        x = -192.020994748
+        y = -290.671139599
         z = 1.0
         connections = SWHonda:5:nio_linux_eth:tap8
     [[Cloud HostB]]
-        x = 29.7994231498
-        y = 83.3137084993
+        symbol = computer
+        x = 117.79942315
+        y = 71.3137084993
         z = 1.0
+        connections = SWDerbi:3:nio_linux_eth:tap9
     [[Cloud DNS2]]
-        x = -337.442350985
-        y = -485.104689146
+        symbol = server
+        x = -281.442350985
+        y = -491.104689146
         z = 1.0
+        connections = SWHonda:6:nio_linux_eth:tap2
     [[Cloud DNS1]]
-        x = 412.877633637
-        y = 264.830519166
+        symbol = server
+        x = 470.877633637
+        y = 290.830519166
         z = 1.0
+        connections = SWHarley:5:nio_linux_eth:tap1
     [[Cloud DNSRoot]]
-        x = -51.7295808258
-        y = -179.87720036
+        symbol = server
+        x = -75.7295808258
+        y = -181.87720036
         z = 1.0
+        connections = SWGilera:5:nio_linux_eth:tap3
     [[Cloud WebServer]]
+        symbol = server
         x = 248.769985898
-        y = 110.279220614
+        y = 98.279220614
         z = 1.0
+        connections = SWHarley:4:nio_linux_eth:tap5
     [[Cloud TelServer]]
-        x = -123.528570699
-        y = -24.941125497
+        symbol = server
+        x = -105.528570699
+        y = -38.941125497
         z = 1.0
+        connections = SWGilera:6:nio_linux_eth:tap6 SWMotomel:3:nio_linux_eth:tap7
+    [[Cloud HostC]]
+        symbol = computer
+        x = 634.500000001
+        y = -447.000000001
+        connections = R5:e0/2:nio_linux_eth:tap0
     [[SHAPE 1]]
         type = ellipse
         x = -615.182899634
