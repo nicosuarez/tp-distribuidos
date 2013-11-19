@@ -12,7 +12,7 @@ zone "." in{
 
 zone "chubut.dc.fi.uba.ar" in{
   type master;
-  file "master/chubut.dc.fi.uba.ar";
+  file "/etc/bind/master/chubut.dc.fi.uba.ar";
 };
 
 //Gilera, Motomel
@@ -20,7 +20,7 @@ zone "chubut.dc.fi.uba.ar" in{
 
 zone "1.24.10.in-addr.arpa" in{
  type master;
- file "master/1.24.10.IN-ADDR.ARPA.rev";
+ file "/etc/bind/master/1.24.10.IN-ADDR.ARPA.rev";
 };
 
 //Zanella
@@ -28,7 +28,7 @@ zone "1.24.10.in-addr.arpa" in{
 
 zone "5.10.10.in-addr.arpa" in{
  type master;
- file "master/5.10.10.IN-ADDR.ARPA.rev";
+ file "/etc/bind/master/5.10.10.IN-ADDR.ARPA.rev";
 };
 
 //Azel, BMW
@@ -36,7 +36,7 @@ zone "5.10.10.in-addr.arpa" in{
 
 zone "27.92.10.in-addr.arpa" in{
  type master;
- file "master/27.92.10.IN-ADDR.ARPA.rev";
+ file "/etc/bind/master/27.92.10.IN-ADDR.ARPA.rev";
 };
 
 //Harley Davidson
@@ -44,7 +44,7 @@ zone "27.92.10.in-addr.arpa" in{
 
 zone "8.168.192.in-addr.arpa" in{
  type master;
- file "master/8.168.192.IN-ADDR.ARPA.rev";
+ file "/etc/bind/master/8.168.192.IN-ADDR.ARPA.rev";
 };
 
 //KTM, Honda, Vespa, Kawasaki, Ducati, Derbi, Suzuki
@@ -52,6 +52,6 @@ zone "8.168.192.in-addr.arpa" in{
 
 zone "3.24.10.in-addr.arpa" in{
  type master;
- file "master/3.24.10.IN-ADDR.ARPA.rev";
+ file "/etc/bind/master/3.24.10.IN-ADDR.ARPA.rev";
 };
 
