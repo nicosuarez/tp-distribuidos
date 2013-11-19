@@ -19,4 +19,4 @@ $ORIGIN  0/24.5.10.10.IN-ADDR.ARPA.
 3				IN      PTR     r4.zanella3.trelew.chubut.dc.com.ar.
 4				IN      PTR     r5.zanella4.trelew.chubut.dc.com.ar
 5				IN      PTR     vrrp-r2r3.zanella5.trelew.chubut.dc.com.ar
-
+6				IN      PTR     hostc.zanella6.trelew.chubut.dc.com.ar
