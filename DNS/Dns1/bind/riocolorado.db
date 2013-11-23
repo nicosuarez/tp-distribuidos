@@ -1,0 +1,13 @@
+; DNS 1: sede riocolorado
+$TTL 2d
+$ORIGIN riocolorado.chubut.dc.fi.uba.ar.
+@	IN	SOA	dns1.riocolorado.chubut.dc.fi.uba.ar. root.fi.uba.ar. (
+                              1
+                         604800
+                          86400
+                        2419200
+                         604800 )
+		IN	NS	dns1.riocolorado.chubut.dc.fi.uba.ar.
+dns1		IN	A	192.168.0.104
+ftp		IN 	A	10.34.13.1
+hostc		IN 	A	10.34.1.147

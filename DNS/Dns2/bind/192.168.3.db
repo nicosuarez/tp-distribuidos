@@ -1,0 +1,10 @@
+$TTL 2d
+@	IN	SOA	dns2.resto.chubut.dc.fi.uba.ar. root.fi.uba.ar. (
+                              1
+                         604800
+                          86400
+                        2419200
+                         604800 )
+		IN	NS		dns2.resto.chubut.dc.fi.uba.ar.
+38		IN	PTR		dns2.resto.chubut.dc.fi.uba.ar.
+1		IN	PTR		www.resto.chubut.dc.fi.uba.ar.
