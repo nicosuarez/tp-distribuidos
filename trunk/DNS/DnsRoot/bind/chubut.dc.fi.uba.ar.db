@@ -19,7 +19,7 @@ $ORIGIN riocolorado.chubut.dc.fi.uba.ar.
 @		IN	NS	dns1.riocolorado.chubut.dc.fi.uba.ar.
 dns1		IN	A	192.168.0.104
 
-$ORIGIN resto.misiones.dc.fi.uba.ar.
+$ORIGIN resto.chubut.dc.fi.uba.ar.
 ; Zona resto
-@		IN	NS	ns2.resto.misiones.dc.fi.uba.ar.
-ns2		IN	A	192.168.0.103
+@		IN	NS	dns2.resto.chubut.dc.fi.uba.ar.
+dns2		IN	A	192.168.0.103
