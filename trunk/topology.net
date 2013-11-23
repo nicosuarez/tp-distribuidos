@@ -61,8 +61,8 @@ autostart = False
         slot0 = NM-4E
         e0/0 = SWHarley 1
         e0/1 = SWDerbi 1
-        x = 156.375541596
-        y = 180.8355698
+        x = 176.174531469
+        y = 169.521861301
         z = 1.0
     [[ROUTER R10]]
         model = 3640
@@ -281,7 +281,6 @@ autostart = False
         slot0 = NM-4E
         e0/0 = SWZanella 3
         e0/1 = Internet e0/1
-        e0/2 = nio_linux_eth:tap0
         x = 600.185858226
         y = -330.208152801
         z = 1.0
@@ -330,13 +329,14 @@ autostart = False
         2 = access 1 R3 e0/1
         3 = access 1 R5 e0/0
         4 = access 1 R2 e0/1
+        5 = access 1 nio_linux_eth:tap0
         x = 466.791413923
         y = -400.960461481
         z = 1.0
 [GNS3-DATA]
     configs = configs
-    m11 = 0.499999999999
-    m22 = 0.499999999999
+    m11 = 1.41421356237
+    m22 = 1.41421356237
     [[Cloud FTPServer]]
         symbol = server
         x = 499.806565825
@@ -355,6 +355,12 @@ autostart = False
         y = 71.3137084993
         z = 1.0
         connections = SWDerbi:3:nio_linux_eth:tap9
+    [[Cloud DNSRoot]]
+        symbol = server
+        x = -75.7295808258
+        y = -181.87720036
+        z = 1.0
+        connections = SWGilera:5:nio_linux_eth:tap3
     [[Cloud DNS2]]
         symbol = server
         x = -281.442350985
@@ -367,12 +373,6 @@ autostart = False
         y = 290.830519166
         z = 1.0
         connections = SWHarley:5:nio_linux_eth:tap1
-    [[Cloud DNSRoot]]
-        symbol = server
-        x = -75.7295808258
-        y = -181.87720036
-        z = 1.0
-        connections = SWGilera:5:nio_linux_eth:tap3
     [[Cloud WebServer]]
         symbol = server
         x = 248.769985898
@@ -389,21 +389,21 @@ autostart = False
         symbol = computer
         x = 634.500000001
         y = -447.000000001
-        connections = R5:e0/2:nio_linux_eth:tap0
+        connections = SWZanella:5:nio_linux_eth:tap0
     [[SHAPE 1]]
+        type = rectangle
+        x = -389.491557496
+        y = -528.915872329
+        width = 1115.56890143
+        height = 341.94530958
+        z = -2.0
+    [[SHAPE 2]]
         type = ellipse
         x = -615.182899634
         y = -200.818325857
         width = 200.0
         height = 200.0
         border_style = 2
-        z = -2.0
-    [[SHAPE 2]]
-        type = rectangle
-        x = -389.491557496
-        y = -528.915872329
-        width = 1115.56890143
-        height = 341.94530958
         z = -2.0
     [[SHAPE 3]]
         type = rectangle
