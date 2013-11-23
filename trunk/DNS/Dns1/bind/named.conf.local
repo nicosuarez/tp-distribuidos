@@ -1,6 +1,6 @@
 zone "riocolorado.chubut.dc.fi.uba.ar" in {
 	type master;
-	file "/etc/bind/riocolorado.db";
+	file "/etc/bind/riocolorado.chubut.dc.fi.uba.ar.db";
 };
 
 zone "13.34.10.in-addr.arpa" {
