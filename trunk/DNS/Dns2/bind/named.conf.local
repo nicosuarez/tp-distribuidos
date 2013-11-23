@@ -1,0 +1,24 @@
+zone "resto.chubut.dc.fi.uba.ar" in {
+	type master;
+	file "/etc/bind/resto.db";
+};
+
+zone "1.34.10.in-addr.arpa" {
+	type master;
+    file "/etc/bind/10.34.1.db";
+};
+
+zone "2.9.10.in-addr.arpa" {
+	type master;
+    file "/etc/bind/10.9.2.db";
+};
+
+zone "2.11.10.in-addr.arpa" {
+	type master;
+    file "/etc/bind/10.11.2.db";
+};
+
+zone "3.168.192.in-addr.arpa" {
+	type master;
+    file "/etc/bind/192.168.3.db";
+};

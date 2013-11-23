@@ -1,0 +1,25 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL 2d
+$ORIGIN chubut.dc.fi.uba.ar.
+@	IN	SOA	dnsroot.chubut.dc.fi.uba.ar. root.fi.uba.ar. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+; definicion del dns root
+		IN	NS	dnsroot.chubut.dc.fi.uba.ar.
+dnsroot		IN	A	192.168.0.101
+
+$ORIGIN riocolorado.chubut.dc.fi.uba.ar.
+; Zona rio colorado
+@		IN	NS	dns1.riocolorado.chubut.dc.fi.uba.ar.
+dns1		IN	A	192.168.0.104
+
+$ORIGIN resto.misiones.dc.fi.uba.ar.
+; Zona resto
+@		IN	NS	ns2.resto.misiones.dc.fi.uba.ar.
+ns2		IN	A	192.168.0.103
