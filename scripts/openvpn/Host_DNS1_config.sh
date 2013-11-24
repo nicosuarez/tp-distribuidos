@@ -13,6 +13,7 @@ fi
 
 log "Iniciando configuración automática del DNS 1..."
 
+
 INTF=$1
 export "$INTF"
 
@@ -25,6 +26,7 @@ cleanRoutes
 
 tunnel $DNS1_PORT $DNS1_GNS3_PORT $GNS3_IP $DNS1_INTF_IP $GNS3_MASK "tap0"
 setupHost $DNS1_TAP_IP $DNS1_TAP_MASK $DNS1_TAP_BRCST
+setupDNS "DNS1"
 
 addDefaultGateway $DNS1_GTWY
 

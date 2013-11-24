@@ -202,6 +202,7 @@ function setupDNS() {
 	stopBind9
 
 	log "Instalando archivos de configuración..."
+	echo " Hola soy el nombre de la carpeta: $DNS_NAME"	
 	cp -f $DNS_NAME/named.conf.* $BIND_DIR
 	cp -f $DNS_NAME/*.db $BIND_DIR
 	cp -f $DNS_NAME/resolv.conf /etc/
