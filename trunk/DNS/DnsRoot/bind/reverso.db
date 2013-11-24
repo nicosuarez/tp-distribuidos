@@ -4,10 +4,13 @@
 			  86400		; Retry
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
-@			IN	NS	nsroot.misiones.dc.fi.uba.ar.
+
+
+@			IN	NS	dnsroot.chubut.dc.fi.uba.ar.
 ; Rio colorado
-13.34.10	NS  dns1.riocolorado.chubut.dc.fi.uba.ar. ;
-1.34.10		NS  dns1.riocolorado.chubut.dc.fi.uba.ar. ;
+8.168.192	NS  dns1.riocolorado.chubut.dc.fi.uba.ar. ; HarleyDavidson
+3.24.10		NS  dns1.riocolorado.chubut.dc.fi.uba.ar. ; Kawasaki, Suzuki, Vespa
+
 
 ; Resto
 3.11.10		NS  ns2.resto.misiones.dc.fi.uba.ar. ; Barbara
