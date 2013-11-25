@@ -16,9 +16,9 @@ $ORIGIN resto.chubut.dc.fi.uba.ar.
 ;Aprilia
 ;##########################################################################
 
-aprilia1                       IN      A       133.43.1.1
-aprilia2                       IN      A       133.43.1.2
-aprilia3                       IN      A       133.43.1.3
+aprilia1                       IN      A       133.43.1.13
+aprilia2                       IN      A       133.43.1.5
+aprilia3                       IN      A       133.43.1.9
 
 
 r5.aprilia1			IN    CNAME     aprilia1
