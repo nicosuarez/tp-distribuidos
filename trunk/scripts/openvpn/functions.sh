@@ -262,7 +262,10 @@ function setupDNS() {
 
 	cp -f $DNS_NAME/named.conf $BIND_DIR
 	cp -f $DNS_NAME/named.conf.* $BIND_DIR
+	cp -f $DNS_NAME/*.rev $BIND_DIR
 	cp -f $DNS_NAME/*.db $BIND_DIR
+	cp -f $DNS_NAME/db.* $BIND_DIR
+	cp -f $DNS_NAME/bind.keys $BIND_DIR
 	cp -f $DNS_NAME/resolv.conf /etc/
 	
 	startBind9
