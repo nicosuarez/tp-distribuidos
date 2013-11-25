@@ -12,10 +12,16 @@
 3.24.10		NS  dns1.riocolorado.chubut.dc.fi.uba.ar. ; Kawasaki, Suzuki, Vespa
 
 
+; Bariloche
+27.92.10	NS  dns2.bariloche.chubut.dc.fi.uba.ar. ; Azel, Bmw 
+1.24.10		NS  dns2.bariloche.chubut.dc.fi.uba.ar. ; Gilera, Motomel
+
+
+; Trelew
+3.24.10		NS  dns2.trelew.chubut.dc.fi.uba.ar. ; Ktm, Ducati, Honda
+5.10.10		NS  dns2.trelew.chubut.dc.fi.uba.ar. ; Zanella
+
 ; Resto
-3.11.10		NS  ns2.resto.misiones.dc.fi.uba.ar. ; Barbara
-3.168.192	NS  ns2.resto.misiones.dc.fi.uba.ar. ; Celeste
-2.9.10		NS  ns2.resto.misiones.dc.fi.uba.ar. ; Daniela
-2.11.10		NS  ns2.resto.misiones.dc.fi.uba.ar. ; Gabriela
-1.34.10		NS  ns2.resto.misiones.dc.fi.uba.ar. ; Ana, Estela, Florencia, Ines, Jimena, Karina, Ofelia, Pamela, Ursula
-1.3.172		NS  ns2.resto.misiones.dc.fi.uba.ar. ; Quimera, Sabrina, Tamara 
+1.43.133	NS  dns2.resto.chubut.dc.fi.uba.ar. ; Aprilia
+0.43.172	NS  dns2.resto.chubut.dc.fi.uba.ar. ; Yamaha
+
