@@ -9,7 +9,6 @@
 @			IN	NS	dnsroot.chubut.dc.fi.uba.ar.
 ; Rio colorado
 8.168.192	NS  dns1.riocolorado.chubut.dc.fi.uba.ar. ; HarleyDavidson
-3.24.10		NS  dns1.riocolorado.chubut.dc.fi.uba.ar. ; Kawasaki, Suzuki, Vespa
 
 
 ; Bariloche
@@ -18,7 +17,7 @@
 
 
 ; Trelew
-3.24.10		NS  dns2.trelew.chubut.dc.fi.uba.ar. ; Ktm, Ducati, Honda
+3.24.10		NS  dns2.trelew.chubut.dc.fi.uba.ar. ; Ktm, Ducati, Honda, Kawasaki, Suzuki, Vespa
 5.10.10		NS  dns2.trelew.chubut.dc.fi.uba.ar. ; Zanella
 
 ; Resto
