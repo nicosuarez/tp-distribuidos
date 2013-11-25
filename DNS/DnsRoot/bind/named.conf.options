@@ -22,5 +22,7 @@ options {
 
 	auth-nxdomain no;    # conform to RFC1035
 	listen-on-v6 { any; };
+	  recursion yes;
+  	allow-recursion {10.92/16;10.24/16;192.168/16;10.10/16;133.43/16;172.43/16;};
 };
 
