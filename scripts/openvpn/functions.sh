@@ -267,7 +267,8 @@ function setupDNS() {
 	cp -f $DNS_NAME/db.* $BIND_DIR
 	cp -f $DNS_NAME/bind.keys $BIND_DIR
 	cp -f $DNS_NAME/resolv.conf /etc/
-	
+	chmod 777 /etc/bind -R
+	chown root /etc/bind -R
 	startBind9
 
 	log "Servicio DNS instalado..."
