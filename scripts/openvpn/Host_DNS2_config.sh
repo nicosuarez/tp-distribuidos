@@ -25,7 +25,7 @@ cleanRoutes
 
 tunnel $DNS2_PORT $DNS2_GNS3_PORT $GNS3_IP $DNS2_INTF_IP $GNS3_MASK "tap0"
 setupHost $DNS2_TAP_IP $DNS2_TAP_MASK $DNS2_TAP_BRCST
-
+setupDNS "DNS2"
 addDefaultGateway $DNS2_GTWY
 
 
