@@ -8,7 +8,7 @@ $ORIGIN riocolorado.chubut.dc.fi.uba.ar.
                         2419200
                          604800 )
 		IN	NS	dns1.riocolorado.chubut.dc.fi.uba.ar.
-dns1		IN	A	192.168.0.104
+dns1		IN	A	192.168.0.7
 localhost       IN      A       127.0.0.1
 
 
