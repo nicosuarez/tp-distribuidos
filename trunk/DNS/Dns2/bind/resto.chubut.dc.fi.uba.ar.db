@@ -1,0 +1,73 @@
+; DNS 2: resto
+$TTL 2d
+$ORIGIN resto.chubut.dc.fi.uba.ar.
+@	IN	SOA	dns2.resto.chubut.dc.fi.uba.ar. root.fi.uba.ar. (
+                              1
+                         604800
+                          86400
+                        2419200
+                         604800 )
+		IN	NS	dns2.resto.chubut.dc.fi.uba.ar.
+
+
+
+;##########################################################################
+;Ktm
+;##########################################################################
+
+ktm1                       IN      A       10.24.3.1
+ktm2                       IN      A       10.24.3.2
+
+
+r4.ktm1			IN    CNAME     ktm1
+r7.ktm2			IN    CNAME     ktm2
+
+
+
+;##########################################################################
+;Aprilia
+;##########################################################################
+
+aprilia1                       IN      A       133.43.1.1
+aprilia2                       IN      A       133.43.1.2
+aprilia3                       IN      A       133.43.1.3
+
+
+r5.aprilia1			IN    CNAME     aprilia1
+r8.aprilia2			IN    CNAME     aprilia2
+r12.aprilia3			IN    CNAME     aprilia3
+
+
+
+;##########################################################################
+;Ducati
+;##########################################################################
+
+ducati1                       IN      A       10.24.3.5
+ducati2                       IN      A       10.24.3.6
+
+
+r11.ducati1			IN    CNAME     ducati1
+r12.ducati2			IN    CNAME     ducati2
+
+
+
+;##########################################################################
+;Yamaha
+;##########################################################################
+
+yamaha1                       IN      A       172.43.0.65
+yamaha2                       IN      A       172.43.0.66
+yamaha3                       IN      A       172.43.0.67
+yamaha4                       IN      A       172.43.0.68
+
+
+r1.yamaha1			IN    CNAME     yamaha1
+r6.yamaha2			IN    CNAME     yamaha2
+r15.yamaha3			IN    CNAME     yamaha3
+r17.yamaha4			IN    CNAME     yamaha4
+
+
+
+
+
