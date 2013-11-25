@@ -117,7 +117,21 @@ function disableMartian() {
     sysctl net.ipv4.conf.$INTF.rp_filter=0
 }
 
+function installTelServer() {
+	installed=`dpkg -s vsftpd|grep installed`
+
+	echo "Verificando que telnetd este instalado..."
+	if [ "" == "$installed" ]; then
+		echo "Error: telnetd no esta instalado!"
+		echo "Instalando telnetd..."
+		sudo apt-get --force-yes --yes install telnetd
+	else
+		echo "telnetd instalado!"
+	fi
+}
+
 function startTelSever() {
+	installTelServer
 	log "Iniciando el servicio Telnet..."
 	startService $TEL_SERVICE
 }
@@ -127,7 +141,22 @@ function stopTelServer() {
 	stopService $TEL_SERVICE
 }
 
+function installWebServer() {
+	#verifica si apache2 está instalado y, en caso negativo, lo instala.
+	installed=`dpkg -s apache2|grep installed`
+
+	echo "Verificando que apache2 este instalado..."
+	if [ "" == "$installed" ]; then
+		echo "Error: apache2 no esta instalado!"
+		echo "Instalando apache2..."
+		sudo apt-get --force-yes --yes install apache2
+	else
+		echo "apache2 instalado!"
+	fi
+}
+
 function startWebSever() {
+	installWebServer
 	log "Iniciando el servicio Web..."
 	startService $WEB_SERVICE
 
@@ -141,7 +170,22 @@ function stopWebServer() {
 	stopService $WEB_SERVICE
 }
 
+function installFTP() {
+	#verifica si ftp está instalado y, en caso negativo, lo instala.
+	installed=`dpkg -s vsftpd|grep installed`
+
+	echo "Verificando que vsftpd este instalado..."
+	if [ "" == "$installed" ]; then
+		echo "Error: vsftpd no esta instalado!"
+		echo "Instalando vsftpd..."
+		sudo apt-get --force-yes --yes install vsftpd
+	else
+		echo "vsftpd instalado!"
+	fi
+}
+
 function startFTP() {
+	installFTP
 	log "Iniciando el servicio FTP..."
 	cp $FTP_FILE /etc/$FTP_FILE
 	startService $FTP_SERVICE
@@ -150,6 +194,17 @@ function startFTP() {
 function stopFTP() {
 	log "Deteniendo el servicio FTP..."
 	stopService $FTP_SERVICE
+}
+
+function installBind9() {
+	echo "Verificando que bind9 este instalado..."
+	installed=`dpkg -s bind9 | grep 'ok installed'`
+	if [ "$installed" == "" ]; then
+		echo "bind9 no esta instalado!"
+		sudo apt-get --force-yes --yes install bind9
+	else
+		echo "bind9 esta instalado!"
+	fi  
 }
 
 function startBind9() {
@@ -198,11 +253,13 @@ function removeProxy() {
 function setupDNS() {
 	DNS_NAME=$1
 
+	installBind9
+
 	log "Configurando servicio DNS..."
 	stopBind9
 
 	log "Instalando archivos de configuración..."
-	echo " Hola soy el nombre de la carpeta: $DNS_NAME"	
+
 	cp -f $DNS_NAME/named.conf $BIND_DIR
 	cp -f $DNS_NAME/named.conf.* $BIND_DIR
 	cp -f $DNS_NAME/*.db $BIND_DIR

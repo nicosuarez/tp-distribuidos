@@ -31,10 +31,10 @@ tunnel $TELSERVER2_PORT $TELSERVER2_GNS3_PORT $GNS3_IP "" $GNS3_MASK "tap1"
 setupHost $TELSERVER2_TAP_IP $TELSERVER2_TAP_MASK $TELSERVER2_TAP_BRCST
 disableMartian
 
+startTelSever
+
 addDefaultGateway $TELSERVER_GTWY
 configureDNS $DOMAIN $SEARCH $TELSERVER_NS
-
-startTelSever
 
 end
 
