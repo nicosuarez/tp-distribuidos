@@ -26,10 +26,10 @@ cleanRoutes
 tunnel $FTP_PORT $FTP_GNS3_PORT $GNS3_IP $FTP_INTF_IP $GNS3_MASK "tap0"
 setupHost $FTP_TAP_IP $FTP_TAP_MASK $FTP_TAP_BRCST
 
+startFTP
+
 addDefaultGateway $FTP_GTWY
 configureDNS $DOMAIN $SEARCH $FTP_NS
-
-startFTP
 
 end
 
