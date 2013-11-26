@@ -1,0 +1,22 @@
+$TTL 2d
+@  IN      SOA     dns1.riocolorado.chubut.dc.fi.uba.ar.   hostmaster.riocolorado.chubut.dc.fi.uba.ar.      (
+                        2012041101      ; Serial (usually YYYYMMDDSS): increment after any change
+                                8h      ; Refresh (8 hours)
+                                2h      ; Retry (2 hours)
+                                4w      ; Expire (4 weeks)
+                                3h )    ; NX (3 hours) TTL Negativ Cache
+
+; name server RR for the domain
+@                               IN      NS      dns1.riocolorado.chubut.dc.fi.uba.ar.
+
+;##########################################################################
+;HarleyDavidson
+;##########################################################################
+
+1				IN      PTR     r12.hdavidson1.riocolorado.chubut.dc.fi.uba.ar.
+2				IN      PTR     r13.hdavidson2.riocolorado.chubut.dc.fi.uba.ar.
+3				IN      PTR     r14.hdavidson3.riocolorado.chubut.dc.fi.uba.ar.
+4				IN      PTR     vrrp-r13r14.hdavidson4.riocolorado.chubut.dc.fi.uba.ar.
+5				IN      PTR     dns1.hdavidson5.riocolorado.chubut.dc.fi.uba.ar.
+71				IN      PTR     apache.hdavidson6.riocolorado.chubut.dc.fi.uba.ar.
+
