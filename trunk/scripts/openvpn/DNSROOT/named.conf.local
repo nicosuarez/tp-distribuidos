@@ -1,0 +1,9 @@
+zone "chubut.dc.fi.uba.ar" in {
+    type master;
+    file "/etc/bind/chubut.dc.fi.uba.ar.db";
+};
+
+zone "in-addr.arpa" {
+    type master;
+    file "/etc/bind/reverso.db";
+};
