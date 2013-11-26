@@ -5,7 +5,7 @@
 
 godMode
 
-echo "Dando de baja todas las intefaces..."
+echo "Dando de baja todas las interfaces..."
 stopServices
 removeProxy
 killTunnels
