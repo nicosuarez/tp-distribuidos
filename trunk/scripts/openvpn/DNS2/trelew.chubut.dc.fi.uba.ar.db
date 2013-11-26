@@ -9,7 +9,7 @@ $ORIGIN trelew.chubut.dc.fi.uba.ar.
                          604800 )
 
 		IN	NS	dns2.trelew.chubut.dc.fi.uba.ar.
-dns2		IN	NS	192.168.0.8.
+dns2		IN	NS	10.24.3.134.
 
 
 ;##########################################################################
