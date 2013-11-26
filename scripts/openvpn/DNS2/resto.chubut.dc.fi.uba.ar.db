@@ -1,0 +1,48 @@
+; DNS 2: resto
+$TTL 2d
+$ORIGIN resto.chubut.dc.fi.uba.ar.
+@	IN	SOA	dns2.resto.chubut.dc.fi.uba.ar. root.fi.uba.ar. (
+                              1
+                         604800
+                          86400
+                        2419200
+                         604800 )
+
+		IN	NS	dns2.resto.chubut.dc.fi.uba.ar.
+dns2		IN	NS	192.168.0.8.
+
+
+
+;##########################################################################
+;Aprilia
+;##########################################################################
+
+aprilia1                       IN      A       133.43.1.13
+aprilia2                       IN      A       133.43.1.5
+aprilia3                       IN      A       133.43.1.9
+
+
+r5.aprilia1			IN    CNAME     aprilia1
+r8.aprilia2			IN    CNAME     aprilia2
+r12.aprilia3			IN    CNAME     aprilia3
+
+
+;##########################################################################
+;Yamaha
+;##########################################################################
+
+yamaha1                       IN      A       172.43.0.65
+yamaha2                       IN      A       172.43.0.66
+yamaha3                       IN      A       172.43.0.67
+yamaha4                       IN      A       172.43.0.68
+
+
+r1.yamaha1			IN    CNAME     yamaha1
+r6.yamaha2			IN    CNAME     yamaha2
+r15.yamaha3			IN    CNAME     yamaha3
+r17.yamaha4			IN    CNAME     yamaha4
+
+
+
+
+
