@@ -4,7 +4,7 @@ autostart = False
     udp = 10201
     [[3640]]
         image = /root/ios/IOS/c3640-js-mz.124-10.bin
-        idlepc = 0x60593c70
+        idlepc = 0x60423b48
         sparsemem = True
         ghostios = True
         chassis = 3640
@@ -34,7 +34,6 @@ autostart = False
         aux = 2536
         cnfg = configs/R17.cfg
         slot0 = NM-4E
-        e0/0 = SWGilera 3
         e0/1 = SWMotomel 1
         slot1 = NM-4T
         s1/0 = SWFR s1/2
@@ -107,7 +106,6 @@ autostart = False
     [[ETHSW SWGilera]]
         1 = access 1 R10 e0/0
         2 = access 1 R11 e0/0
-        3 = access 1 R17 e0/0
         4 = access 1 R7 e0/2
         5 = access 1 nio_linux_eth:tap3
         6 = access 1 nio_linux_eth:tap6
@@ -119,7 +117,7 @@ autostart = False
     udp = 10301
     [[3640]]
         image = /root/ios/IOS/c3640-js-mz.124-10.bin
-        idlepc = 0x60593c70
+        idlepc = 0x60423b48
         sparsemem = True
         ghostios = True
         chassis = 3640
@@ -145,6 +143,7 @@ autostart = False
     udp = 10001
     [[3640]]
         image = /root/ios/IOS/c3640-js-mz.124-10.bin
+        idlepc = 0x60423b48
         sparsemem = True
         ghostios = True
         chassis = 3640
@@ -209,7 +208,7 @@ autostart = False
     udp = 10101
     [[3640]]
         image = /root/ios/IOS/c3640-js-mz.124-10.bin
-        idlepc = 0x60593c70
+        idlepc = 0x60423b48
         sparsemem = True
         ghostios = True
         chassis = 3640
@@ -337,6 +336,24 @@ autostart = False
     configs = configs
     m11 = 0.499999999999
     m22 = 0.499999999999
+    [[Cloud FTPServer]]
+        symbol = server
+        x = 499.806565825
+        y = -164.705627485
+        z = 1.0
+        connections = SWAzel:4:nio_linux_eth:tap4
+    [[Cloud HostA]]
+        symbol = computer
+        x = -192.020994748
+        y = -290.671139599
+        z = 1.0
+        connections = SWHonda:5:nio_linux_eth:tap8
+    [[Cloud HostB]]
+        symbol = computer
+        x = 117.79942315
+        y = 71.3137084993
+        z = 1.0
+        connections = SWDerbi:3:nio_linux_eth:tap9
     [[NOTE 1]]
         text = Rio Colorado
         x = 616.000000001
@@ -349,509 +366,36 @@ autostart = False
         text = Trelew
         x = 656.000000001
         y = -518.500000001
-    [[NOTE 4]]
-        text = 2
-        x = 74.7593270024
-        y = 8.33806530161
-        interface = SWHonda 2
-    [[NOTE 5]]
-        text = 4
-        x = 73.3830834548
-        y = 28.8402487497
-        interface = SWHonda 4
-    [[NOTE 6]]
-        text = 1
-        x = -3.89027485325
-        y = 22.9574598084
-        interface = SWHonda 1
-    [[NOTE 7]]
-        text = 3
-        x = 50.8146137322
-        y = 52.952166462
-        interface = SWHonda 3
-    [[NOTE 8]]
-        text = 6
-        x = -3.38885030952
-        y = 6.6374511161
-        interface = SWHonda 6
-    [[NOTE 9]]
-        text = 5
-        x = 6.7982204273
-        y = 43.8605069832
-        interface = SWHonda 5
-    [[NOTE 10]]
-        text = s1/1
-        x = 54.5585606742
-        y = -3.98818021526
-        interface = SWFR s1/1
-    [[NOTE 11]]
-        text = s1/0
-        x = 63.6563370645
-        y = 11.4960863957
-        interface = SWFR s1/0
-    [[NOTE 12]]
-        text = s1/3
-        x = 52.1283570513
-        y = 53.3484606093
-        interface = SWFR s1/3
-    [[NOTE 13]]
-        text = s1/2
-        x = 64.1245812302
-        y = 33.8991213472
-        interface = SWFR s1/2
-    [[NOTE 14]]
-        text = 2
-        x = -4.03312150736
-        y = 9.90637186199
-        interface = SWZanella 2
-    [[NOTE 15]]
-        text = 4
-        x = -4.06839484121
-        y = 21.8602158399
-        interface = SWZanella 4
-    [[NOTE 16]]
-        text = 3
-        x = 70.0054938341
-        y = 36.2329161334
-        interface = SWZanella 3
-    [[NOTE 17]]
-        text = 1
-        x = -1.12911591977
-        y = 32.0719590261
-        interface = SWZanella 1
-    [[NOTE 18]]
-        text = 1
-        x = 74.2393417521
-        y = 25.9631019574
-        interface = SWBMW 1
-    [[NOTE 19]]
-        text = 2
-        x = -2.95720752921
-        y = 4.99803703628
-        interface = SWBMW 2
-    [[NOTE 20]]
-        text = 4
-        x = 75.369664327
-        y = 12.7735675351
-        interface = SWGilera 4
-    [[NOTE 21]]
-        text = 2
-        x = 73.3474762857
-        y = 28.9448267198
-        interface = SWGilera 2
-    [[NOTE 22]]
-        text = 1
-        x = 75.4033806748
-        y = 18.7785267185
-        interface = SWGilera 1
-    [[NOTE 23]]
-        text = 3
-        x = 33.7095717213
-        y = 55.9599094916
-        interface = SWGilera 3
-    [[NOTE 24]]
-        text = 6
-        x = 63.3915061706
-        y = 44.6716564491
-        interface = SWGilera 6
-    [[NOTE 25]]
-        text = 5
-        x = 72.7292014624
-        y = 1.37172059083
-        interface = SWGilera 5
-    [[NOTE 26]]
-        text = 1
-        x = -4.47200711359
-        y = 14.5037890152
-        interface = SWHarley 1
-    [[NOTE 27]]
-        text = 2
-        x = 72.5371341044
-        y = 0.892031992027
-        interface = SWHarley 2
-    [[NOTE 28]]
-        text = 3
-        x = -1.86494265409
-        y = 30.2779921718
-        interface = SWHarley 3
-    [[NOTE 29]]
-        text = 5
-        x = 60.2398481739
-        y = 47.4315114548
-        interface = SWHarley 5
-    [[NOTE 30]]
-        text = 4
-        x = 1.07525388575
-        y = -4.36999889468
-        interface = SWHarley 4
-    [[NOTE 31]]
-        text = e0/1
-        x = -5.7393417521
-        y = 12.0368980426
-        interface = R9 e0/1
-    [[NOTE 32]]
-        text = e0/0
-        x = 72.9904979644
-        y = 21.1281785989
-        interface = R9 e0/0
-    [[NOTE 33]]
-        text = e0/1
-        x = 71.4518964076
-        y = 33.020510998
-        interface = R8 e0/1
-    [[NOTE 34]]
-        text = e0/0
-        x = 8.74540763141
-        y = 53.8074637315
-        interface = R8 e0/0
-    [[NOTE 35]]
-        text = e0/1
-        x = 72.5331215074
-        y = 28.093628138
-        interface = R3 e0/1
-    [[NOTE 36]]
-        text = e0/0
-        x = -6.25932700235
-        y = 29.6619346984
-        interface = R3 e0/0
-    [[NOTE 37]]
-        text = e0/1
-        x = 72.5683948412
-        y = 16.1397841601
-        interface = R2 e0/1
-    [[NOTE 38]]
-        text = e0/0
-        x = -4.88308345484
-        y = 9.15975125031
-        interface = R2 e0/0
-    [[NOTE 39]]
-        text = s1/0
-        x = 3.94143932585
-        y = 49.4881802153
-        interface = R1 s1/0
-    [[NOTE 40]]
-        text = e0/0
-        x = 72.3902748533
-        y = 15.0425401916
-        interface = R1 e0/0
-    [[NOTE 41]]
-        text = e0/2
-        x = -6.86966432702
-        y = 25.2264324649
-        interface = R7 e0/2
-    [[NOTE 42]]
-        text = e0/1
-        x = 68.4942766092
-        y = 40.4433274652
-        interface = R7 e0/1
-    [[NOTE 43]]
-        text = e0/0
-        x = 45.6720684551
-        y = -15.9396715994
-        interface = R7 e0/0
-    [[NOTE 44]]
-        text = s1/0
-        x = -5.15633706451
-        y = 34.0039136043
-        interface = R6 s1/0
-    [[NOTE 45]]
-        text = e0/0
-        x = 17.6853862678
-        y = -14.952166462
-        interface = R6 e0/0
-    [[NOTE 46]]
-        text = e0/1
-        x = 57.3133670675
-        y = 53.7625594347
-        interface = R5 e0/1
-    [[NOTE 47]]
-        text = e0/0
-        x = -1.50549383414
-        y = 1.76708386658
-        interface = R5 e0/0
-    [[NOTE 48]]
-        text = 2
-        x = -0.578277832002
-        y = 33.2730387795
-        interface = SWKawasaki 2
-    [[NOTE 49]]
-        text = 3
-        x = 75.4727237139
-        y = 17.4769424124
-        interface = SWKawasaki 3
-    [[NOTE 50]]
-        text = 1
-        x = -2.19549090177
-        y = 2.61904466509
-        interface = SWKawasaki 1
-    [[NOTE 51]]
-        text = 2
-        x = -4.49049796445
-        y = 16.8718214011
-        interface = SWAzel 2
-    [[NOTE 52]]
-        text = 3
-        x = 59.7545923686
-        y = -15.8074637315
-        interface = SWAzel 3
-    [[NOTE 53]]
-        text = 1
-        x = 0.00572339076132
-        y = -2.44332746515
-        interface = SWAzel 1
-    [[NOTE 54]]
-        text = 4
-        x = 22.4498349298
-        y = -21.8112839195
-        interface = SWAzel 4
-    [[NOTE 55]]
-        text = e0/2
-        x = -2.45327915834
-        y = 40.5220138462
-        interface = R11 e0/2
-    [[NOTE 56]]
-        text = e0/0
-        x = -4.84747628566
-        y = 9.05517328017
-        interface = R11 e0/0
-    [[NOTE 57]]
-        text = e0/1
-        x = 70.496184732
-        y = 35.9296852278
-        interface = R11 e0/1
-    [[NOTE 58]]
-        text = e0/1
-        x = 71.4572075292
-        y = 33.0019629637
-        interface = R10 e0/1
-    [[NOTE 59]]
-        text = e0/0
-        x = -6.90338067476
-        y = 19.2214732815
-        interface = R10 e0/0
-    [[NOTE 60]]
-        text = e0/1
-        x = -6.3616137384
-        y = 14.8821798345
-        interface = R13 e0/1
-    [[NOTE 61]]
-        text = e0/0
-        x = 72.9720071136
-        y = 23.4962109848
-        interface = R13 e0/0
-    [[NOTE 62]]
-        text = e0/2
-        x = -4.03713410444
-        y = 37.107968008
-        interface = R12 e0/2
-    [[NOTE 63]]
-        text = e0/1
-        x = -4.49618473197
-        y = 8.07031477218
-        interface = R12 e0/1
-    [[NOTE 64]]
-        text = e0/0
-        x = 65.5052544801
-        y = -1.31112247797
-        interface = R12 e0/0
-    [[NOTE 65]]
-        text = s1/0
-        x = 6.37164294866
-        y = -7.84846060933
-        interface = R15 s1/0
-    [[NOTE 66]]
-        text = e0/0
-        x = 69.078277832
-        y = 4.72696122054
-        interface = R15 e0/0
-    [[NOTE 67]]
-        text = e0/2
-        x = -1.55146566209
-        y = 1.84568977609
-        interface = R14 e0/2
-    [[NOTE 68]]
-        text = e0/1
-        x = -6.97272371394
-        y = 20.5230575876
-        interface = R14 e0/1
-    [[NOTE 69]]
-        text = e0/0
-        x = 70.3649426541
-        y = 7.72200782824
-        interface = R14 e0/0
-    [[NOTE 70]]
-        text = s1/0
-        x = -5.62458123018
-        y = 11.6008786528
-        interface = R17 s1/0
-    [[NOTE 71]]
-        text = e0/1
-        x = 65.9838436607
-        y = 44.6288766263
-        interface = R17 e0/1
-    [[NOTE 72]]
-        text = e0/0
-        x = 34.7904282787
-        y = -17.9599094916
-        interface = R17 e0/0
-    [[NOTE 73]]
-        text = e0/0
-        x = 70.6954909018
-        y = 35.3809553349
-        interface = R16 e0/0
-    [[NOTE 74]]
-        text = e0/0
-        x = -7.01676691719
-        y = 10.2038502546
-        interface = Internet e0/0
-    [[NOTE 75]]
-        text = e0/1
-        x = 49.1082911656
-        y = -4.70319929333
-        interface = Internet e0/1
-    [[NOTE 76]]
-        text = e0/2
-        x = 22.6158046598
-        y = 75.7944643364
-        interface = Internet e0/2
-    [[NOTE 77]]
-        text = 1
-        x = 74.8616137384
-        y = 23.1178201655
-        interface = SWDerbi 1
-    [[NOTE 78]]
-        text = 2
-        x = 70.0514656621
-        y = 36.1543102239
-        interface = SWDerbi 2
-    [[NOTE 79]]
-        text = 3
-        x = 65.7878830275
-        y = -10.1274595342
-        interface = SWDerbi 3
-    [[NOTE 80]]
-        text = e0/1
-        x = 20.3279315449
-        y = 59.9396715994
-        interface = R4 e0/1
-    [[NOTE 81]]
-        text = e0/0
-        x = 69.6291159198
-        y = 5.92804097392
-        interface = R4 e0/0
-    [[NOTE 82]]
-        text = nio_linux_eth:tap4
-        x = 37.5501650702
-        y = 72.3112839195
-        interface = FTPServer nio_linux_eth:tap4
-    [[Cloud FTPServer]]
-        symbol = server
-        x = 499.806565825
-        y = -164.705627485
-        z = 1.0
-        connections = SWAzel:4:nio_linux_eth:tap4
-    [[NOTE 83]]
-        text = nio_linux_eth:tap8
-        x = 68.3772244659
-        y = -5.32563372898
-        interface = HostA nio_linux_eth:tap8
-    [[Cloud HostA]]
-        symbol = computer
-        x = -192.020994748
-        y = -290.671139599
-        z = 1.0
-        connections = SWHonda:5:nio_linux_eth:tap8
-    [[NOTE 84]]
-        text = nio_linux_eth:tap9
-        x = -5.35985378435
-        y = 62.1593244178
-        interface = HostB nio_linux_eth:tap9
-    [[Cloud HostB]]
-        symbol = computer
-        x = 117.79942315
-        y = 71.3137084993
-        z = 1.0
-        connections = SWDerbi:3:nio_linux_eth:tap9
-    [[NOTE 85]]
-        text = nio_linux_eth:tap3
-        x = -12.7292014624
-        y = 49.1282794092
-        interface = DNSRoot nio_linux_eth:tap3
     [[Cloud DNSRoot]]
         symbol = server
         x = -75.7295808258
         y = -181.87720036
         z = 1.0
         connections = SWGilera:5:nio_linux_eth:tap3
-    [[NOTE 86]]
-        text = nio_linux_eth:tap2
-        x = 63.3888503095
-        y = 43.8625488839
-        interface = DNS2 nio_linux_eth:tap2
     [[Cloud DNS2]]
         symbol = server
         x = -281.442350985
         y = -491.104689146
         z = 1.0
         connections = SWHonda:6:nio_linux_eth:tap2
-    [[NOTE 87]]
-        text = nio_linux_eth:tap1
-        x = -0.239848173855
-        y = 3.06848854518
-        interface = DNS1 nio_linux_eth:tap1
     [[Cloud DNS1]]
         symbol = server
         x = 470.877633637
         y = 290.830519166
         z = 1.0
         connections = SWHarley:5:nio_linux_eth:tap1
-    [[NOTE 88]]
-        text = nio_linux_eth:tap5
-        x = 58.9247461142
-        y = 54.8699988947
-        interface = WebServer nio_linux_eth:tap5
     [[Cloud WebServer]]
         symbol = server
         x = 248.769985898
         y = 98.279220614
         z = 1.0
         connections = SWHarley:4:nio_linux_eth:tap5
-    [[NOTE 89]]
-        text = nio_linux_eth:tap6
-        x = -3.39150617055
-        y = 5.82834355085
-        interface = TelServer nio_linux_eth:tap6
-    [[NOTE 90]]
-        text = nio_linux_eth:tap7
-        x = 35.8822567115
-        y = 72.8463718252
-        interface = TelServer nio_linux_eth:tap7
     [[Cloud TelServer]]
         symbol = server
         x = -105.528570699
         y = -38.941125497
         z = 1.0
         connections = SWGilera:6:nio_linux_eth:tap6 SWMotomel:3:nio_linux_eth:tap7
-    [[NOTE 91]]
-        text = 2
-        x = 70.9532791583
-        y = -2.52201384625
-        interface = SWMotomel 2
-    [[NOTE 92]]
-        text = 1
-        x = 2.51615633932
-        y = -6.62887662629
-        interface = SWMotomel 1
-    [[NOTE 93]]
-        text = 3
-        x = 24.1177432885
-        y = -22.3463718252
-        interface = SWMotomel 3
-    [[NOTE 94]]
-        text = nio_linux_eth:tap0
-        x = 20.6772095777
-        y = 67.712846356
-        interface = HostC nio_linux_eth:tap0
     [[Cloud HostC]]
         symbol = computer
         x = 634.500000001
@@ -859,19 +403,12 @@ autostart = False
         connections = SWZanella:5:nio_linux_eth:tap0
     [[SHAPE 1]]
         type = rectangle
-        x = -389.757359314
-        y = 58.3202384294
-        width = 1115.24891681
+        x = -385.514718627
+        y = 59.7344519918
+        width = 1112.42048969
         height = 328.11183182
         z = -2.0
     [[SHAPE 2]]
-        type = rectangle
-        x = -389.248916809
-        y = -187.798989873
-        width = 1111.91204718
-        height = 245.968470707
-        z = -2.0
-    [[SHAPE 3]]
         type = ellipse
         x = -615.182899634
         y = -200.818325857
@@ -879,10 +416,10 @@ autostart = False
         height = 200.0
         border_style = 2
         z = -2.0
-    [[SHAPE 4]]
+    [[SHAPE 3]]
         type = rectangle
         x = -387.248916809
         y = -530.087445204
-        width = 1115.56890143
+        width = 1109.91204718
         height = 341.94530958
         z = -2.0
