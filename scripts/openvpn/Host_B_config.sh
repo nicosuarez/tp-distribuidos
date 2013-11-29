@@ -44,11 +44,10 @@ addRoute $REDAPRILIA $REDMASCAPRILIA $VRRP
 addRoute $REDAZEL $REDMASCAZEL $VRRP
 addRoute $REDKTM $REDMASCKTM $VRRP
 addRoute $REDZANELLA $REDMASCZANELLA $VRRP
+log "---------------Fin de RUTAS-------------------..."
 
 addDefaultGateway $HOSTB_GTWY
 configureDNS $DOMAIN $SEARCH $HOSTB_NS
-log "---------------Fin de RUTAS-------------------..."
-
 
 end
 
