@@ -124,7 +124,7 @@ function disableMartian() {
 }
 
 function installTelServer() {
-	installed=`dpkg -s vsftpd|grep installed`
+	installed=`dpkg -s telnetd|grep installed`
 
 	echo "Verificando que telnetd este instalado..."
 	if [ "" == "$installed" ]; then
