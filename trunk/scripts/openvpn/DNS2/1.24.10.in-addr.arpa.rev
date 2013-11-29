@@ -14,7 +14,7 @@ $TTL 2d
 1		IN	PTR		r7.gilera1.bariloche.chubut.dc.fi.uba.ar.
 2		IN	PTR		r10.gilera2.bariloche.chubut.dc.fi.uba.ar.
 3		IN	PTR		r11.gilera3.bariloche.chubut.dc.fi.uba.ar.
-4		IN	PTR		dnsroot.gilera5.bariloche.chubut.dc.fi.uba.ar.
+5		IN	PTR		dnsroot.gilera5.bariloche.chubut.dc.fi.uba.ar.
 65		IN	PTR		telnet.gilera4.bariloche.chubut.dc.fi.uba.ar.
 
 
