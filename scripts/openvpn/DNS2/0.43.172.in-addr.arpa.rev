@@ -14,6 +14,5 @@ $TTL 2d
 65		IN	PTR		r1.yamaha1.resto.chubut.dc.fi.uba.ar.
 66		IN	PTR		r6.yamaha2.resto.chubut.dc.fi.uba.ar.
 67		IN	PTR		r15.yamaha3.resto.chubut.dc.fi.uba.ar.
-68		IN	PTR		r17.yamaha4.resto.chubut.dc.fi.uba.ar.
 
 
