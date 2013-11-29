@@ -24,7 +24,8 @@ function godMode() {
 
 function addRoute() {
 	log "Configurando ruta $1 Mascara $2 en $3..."
-	$ROUTE add -net $1 netmask $2 $3
+
+	$ROUTE add -net $1 netmask $2 gw $3
 }
 
 function addDefaultGateway() {
