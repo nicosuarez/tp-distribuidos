@@ -4,7 +4,7 @@ autostart = False
     udp = 10201
     [[3640]]
         image = /root/ios/IOS/c3640-js-mz.124-10.bin
-        idlepc = 0x60423b48
+        idlepc = 0x604ec6b0
         sparsemem = True
         ghostios = True
         chassis = 3640
@@ -117,7 +117,7 @@ autostart = False
     udp = 10301
     [[3640]]
         image = /root/ios/IOS/c3640-js-mz.124-10.bin
-        idlepc = 0x60423b48
+        idlepc = 0x604ec6b0
         sparsemem = True
         ghostios = True
         chassis = 3640
@@ -143,7 +143,7 @@ autostart = False
     udp = 10001
     [[3640]]
         image = /root/ios/IOS/c3640-js-mz.124-10.bin
-        idlepc = 0x60423b48
+        idlepc = 0x604ec6b0
         sparsemem = True
         ghostios = True
         chassis = 3640
@@ -208,7 +208,7 @@ autostart = False
     udp = 10101
     [[3640]]
         image = /root/ios/IOS/c3640-js-mz.124-10.bin
-        idlepc = 0x60423b48
+        idlepc = 0x604ec6b0
         sparsemem = True
         ghostios = True
         chassis = 3640
@@ -354,24 +354,6 @@ autostart = False
         y = 71.3137084993
         z = 1.0
         connections = SWDerbi:3:nio_linux_eth:tap9
-    [[NOTE 1]]
-        text = Rio Colorado
-        x = 616.000000001
-        y = 65.5000000002
-    [[NOTE 2]]
-        text = Bariloche
-        x = 640.000000001
-        y = -178.5
-    [[NOTE 3]]
-        text = Trelew
-        x = 656.000000001
-        y = -518.500000001
-    [[Cloud DNSRoot]]
-        symbol = server
-        x = -75.7295808258
-        y = -181.87720036
-        z = 1.0
-        connections = SWGilera:5:nio_linux_eth:tap3
     [[Cloud DNS2]]
         symbol = server
         x = -281.442350985
@@ -384,18 +366,36 @@ autostart = False
         y = 290.830519166
         z = 1.0
         connections = SWHarley:5:nio_linux_eth:tap1
+    [[Cloud DNSRoot]]
+        symbol = server
+        x = -75.7295808258
+        y = -181.87720036
+        z = 1.0
+        connections = SWGilera:5:nio_linux_eth:tap3
     [[Cloud WebServer]]
         symbol = server
         x = 248.769985898
         y = 98.279220614
         z = 1.0
         connections = SWHarley:4:nio_linux_eth:tap5
+    [[NOTE 1]]
+        text = Rio Colorado
+        x = 616.000000001
+        y = 65.5000000002
     [[Cloud TelServer]]
         symbol = server
         x = -105.528570699
         y = -38.941125497
         z = 1.0
         connections = SWGilera:6:nio_linux_eth:tap6 SWMotomel:3:nio_linux_eth:tap7
+    [[NOTE 2]]
+        text = Trelew
+        x = 656.000000001
+        y = -518.500000001
+    [[NOTE 3]]
+        text = Bariloche
+        x = 640.000000001
+        y = -178.5
     [[Cloud HostC]]
         symbol = computer
         x = 634.500000001
@@ -403,10 +403,10 @@ autostart = False
         connections = SWZanella:5:nio_linux_eth:tap0
     [[SHAPE 1]]
         type = rectangle
-        x = -385.514718627
-        y = 59.7344519918
-        width = 1112.42048969
-        height = 328.11183182
+        x = -387.248916809
+        y = -530.087445204
+        width = 1109.91204718
+        height = 341.94530958
         z = -2.0
     [[SHAPE 2]]
         type = ellipse
@@ -418,8 +418,8 @@ autostart = False
         z = -2.0
     [[SHAPE 3]]
         type = rectangle
-        x = -387.248916809
-        y = -530.087445204
-        width = 1109.91204718
-        height = 341.94530958
+        x = -385.514718627
+        y = 59.7344519918
+        width = 1112.42048969
+        height = 328.11183182
         z = -2.0
