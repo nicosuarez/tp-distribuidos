@@ -28,6 +28,7 @@ setupHost $FTP_TAP_IP $FTP_TAP_MASK $FTP_TAP_BRCST
 
 startFTP
 
+log "---------------FIN de Inicio de FTP-------------------..."
 
 log "---------------RUTAS-------------------..."
 R7="10.92.27.4"
@@ -40,7 +41,7 @@ addRoute $REDSUSUKI $REDMASCSUSUKI $R7
 addRoute $REDVESPA $REDMASCVESPA $R7
 addRoute $REDHDAVIDSON $REDMASCHDAVIDSON $R8
 addRoute $REDDUCATI $REDMASCDUCATI $R7
-addRoute $REDDERBI $REDMASCDUCATI $R7
+addRoute $REDDERBI $REDMASCDERBI $R7
 addRoute $REDGILERA $REDMASCGILERA $R7
 addRoute $REDMOTOMEL $REDMASCMOTOMEL $R7
 addRoute $REDBMW $REDMASCBMW $R9
@@ -51,7 +52,7 @@ addRoute $REDZANELLA $REDMASCZANELLA $R7
 
 addDefaultGateway $FTP_GTWY
 configureDNS $DOMAIN $SEARCH $FTP_NS
-log "---------------Fin de RUTAS-------------------..."
+log "---------------Fin de RUTAS-------------------..." 
 
 
 end
