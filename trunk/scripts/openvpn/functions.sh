@@ -22,6 +22,20 @@ function godMode() {
 	fi
 }
 
+function addRouteTelnet () {
+	log "Configurando ruta $1 Mascara $2 en $3 dev $4..."
+
+	$ROUTE add -net $1 netmask $2 gw $3 dev $4
+}
+
+
+function addRouteTelnet2 () {
+	log "Configurando ruta $1 Mascara $2 en $3 dev $4..."
+
+	$ROUTE add -net $1 netmask $2 gw $3 dev $4 metric 5
+}
+
+
 function addRoute() {
 	log "Configurando ruta $1 Mascara $2 en $3..."
 
@@ -137,7 +151,7 @@ function installTelServer() {
 }
 
 function startTelSever() {
-	installTelServer
+	#installTelServer
 	log "Iniciando el servicio Telnet..."
 	startService $TEL_SERVICE
 }
