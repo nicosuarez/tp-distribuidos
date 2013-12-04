@@ -1,0 +1,2 @@
+Para configurar los hosts se debe ejecutar el script de host correspondient (A, B o C)
+con permisos de root. Pasar por parametro el nombre de la interfaz de red a usar (ej eth0)

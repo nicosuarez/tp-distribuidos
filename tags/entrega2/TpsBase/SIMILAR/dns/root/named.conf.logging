@@ -1,0 +1,11 @@
+// ----------------------- Logging ----------------------- 
+logging{
+  channel custom_log{
+    file "log/tp.log" versions 3 size 250k;
+    severity info;
+  };
+  category default{
+    custom_log;
+  };
+};
+

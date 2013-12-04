@@ -1,0 +1,36 @@
+; DNS 1: sede riocolorado
+$TTL 2d
+$ORIGIN riocolorado.chubut.dc.fi.uba.ar.
+@	IN	SOA	dns1.riocolorado.chubut.dc.fi.uba.ar. root.fi.uba.ar. (
+                              1
+                         604800
+                          86400
+                        2419200
+                         604800 )
+		IN	NS	dns1.riocolorado.chubut.dc.fi.uba.ar.
+dns1		IN	A	192.168.8.5
+localhost       IN      A       127.0.0.1
+
+
+
+;##########################################################################
+;HarleyDavidson
+;##########################################################################
+
+hdavidson1                       IN      A       192.168.8.1
+hdavidson2                       IN      A       192.168.8.2
+hdavidson3                       IN      A       192.168.8.3
+hdavidson4                       IN      A       192.168.8.4
+hdavidson5                       IN      A       192.168.8.5
+hdavidson6                       IN      A       192.168.8.71
+
+
+r12.hdavidson1        	       		IN    CNAME     hdavidson1
+r13.hdavidson2        	       		IN    CNAME     hdavidson2
+r14.hdavidson3        	       		IN    CNAME     hdavidson3
+vrrp-r13r14.hdavidson4        	        IN    CNAME     hdavidson4
+dns1.hdavidson5        	       		IN    CNAME     hdavidson5
+apache.hdavidson6        	        IN    CNAME     hdavidson6
+
+
+

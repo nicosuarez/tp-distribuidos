@@ -1,0 +1,67 @@
+$TTL 2d
+@	IN	SOA	dns2.trelew.chubut.dc.fi.uba.ar. hostmaster.trelew.chubut.dc.fi.uba.ar. (
+                              1
+                         604800
+                          86400
+                        2419200
+                         604800 )
+
+@		IN	NS		dns2.trelew.chubut.dc.fi.uba.ar.
+
+
+;##########################################################################
+;Ktm
+;##########################################################################
+1		IN	PTR		r4.ktm1.trelew.chubut.dc.fi.uba.ar.
+2		IN	PTR		r7.ktm2.trelew.chubut.dc.fi.uba.ar.
+
+
+;##########################################################################
+;Ducati
+;##########################################################################
+5		IN	PTR		r11.ducati1.trelew.chubut.dc.fi.uba.ar.
+6		IN	PTR		r12.ducati2.trelew.chubut.dc.fi.uba.ar.
+
+
+;##########################################################################
+;Derbi
+;##########################################################################
+65		IN	PTR		r13.derbi1.trelew.chubut.dc.fi.uba.ar.
+66		IN	PTR		r14.derbi2.trelew.chubut.dc.fi.uba.ar.
+67		IN	PTR		vrrp-r13r14.derbi3.trelew.chubut.dc.fi.uba.ar.
+68		IN	PTR		hostb.derbi4.trelew.chubut.dc.fi.uba.ar.
+
+
+;##########################################################################
+;Suzuki
+;##########################################################################
+9		IN	PTR		r16.suzuki1.trelew.chubut.dc.fi.uba.ar.
+
+
+;##########################################################################
+;Vespa
+;##########################################################################
+17		IN	PTR		r14.vespa1.trelew.chubut.dc.fi.uba.ar.
+
+
+;##########################################################################
+;Kawasaki
+;##########################################################################
+33		IN	PTR		r14.kawasaki1.trelew.chubut.dc.fi.uba.ar.
+34		IN	PTR		r15.kawasaki2.trelew.chubut.dc.fi.uba.ar.
+35		IN	PTR		r16.kawasaki3.trelew.chubut.dc.fi.uba.ar.
+
+
+;##########################################################################
+;Honda
+;##########################################################################
+129		IN	PTR		r1.honda1.trelew.chubut.dc.fi.uba.ar.
+130		IN	PTR		r2.honda2.trelew.chubut.dc.fi.uba.ar.
+131		IN	PTR		r3.honda3.trelew.chubut.dc.fi.uba.ar.
+132		IN	PTR		r6.honda4.trelew.chubut.dc.fi.uba.ar.
+133		IN	PTR		vrrp-r2r3.honda5.trelew.chubut.dc.fi.uba.ar.
+134		IN	PTR		dns2.honda6.trelew.chubut.dc.fi.uba.ar.
+135		IN	PTR		hosta.honda7.trelew.chubut.dc.fi.uba.ar.
+
+
+

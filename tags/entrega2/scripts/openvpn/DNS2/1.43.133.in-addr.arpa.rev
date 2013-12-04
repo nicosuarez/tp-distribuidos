@@ -1,0 +1,19 @@
+$TTL 2d
+@	IN	SOA	dns2.resto.chubut.dc.fi.uba.ar. hostmaster.resto.chubut.dc.fi.uba.ar. (
+                              1
+                         604800
+                          86400
+                        2419200
+                         604800 )
+
+@		IN	NS		dns2.resto.chubut.dc.fi.uba.ar.
+
+;##########################################################################
+;Aprilia
+;##########################################################################
+13		IN	PTR		r5.aprilia1.resto.chubut.dc.fi.uba.ar.
+5		IN	PTR		r8.aprilia2.resto.chubut.dc.fi.uba.ar.
+9		IN	PTR		r12.aprilia3.resto.chubut.dc.fi.uba.ar.
+
+
+

@@ -1,0 +1,23 @@
+$TTL 2d
+$ORIGIN  0/27.1.24.10.IN-ADDR.ARPA.
+@  IN      SOA     dns2.puntaindio.chubut.dc.fi.uba.ar.   hostmaster.puntaindio.chubut.dc.fi.uba.ar.      (
+                        2012041101      ; Serial (usually YYYYMMDDSS): increment after any change
+                                8h      ; Refresh (8 hours)
+                                2h      ; Retry (2 hours)
+                                4w      ; Expire (4 weeks)
+                                3h )    ; NX (3 hours) TTL Negativ Cache
+
+; name server RR for the domain
+@                               IN      NS      dns2.puntaindio.chubut.dc.fi.uba.ar.
+
+
+;##########################################################################
+;Diego
+;##########################################################################
+
+1				IN      PTR     r9.diego1.puntaindio.chubut.dc.fi.uba.ar.
+2				IN      PTR     r8.diego2.puntaindio.chubut.dc.fi.uba.ar.
+3				IN      PTR     r7.diego3.puntaindio.chubut.dc.fi.uba.ar.
+4				IN      PTR     hosta.diego4.puntaindio.chubut.dc.fi.uba.ar.
+5				IN      PTR     diego5.puntaindio.chubut.dc.fi.uba.ar.
+6				IN      PTR     diego6.puntaindio.chubut.dc.fi.uba.ar.

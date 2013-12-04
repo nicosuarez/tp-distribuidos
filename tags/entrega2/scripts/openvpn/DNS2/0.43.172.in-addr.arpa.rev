@@ -1,0 +1,18 @@
+$TTL 2d
+@	IN	SOA	dns2.resto.chubut.dc.fi.uba.ar. hostmaster.resto.chubut.dc.fi.uba.ar. (
+                              1
+                         604800
+                          86400
+                        2419200
+                         604800 )
+
+@		IN	NS		dns2.resto.chubut.dc.fi.uba.ar.
+
+;##########################################################################
+;Yamaha
+;##########################################################################
+65		IN	PTR		r1.yamaha1.resto.chubut.dc.fi.uba.ar.
+66		IN	PTR		r6.yamaha2.resto.chubut.dc.fi.uba.ar.
+67		IN	PTR		r15.yamaha3.resto.chubut.dc.fi.uba.ar.
+
+

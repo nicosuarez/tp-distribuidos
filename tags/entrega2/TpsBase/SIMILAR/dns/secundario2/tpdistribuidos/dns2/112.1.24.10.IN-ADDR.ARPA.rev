@@ -1,0 +1,21 @@
+$TTL 2d
+$ORIGIN  112/28.1.24.10.IN-ADDR.ARPA.
+@  IN      SOA     dns2.rionegro.chubut.dc.fi.uba.ar.   hostmaster.puntaindio.chubut.dc.fi.uba.ar.      (
+                        2012041101      ; Serial (usually YYYYMMDDSS): increment after any change
+                                8h      ; Refresh (8 hours)
+                                2h      ; Retry (2 hours)
+                                4w      ; Expire (4 weeks)
+                                3h )    ; NX (3 hours) TTL Negativ Cache
+
+; name server RR for the domain
+@                               IN      NS      dns2.rionegro.chubut.dc.fi.uba.ar.
+
+
+;##########################################################################
+;Juan
+;##########################################################################
+
+113				IN      PTR     r14.juan1.rionegro.chubut.dc.fi.uba.ar.
+114				IN      PTR     juan2.rionegro.chubut.dc.fi.uba.ar.
+115				IN      PTR     juan3.rionegro.chubut.dc.fi.uba.ar.
+116				IN      PTR     juan4.rionegro.chubut.dc.fi.uba.ar.

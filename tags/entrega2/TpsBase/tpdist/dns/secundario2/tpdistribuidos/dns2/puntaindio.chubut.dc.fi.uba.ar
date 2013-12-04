@@ -1,0 +1,94 @@
+$ORIGIN puntaindio.chubut.dc.fi.uba.ar.
+$TTL 2d
+; The SOA Resource Record (in the following format:)
+;name [ttl] [class] rr      name-server           e-mail             ( [...] )
+@           IN      SOA     dns2.puntaindio.chubut.dc.fi.uba.ar.   hostmaster.puntaindio.chubut.dc.fi.uba.ar.      (
+                        2012041101      ; Serial (usually YYYYMMDDSS): increment after any change
+                                8h      ; Refresh (8 hours)
+                                2h      ; Retry (2 hours)
+                                4w      ; Expire (4 weeks)
+                                3h )    ; NX (3 hours) TTL Negativ Cache
+
+; name server RR for the domain
+                               IN      NS      dns2.puntaindio.chubut.dc.fi.uba.ar.
+
+dns2		               IN      A       10.24.3.5
+
+localhost                      IN      A       127.0.0.1
+
+
+;##########################################################################
+;Diego
+;##########################################################################
+
+diego1                         IN      A       10.24.1.1
+diego2                         IN      A       10.24.1.2
+diego3                         IN      A       10.24.1.3
+diego4                         IN      A       10.24.1.4
+diego5                         IN      A       10.24.1.5
+diego6                         IN      A       10.24.1.6
+
+r9.diego1        	       IN    CNAME     diego1
+r8.diego2		       IN    CNAME     diego2
+r7.diego3		       IN    CNAME     diego3
+hosta.diego4		       IN    CNAME     diego4
+
+;##########################################################################
+;Elio
+;##########################################################################
+
+elio1                          IN      A       10.24.1.97
+elio2                          IN      A       10.24.1.98
+
+r9.elio1		       IN    CNAME     elio1
+r10.elio2		       IN    CNAME     elio2
+
+;##########################################################################
+;Guido
+;##########################################################################
+
+guido1           	       IN      A       10.24.1.129
+guido2           	       IN      A       10.24.1.130
+guido3           	       IN      A       10.24.1.131
+guido4          	       IN      A       10.24.1.132
+guido5          	       IN      A       10.24.1.133
+guido6          	       IN      A       10.24.1.134
+guido7          	       IN      A       10.24.1.135
+
+telserver.guido1       	       IN    CNAME     guido1
+r10.guido2		       IN    CNAME     guido2
+r7.guido3		       IN    CNAME     guido3
+r11.guido4		       IN    CNAME     guido4
+dnsroot			       IN    CNAME     guido5
+
+;##########################################################################
+;Hernan
+;##########################################################################
+
+hernan1                        IN      A       192.168.8.65
+hernan2                        IN      A       192.168.8.66
+hernan3                        IN      A       192.168.8.67
+hernan4                        IN      A       192.168.8.68
+hernan5                        IN      A       192.168.8.69
+hernan6                        IN      A       192.168.8.70
+hernan7                        IN      A       192.168.8.71
+hernan8                        IN      A       192.168.8.72
+
+r13.hernan1         	       IN    CNAME     hernan1
+r14.hernan2           	       IN    CNAME     hernan2
+vrrp.hernan3          	       IN    CNAME     hernan3
+webserver.hernan7     	       IN    CNAME     hernan7
+
+;##########################################################################
+;Nestor
+;##########################################################################
+
+nestor1                        IN      A       10.24.1.65
+nestor2                        IN      A       10.24.1.66
+nestor3                        IN      A       10.24.1.67
+nestor4                        IN      A       10.24.1.68
+nestor5                        IN      A       10.24.1.69
+
+telserver.nestor1      	       IN    CNAME     nestor1
+r11.nestor2            	       IN    CNAME     nestor2
+r17.nestor3            	       IN    CNAME     nestor3

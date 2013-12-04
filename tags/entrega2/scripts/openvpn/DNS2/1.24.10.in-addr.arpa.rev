@@ -1,0 +1,29 @@
+$TTL 2d
+@	IN	SOA	dns2.bariloche.chubut.dc.fi.uba.ar. hostmaster.bariloche.chubut.dc.fi.uba.ar. (
+                              1
+                         604800
+                          86400
+                        2419200
+                         604800 )
+
+@		IN	NS		dns2.bariloche.chubut.dc.fi.uba.ar.
+
+;##########################################################################
+;Gilera
+;##########################################################################
+1		IN	PTR		r7.gilera1.bariloche.chubut.dc.fi.uba.ar.
+2		IN	PTR		r10.gilera2.bariloche.chubut.dc.fi.uba.ar.
+3		IN	PTR		r11.gilera3.bariloche.chubut.dc.fi.uba.ar.
+5		IN	PTR		dnsroot.gilera5.bariloche.chubut.dc.fi.uba.ar.
+65		IN	PTR		telnet.gilera4.bariloche.chubut.dc.fi.uba.ar.
+
+
+
+;##########################################################################
+;Motomel
+;##########################################################################
+129		IN	PTR		telnet.motomel3.bariloche.chubut.dc.fi.uba.ar.
+130		IN	PTR		r11.motomel1.bariloche.chubut.dc.fi.uba.ar.
+131		IN	PTR		r17.motomel2.bariloche.chubut.dc.fi.uba.ar.
+
+

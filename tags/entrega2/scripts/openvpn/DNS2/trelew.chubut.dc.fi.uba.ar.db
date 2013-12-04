@@ -1,0 +1,129 @@
+; DNS 2: trelew
+$TTL 2d
+$ORIGIN trelew.chubut.dc.fi.uba.ar.
+@	IN	SOA	dns2.trelew.chubut.dc.fi.uba.ar. root.fi.uba.ar. (
+                              1
+                         604800
+                          86400
+                        2419200
+                         604800 )
+
+		IN	NS	dns2.trelew.chubut.dc.fi.uba.ar.
+dns2		IN	NS	10.24.3.134.
+
+
+;##########################################################################
+;Ktm
+;##########################################################################
+
+ktm1                       IN      A       10.24.3.1
+ktm2                       IN      A       10.24.3.2
+
+
+r4.ktm1			IN    CNAME     ktm1
+r7.ktm2			IN    CNAME     ktm2
+
+
+;##########################################################################
+;Ducati
+;##########################################################################
+
+ducati1                       IN      A       10.24.3.5
+ducati2                       IN      A       10.24.3.6
+
+
+r11.ducati1			IN    CNAME     ducati1
+r12.ducati2			IN    CNAME     ducati2
+
+
+;##########################################################################
+;Honda
+;##########################################################################
+
+honda1                       IN      A       10.24.3.129
+honda2                       IN      A       10.24.3.130
+honda3                       IN      A       10.24.3.131
+honda4                       IN      A       10.24.3.132
+honda5                       IN      A       10.24.3.133
+honda6                       IN      A       10.24.3.134
+honda7                       IN      A       10.24.3.135
+
+
+r1.honda1			IN    CNAME     honda1
+r2.honda2			IN    CNAME     honda2
+r3.honda3			IN    CNAME     honda3
+r6.honda4			IN    CNAME     honda4
+vrrp-r2r3.honda5		IN    CNAME     honda5
+dns2.honda6			IN    CNAME     honda6
+hosta.honda7			IN    CNAME     honda7
+
+;##########################################################################
+;Derbi
+;##########################################################################
+
+derbi1                       IN      A       10.24.3.65
+derbi2                       IN      A       10.24.3.66
+derbi3                       IN      A       10.24.3.67
+derbi4                       IN      A       10.24.3.68
+
+
+r13.derbi1       	       		IN    CNAME     derbi1
+r14.derbi2        	       		IN    CNAME     derbi2
+vrrp-r13r14.derbi3        	        IN    CNAME     derbi3
+hostb.derbi4				IN    CNAME     derbi4
+
+
+;##########################################################################
+;Kawasaki
+;##########################################################################
+
+kawasaki1                          IN      A       10.24.3.33
+kawasaki2                          IN      A       10.24.3.34
+kawasaki3                          IN      A       10.24.3.35
+
+r14.kawasaki1        	       IN    CNAME     kawasaki1
+r15.kawasaki2        	       IN    CNAME     kawasaki2
+r16.kawasaki3        	       IN    CNAME     kawasaki3
+
+
+
+;##########################################################################
+;Suzuki
+;##########################################################################
+
+suzuki1                           IN      A       10.24.3.9
+
+r16.suzuki1        	       IN    CNAME     suzuki1
+
+
+
+;##########################################################################
+;Vespa
+;##########################################################################
+
+vespa1                          IN      A       10.24.3.17
+
+r14.vespa1        	       IN    CNAME     vespa1
+
+
+;##########################################################################
+;Zanella
+;##########################################################################
+
+
+zanella1                       IN      A       10.10.5.1
+zanella2                       IN      A       10.10.5.2
+zanella3                       IN      A       10.10.5.3
+zanella4                       IN      A       10.10.5.4
+zanella5                       IN      A       10.10.5.5
+zanella6                       IN      A       10.10.5.6
+
+
+r2.zanella1			IN    CNAME     zanella1
+r3.zanella2			IN    CNAME     zanella2
+r4.zanella3			IN    CNAME     zanella3
+r5.zanella4			IN    CNAME     zanella4
+vrrp-r2r3.zanella5		IN    CNAME     zanella5
+hostc.zanella6			IN    CNAME     zanella6
+
+
