@@ -1,0 +1,15 @@
+$TTL	604800
+@	IN	SOA	dnsroot.chubut.dc.fi.uba.ar. root.fi.uba.ar. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+
+@			IN    NS       dnsroot.chubut.dc.fi.uba.ar.
+
+$GENERATE 0-127		$	IN    NS       dns2.bariloche.chubut.dc.fi.uba.ar.  ; GILERA
+
+$GENERATE 128-159	$	IN    NS       dns2.bariloche.chubut.dc.fi.uba.ar.  ; MOTOMEL
+
