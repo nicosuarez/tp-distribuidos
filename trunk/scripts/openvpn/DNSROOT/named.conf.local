@@ -3,7 +3,40 @@ zone "chubut.dc.fi.uba.ar" in {
     file "/etc/bind/chubut.dc.fi.uba.ar.db";
 };
 
-zone "in-addr.arpa" {
+zone "3.24.10.in-addr.arpa" in {
     type master;
-    file "/etc/bind/reverso.db";
+    file "/etc/bind/3.24.10.in-addr.arpa.rev";
 };
+
+
+zone "1.24.10.in-addr.arpa" in {
+    type master;
+    file "/etc/bind/1.24.10.in-addr.arpa.rev";
+};
+
+zone "8.168.192.in-addr.arpa" in {
+    type master;
+    file "/etc/bind/8.168.192.in-addr.arpa.rev";
+};
+
+zone "27.92.10.in-addr.arpa" in {
+    type master;
+    file "/etc/bind/27.92.10.in-addr.arpa.rev";
+};
+
+zone "1.43.133.in-addr.arpa" in {
+    type master;
+    file "/etc/bind/1.43.133.in-addr.arpa.rev";
+};
+
+zone "5.10.10.in-addr.arpa" in {
+    type master;
+    file "/etc/bind/5.10.10.in-addr.arpa.rev";
+};
+
+zone "0.43.172.in-addr.arpa" in {
+    type master;
+    file "/etc/bind/0.43.172.in-addr.arpa.rev";
+};
+
+

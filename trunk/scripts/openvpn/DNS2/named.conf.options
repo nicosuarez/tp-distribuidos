@@ -16,7 +16,7 @@ options {
 
 	allow-query{ "any"; };
 	recursion yes;
-  	allow-recursion {172.43/16;10.24/16;10.10/16;10.92/16;133.43/16;};
+  	//allow-recursion {172.43/16;10.24/16;10.10/16;10.92/16;133.43/16;};
 	allow-recursion-on {"any";};
 };
 

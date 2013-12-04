@@ -17,42 +17,6 @@ $TTL 2d
 
 
 ;##########################################################################
-;Ducati
-;##########################################################################
-5		IN	PTR		r11.ducati1.trelew.chubut.dc.fi.uba.ar.
-6		IN	PTR		r12.ducati2.trelew.chubut.dc.fi.uba.ar.
-
-
-;##########################################################################
-;Derbi
-;##########################################################################
-65		IN	PTR		r13.derbi1.trelew.chubut.dc.fi.uba.ar.
-66		IN	PTR		r14.derbi2.trelew.chubut.dc.fi.uba.ar.
-67		IN	PTR		vrrp-r13r14.derbi3.trelew.chubut.dc.fi.uba.ar.
-68		IN	PTR		hostb.derbi4.trelew.chubut.dc.fi.uba.ar.
-
-
-;##########################################################################
-;Suzuki
-;##########################################################################
-9		IN	PTR		r16.suzuki1.trelew.chubut.dc.fi.uba.ar.
-
-
-;##########################################################################
-;Vespa
-;##########################################################################
-17		IN	PTR		r14.vespa1.trelew.chubut.dc.fi.uba.ar.
-
-
-;##########################################################################
-;Kawasaki
-;##########################################################################
-33		IN	PTR		r14.kawasaki1.trelew.chubut.dc.fi.uba.ar.
-34		IN	PTR		r15.kawasaki2.trelew.chubut.dc.fi.uba.ar.
-35		IN	PTR		r16.kawasaki3.trelew.chubut.dc.fi.uba.ar.
-
-
-;##########################################################################
 ;Honda
 ;##########################################################################
 129		IN	PTR		r1.honda1.trelew.chubut.dc.fi.uba.ar.
@@ -63,5 +27,9 @@ $TTL 2d
 134		IN	PTR		dns2.honda6.trelew.chubut.dc.fi.uba.ar.
 135		IN	PTR		hosta.honda7.trelew.chubut.dc.fi.uba.ar.
 
-
+;##########################################################################
+;DUCATI
+;##########################################################################
+5		IN	PTR		r11.ducati1.resto.chubut.dc.fi.uba.ar.
+6		IN	PTR		r12.ducati2.resto.chubut.dc.fi.uba.ar.
 
